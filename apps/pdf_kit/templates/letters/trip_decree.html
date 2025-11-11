@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xizmat Safari Farmoyishi</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+
+        .border-all {
+            border: 1px solid;
+        }
+
+        .border-top {
+            border-top: 1px solid;
+        }
+
+        .border-right {
+            border-right: 1px solid;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid;
+        }
+
+        .border-left {
+            border-left: 1px solid;
+        }
+
+        .employees-table {
+            border-spacing: 0;
+        }
+
+        .employees-table td {
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td style="width: {{ logo_size }};">
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">{{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">{{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="margin-top: 16px; font-size: 14px; font-weight: bolder">
+        <div>№ {{ register_number }}</div>
+        <div>{{ register_date }}</div>&nbsp;&nbsp;
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; font-weight: bolder">
+        FARMOYISH
+    </div>
+
+    <div style="margin: 32px 0 48px 0; text-align: justify!important;">
+        {{ content|safe }}
+    </div>
+
+    <table class="employees-table" style="width: 100%; font-size: 14px">
+        <tr style="text-align: center">
+            <td class="border-all">№</td>
+            <td class="border-top border-right border-bottom">F.I.SH</td>
+            <td class="border-top border-right border-bottom">Departament va lavozim</td>
+            <td class="border-top border-right border-bottom">Yo'nalish</td>
+            <td class="border-top border-right border-bottom">Xizmat sanasi</td>
+        </tr>
+
+        <!-- Loop notices-->
+        {% for trip in trips %}
+            <tr style="text-align: center">
+                <td class="border-right border-bottom border-left">{{ trip.counter }}</td>
+                <td class="border-right border-bottom">{{ trip.full_name }}</td>
+                <td class="border-right border-bottom">{{ trip.department }} <br> {{ trip.position }}</td>
+                <td class="border-right border-bottom">
+                    {% for name in trip.destinations %}
+                        {{ name }} <br>
+                    {% endfor %}
+                </td>
+                <td class="border-right border-bottom" style="width: 100px">{{ trip.start_date }}
+                    <br> {{ trip.end_date }}</td>
+            </tr>
+        {% endfor %}
+        <!-- /Loop notices-->
+    </table>
+    <div style="text-indent: 32px; margin-top: 8px; font-size: 14px; text-align: justify;">
+        <div>xizmat safariga yuborilsin.</div>
+        <div>
+            Xizmat safarida bo‘lgan xodimga u yuborilgan Bank tarmog‘i/tashkilotdagi ish vaqti rejimi va dam olish
+            vaqtlari tadbiq etilsin.
+        </div>
+
+        <div>
+            Xizmat safariga yuborilgan xodim safardan qaytgandan so‘ng 3 ish kuni ichida xizmat safari natijalari
+            to‘g‘risida xisobot topshirsin.
+        </div>
+
+        <div>
+            Buxgalteriya hisobi va hisoboti departamenti tomonidan xizmat safari bilan bog‘liq xarajatlar
+            uchun to‘lovlar belgilangan tartibda amalga oshirilsin.
+        </div>
+
+        <div>
+            <span style="font-weight: bold">Asos: </span>{{ trip_notice_number }}-sonli
+            bildirishnnoma;
+        </div>
+
+        <div>
+            “O‘zsanoatqurilishbank” ATB xodimlarini xizmat safariga yuborish to‘g‘risidagi Tartib;
+        </div>
+
+        <div>
+            O‘zR MKning 287-moddasi;
+        </div>
+
+        <div>
+            Vazirlar Mahkamasining 2022-yil 2-avgustdagi “O‘zbekiston Respublikasi hududida xizmat safarlari
+            to‘g‘risidagi” 424-sonli Nizom.
+        </div>
+    </div>
+
+    {{ signers|safe }}
+
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        {#        <div style="font-size: 12px">#}
+        {#            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},#}
+        {#            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}#}
+        {#        </div>#}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; font-size: 14px; font-weight: bolder; margin-top: 32px">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Ushbu ishonchnoma orqali “O‘zbekiston sanoat-qurilish banki” aksiyadorlik tijorat banki (“O‘zsanoatqurilishbank”
+            ATB) (keyingi o‘rinlarda – Bank) nomidan 2024-yil 18-noyabrdagi
+            04-07/250-sonli ishonchnoma asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139 va 144-moddalariga amal qilgan holda Bankning
+            {{ employee_company }}
+            (keyingi o‘rinlarda – "{% if doc_sub_type == 47 %}Ofis{% else %}Markaz{% endif %}")
+            {{ employee_position }}
+            <span style="font-weight: bold">
+          {{ employee_name }}
+         </span>
+            (keyingi o‘rinlarda – menejer)ga quyidagi vakolatlarga ishonch bildiradi:
+        </div>
+
+        <div>
+            {% if doc_sub_type == 47 %}
+            	Ofis
+            {% else %}
+                Markaz
+            {% endif %}
+            tomonidan Bank nomidan jismoniy shaxslarga kreditlash xizmatlarini ko‘rsatish bilan bog‘liq bo‘lgan
+            mikroqarz, ta’lim, iste’mol, overdraft (offlayn), avtokredit, kafillik, sug‘urta, ipoteka krediti shartnomalari
+            hamda garov/ipoteka (notarial rasmiylashtirish talab qilinmaydigan) shartnomalarni imzolash vakolatini beradi.
+        </div>
+
+        <div>
+            Bunda yuqorida qayd etilgan shartnomalardan tashqari boshqa turdagi shartnomalar (bitimlar) hamda Bankda garovda
+            turgan mulklarni taqiqdan chiqarish, garov mulkini boshqa mulk bilan almashtirish, garov mulki egasini
+            o‘zgartirish <span style="font-weight: bold">taqiqlanadi</span>.
+        </div>
+
+        {% include "poa/poa_validity_block.html" %}
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+[
+  {
+    "model": "compose.composestatus",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-08-26T10:03:58.201Z",
+      "modified_date": "2023-08-26T10:03:58.201Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Pending",
+      "name_uz": "Kutish jarayonida",
+      "name_ru": "В ожидании",
+      "name_en": "Pending",
+      "is_default": true,
+      "is_draft": false,
+      "is_approve": false,
+      "declined_from_approver": false,
+      "declined_from_signer": false
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 2,
+    "fields": {
+      "created_date": "2023-08-26T10:04:35.061Z",
+      "modified_date": "2023-08-26T10:04:35.061Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Draft",
+      "name_uz": "Qoralama",
+      "name_ru": "Черновик",
+      "name_en": "Draft",
+      "is_default": false,
+      "is_draft": true,
+      "is_approve": false,
+      "declined_from_approver": false,
+      "declined_from_signer": false
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 3,
+    "fields": {
+      "created_date": "2023-08-26T10:05:11.830Z",
+      "modified_date": "2023-08-26T10:05:11.830Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "For registration",
+      "name_uz": "Ro'yxatdan o'tish uchun",
+      "name_ru": "Для регистрации",
+      "name_en": "For registration",
+      "is_default": false,
+      "is_draft": false,
+      "is_approve": false,
+      "declined_from_approver": false,
+      "declined_from_signer": false
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 4,
+    "fields": {
+      "created_date": "2023-08-26T10:05:40.228Z",
+      "modified_date": "2024-08-17T05:53:16.813Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Declined from signer",
+      "name_uz": "Rad etildi",
+      "name_ru": "Подписавший отклонен",
+      "name_en": "Declined from signer",
+      "is_default": false,
+      "is_draft": false,
+      "is_approve": false,
+      "declined_from_approver": false,
+      "declined_from_signer": true
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 5,
+    "fields": {
+      "created_date": "2023-08-26T10:07:04.716Z",
+      "modified_date": "2023-08-26T10:08:25.561Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Approved",
+      "name_uz": "Tasdiqlandi",
+      "name_ru": "Одобренный",
+      "name_en": "Approved",
+      "is_default": false,
+      "is_draft": false,
+      "is_approve": true,
+      "declined_from_approver": false,
+      "declined_from_signer": false
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 6,
+    "fields": {
+      "created_date": "2024-08-15T12:35:10.573Z",
+      "modified_date": "2024-08-15T12:35:10.573Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Declined from approver",
+      "name_uz": "Rad etildi",
+      "name_ru": "Отклоненный",
+      "name_en": "Declined from approver",
+      "is_default": false,
+      "is_draft": false,
+      "is_approve": false,
+      "declined_from_approver": true,
+      "declined_from_signer": false
+    }
+  },
+  {
+    "model": "compose.composestatus",
+    "pk": 7,
+    "fields": {
+      "created_date": "2024-12-07T11:04:13.939Z",
+      "modified_date": "2024-12-07T11:04:13.939Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Archived",
+      "name_uz": "Arxiv",
+      "name_ru": "Архивировано",
+      "name_en": "Archived",
+      "is_default": false,
+      "is_draft": false,
+      "is_approve": false,
+      "declined_from_approver": false,
+      "declined_from_signer": false
+    }
+  }
+]

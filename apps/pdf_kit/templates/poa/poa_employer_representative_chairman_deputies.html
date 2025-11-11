@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 32px; font-size: 14px; font-weight: bolder">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Mazkur ishonchnoma orqali Toshkent shahri, Shahrisabz ko‘chasi, 3-uyda joylashgan “O‘zbekiston sanoat-qurilish
+            banki” aksiyadorlik tijorat banki (“O‘zsanoatqurilishbank” АTB, keyingi o‘rinlarda - Bank) nomidan uning Ustavi
+            asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            {{ employee_position }} {{ employee_name }}ga
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139, 144-moddalariga asosan quyidagi vakolatlarni
+            beradi:
+        </div>
+
+        <div>
+            Bank Boshqaruvi Raisi nomidan “Ish beruvchining vakili” sifatida xodimlar (departament direktori, o‘rinbosari
+            hamda bank tarmoqlari rahbarlari va o‘rinbosarlari bundan mustasno) bilan mehnat shartnomasini imzolash va unga
+            qo‘shimcha kelishuv imzolash, bunday hujjatlardan kelib chiqadigan munosabatlar bo‘yicha rasmiylashtiriladigan
+            buyruqlarni imzolash;
+        </div>
+
+        <div>
+            mehnat shartnomasida shart qilib ko‘rsatilgan ish joyini o‘zgartirish to‘g‘risida, ish beruvchining boshqa joyga
+            ko‘chishi munosabati bilan joyini o‘zgartirish haqida, xodimni boshqa ish beruvchiga vaqtincha xizmat safariga
+            yuborish haqida, xodim bilan tuzilgan mehnat shartnomasi alohida asoslarga ko‘ra bekor qilinganda xodimni boshqa
+            ishga o‘tkazish haqida, xodimlarni rag‘batlantirish to‘g‘risida, bir necha kasbda (lavozimda) ishlash, xizmat
+            ko‘rsatish doirasini kengaytirish, ish hajmini ko‘paytirish, vaqtincha yo‘q bo‘lgan xodimning majburiyatlarini
+            mehnat shartnomasida belgilangan ishdan ozod etilmagan holda bajarish haqida, dam olish kunlari va
+            ishlanmaydigan bayram kunlari ishga jalb etish to‘g‘risida, dam olish kunlaridagi yoki ishlanmaydigan bayram
+            kunlaridagi ish uchun haq to‘lash va boshqa turdagi haq to‘lash to‘g‘risida; kompensatsiya to‘lovlari
+            to‘g‘risida; kasbiy tayyorgarlik, qayta tayyorlash, malaka oshirish va stajirovka to‘g‘risida; shuningdek mehnat
+            ta’tili va boshqa ta’tillar berish haqida, mahalliy xizmat safarlari, malaka oshirish va o’quv kurslariga
+            yuborish bilan bog‘liq bo‘lgan buyruqlarni imzolash.
+        </div>
+
+       {% include "poa/poa_validity_block.html" %}
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

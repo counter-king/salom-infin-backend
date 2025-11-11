@@ -1,0 +1,95 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    services:
+      redis:
+        image: redis:7
+        ports: [ "6379:6379" ]
+        options: >-
+          --health-cmd "redis-cli ping || exit 1"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      postgres:
+        image: postgres:latest
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+    steps:
+      - name: Update and install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            python3-pip python3-dev libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev \
+            libldap2-dev build-essential libssl-dev libffi-dev libmysqlclient-dev \
+            libjpeg-dev libpq-dev libjpeg8-dev liblcms2-dev libblas-dev libatlas-base-dev \
+            libyaml-dev
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10.12
+      - name: Checkout repository code
+        uses: actions/checkout@v3
+      - name: Upgrade pip and essential build tools
+        run: |
+          python3 -m pip install --upgrade pip setuptools wheel
+      - name: Install Python requirements
+        run: |
+          pip install -r requirements.txt
+#      - name: Execute tests
+#        env:
+#          DJANGO_SETTINGS_MODULE: config.settings
+#          API_URL_FOR_FILE: ${{ secrets.API_URL_FOR_FILE }}
+#          DEBUG: ${{ secrets.DEBUG }}
+#          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+#          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+#          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
+#          POSTGRES_PORT: ${{ job.services.postgres.ports[5432] }}
+#          POSTGRES_HOST: ${{ secrets.POSTGRES_HOST }}
+#        run: pytest
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      API_URL_FOR_FILE: ${{ secrets.API_URL_FOR_FILE }}
+    steps:
+      - name: Deploy Django project
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DO_SSH_HOST }}
+          username: ${{ secrets.DO_SSH_USERNAME }}
+          key: ${{ secrets.DO_PRIVATE_KEY }}
+          script: |
+            export API_URL_FOR_FILE=${{ secrets.API_URL_FOR_FILE }}
+            cd digital-workspace
+            git pull origin master
+            . venv/bin/activate
+            pip install --upgrade pip setuptools wheel
+            pip install -r requirements.txt
+            python manage.py migrate
+            python manage.py loaddata json_files/error_messages.json
+            python manage.py loaddata json_files/doc_types.json
+            python manage.py loaddata json_files/doc_sub_types.json
+            python manage.py loaddata json_files/envs.json
+            python manage.py loaddata json_files/cache_keys.json
+            python manage.py loaddata json_files/compose_statuses.json
+            echo "Restarting Gunicorn..."
+            sudo systemctl restart gunicorn.service
+            echo "Restarting Celery..."
+            sudo systemctl restart celery.service
+            echo "Restarting Daphne..."
+            sudo systemctl restart daphne.service
+            echo "The deployment was successful."

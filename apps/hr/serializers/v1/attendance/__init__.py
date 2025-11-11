@@ -1,0 +1,15 @@
+from apps.hr.serializers.v1.attendance.attendance import (
+    AttendanceExceptionApprovalSerializer,
+    ApproveOrRejectExceptionSerializer,
+    AttendanceExceptionSerializer,
+    AttendanceHasReasonSerializer,
+    AttendanceSerializer,
+    BulkBranchScopeAssignSerializer,
+    BulkDepartmentScopeAssignSerializer,
+    BulkScheduleAssignSerializer,
+    EmployeeScheduleSerializer,
+    HRBranchScopeSerializer,
+    HRDepartmentScopeSerializer,
+    ScopedUserSerializer,
+    WorkScheduleSerializer,
+)

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; font-size: 14px; font-weight: bolder; margin-top: 32px">
+        Elektron raqamli imzo olish uchun
+    </div>
+
+    <div style="text-align: center; font-size: 14px; font-weight: bolder;">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Ushbu ishonchnoma orqali “O‘zbekiston sanoat-qurilish banki” aksiyadorlik tijorat banki (“O‘zsanoatqurilishbank”
+            ATB) (keyingi o‘rinlarda – Bank) nomidan 2024-yil 18-noyabrdagi
+            04-07/250-sonli ishonchnoma asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139 va 144-moddalariga amal qilgan holda Bankning
+            {{ employee_company }}
+            (keyingi o‘rinlarda – "{% if doc_sub_type == 48 %}Ofis{% else %}Markaz{% endif %}")
+            {{ employee_position }}
+            <span style="font-weight: bold">{{ employee_name }}</span>ga
+            {% if doc_sub_type == 48 %}Ofis{% else %}Markaz{% endif %} tomonidan Bank nomidan Bank Ustavi, Bankka berilgan litsenziyada ko‘zda tutilgan operatsiyalarni Bank
+            tomonidan o‘rnatilgan limit va vakolatlar doirasida amalga oshirish hamda uni amalga oshirish bilan bog‘liq
+            bo‘lgan hujjatlarni imzolash, shuningdek elektron hujjatlarni imzolash va ushbu hujjatlarni imzolash uchun
+            davlat xizmatlari markazidan yuridik shaxs uchun beriladigan elektron raqamli imzo olishga ishonch bildiradi.
+        </div>
+
+        <div style="font-style: italic">
+            {% if old_attorney_exists == 'exists' %}
+                Ushbu ishonchnomaning berilishi munosabati bilan {{ old_attorney_date }}-yilda berilgan
+                {{ old_attorney_number }}-sonli ishonchnoma
+                o‘z kuchini yo‘qotadi.
+            {% endif %}
+            Mazkur ishonchnomaning amal qilish muddati u orqali berilgan vakolatlarni boshqa shaxsga o‘tkazish huquqisiz
+            {{ deadline_in_words }}ni tashkil etadi.
+        </div>
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

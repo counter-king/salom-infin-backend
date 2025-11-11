@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xizmat Safari Farmoyishi</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+
+        .border-all {
+            border: 1px solid;
+        }
+
+        .border-top {
+            border-top: 1px solid;
+        }
+
+        .border-right {
+            border-right: 1px solid;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid;
+        }
+
+        .border-left {
+            border-left: 1px solid;
+        }
+
+        .employees-table {
+            border-spacing: 0;
+        }
+
+        .employees-table td {
+            padding: 4px;
+        }
+
+        .business-trip-table,
+        .business-trip-table tr,
+        .business-trip-table td {
+            border: none;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        .business-trip-table td {
+            padding: 4px !important;
+        }
+
+        .bg-greyscale-100 {
+            background: #F2F2F2;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .text-sm {
+            font-size: 14px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 8px;
+        }
+
+        .mt-4 {
+            margin-top: 16px;
+        }
+
+        .font-semibold {
+            font-weight: bold;
+        }
+
+        .booking-table {
+            border-collapse: collapse;
+        }
+
+        .booking-table td {
+            border: 1px solid #E2E8F0;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td style="width: {{ logo_size }};">
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">{{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">{{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="margin-top: 16px; font-size: 14px; font-weight: bolder">
+        <div>№ {{ register_number }}</div>
+        <div>{{ register_date }}</div>&nbsp;&nbsp;
+    </div>
+
+    <div style="text-align: center; margin-top: 20px; font-size: 14px; font-weight: bolder">
+        FARMOYISH
+    </div>
+
+    <div style="margin: 32px 0 48px 0; text-align: justify!important;">
+        {{ content|safe }}
+    </div>
+
+    <!-- Loop according to groups -->
+    {% for group in groups %}
+        <div>
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 5%; text-align: start">
+                        №
+                    </td>
+                    <td style="width: 30%;">
+                        F.I.Sh
+                    </td>
+                    <td style="width: 30%;">
+                        Lavozimi
+                    </td>
+                    <td style="width: 35%;">
+                        Tarkibiy tuzilmasi
+                    </td>
+                </tr>
+                <!-- Loop according to group users -->
+
+                <!-- Loop over group users -->
+                {% for trip in group.trips %}
+                    <tr>
+                        <td style="text-align: start">{{ forloop.counter }}.</td>
+                        <td>{{ trip.full_name }}</td>
+                        <td>{{ trip.position }}</td>
+                        <td>{{ trip.department }}</td>
+                    </tr>
+                {% endfor %}
+                <!-- /Loop according to group users -->
+            </table>
+
+            {% if doc_sub_type == 41 %}
+                <table class="business-trip-table w-full text-sm text-center mt-2" style="width: 100%;">
+                    <tr class="bg-greyscale-100 font-semibold">
+                        <td style="width: 33%;">
+                            Qayerdan
+                        </td>
+                        <td style="width: 33%">
+                            Qayerga
+                        </td>
+                    </tr>
+
+                    <!-- Loop over locations -->
+                    {% for location in group.trips.0.countries %}
+                        <tr>
+                            <td>{% if forloop.first %}{{ group.trips.0.sender_location }}{% endif %}</td>
+                            <td>{{ location.name }}</td>
+                        </tr>
+                    {% endfor %}
+                    <!-- /Loop according to group regions -->
+                </table>
+            {% else %}
+                <table class="business-trip-table w-full text-sm text-center mt-2" style="width: 100%;">
+                    <tr class="bg-greyscale-100 font-semibold">
+                        <td style="width: 33%;">
+                            Qayerdan
+                        </td>
+                        <td style="width: 33%">
+                            Qayerga
+                        </td>
+                        <td style="width: 34%">
+                            Mamlakat
+                        </td>
+                    </tr>
+
+                    <!-- Loop over locations -->
+                    {% for location in group.trips.0.locations %}
+                        <tr>
+                            <td>{% if forloop.first %}{{ group.trips.0.sender_location }}{% endif %}</td>
+                            <td>{{ location.name }}</td>
+                            <td>{% if forloop.first %}{{ location.country.name }}{% endif %}</td>
+                        </tr>
+                    {% endfor %}
+                    <!-- /Loop according to group regions -->
+                </table>
+            {% endif %}
+
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 33%; text-align: start">
+                        Xizmat safari muddati:
+                    </td>
+                    <td style="width: 33%">
+                        Boshlanish sanasi
+                    </td>
+                    <td style="width: 34%">
+                        Tugash sanasi
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>{{ group.trips.0.start_date }}</td>
+                    <td>{{ group.trips.0.end_date }}</td>
+                </tr>
+            </table>
+
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 5%; text-align: start">№</td>
+                    <td style="width: 95%; text-align: start">
+                        Xizmat safari maqsadi:
+                    </td>
+                </tr>
+
+                <!-- Loop according to group tags -->
+                {% for goal in group.trips.0.goals %}
+                    <tr>
+                        <td style="text-align: start">{{ forloop.counter }}.</td>
+                        <td style="text-align: start">{{ goal }}</td>
+                    </tr>
+                {% endfor %}
+                <!-- /Loop according to group tags -->
+            </table>
+        
+            {% if not forloop.last %}
+                <div style="margin: 32px 0; border: 1px solid #ADB7C2"></div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <!-- /Loop according to groups -->
+
+
+    {% if doc_sub_type == 41 %}
+        <div style="text-indent: 32px; margin-top: 8px; font-size: 14px; text-align: justify; line-height: 20px;">
+            <div>
+                Xizmat safari natijasi yuzasidan mas'ul departament direktori tomonidan 3 kun ichida Boshqaruv Raisiga axborot kiritilsin.
+            </div>
+
+            <div>
+                Buxgalteriya hisobi va hisoboti departamenti tomonidan xizmat safari bilan bog‘liq
+                (aviachipta, kunlik, transfer, mexmonxona, o‘quv kursi) xarajatlari uchun to‘lovlar belgilangan
+                tartibda amalga oshirilsin (O‘zR MKning 287-moddasi, Jamoa shartnomasi, 2015-yil 19-
+                oktabrdagi “Vazirliklar, idoralar, korxonalar va tashkilotlar xodimlari O‘zbekiston Respublikasi
+                tashqarisiga xizmat safariga yuborilganda xizmat safari xarajatlari uchun mablag‘lar berish
+                tartibi to‘g‘risidagi Nizom”).
+            </div>
+
+            {% if trip_notice_number %}
+             <div>
+                <span style="font-weight: bold">Asos: </span>{{ trip_notice_number }}-sonli
+                bildirishnoma.
+            </div>
+            {% endif %}
+        </div>
+    {% else %}
+        <div style="text-indent: 32px; margin-top: 8px; font-size: 14px; text-align: justify; line-height: 20px;">
+        <div>
+            Xizmat safarida bo‘lgan xodimga u yuborilgan Bank tarmog‘i/tashkilotdagi ish vaqti rejimi va dam olish
+            vaqtlari tadbiq etilsin.
+        </div>
+
+        <div>
+            Xizmat safariga yuborilgan xodim safardan qaytgandan so‘ng 3 ish kuni ichida xizmat safari natijalari
+            to‘g‘risida xisobot topshirsin.
+        </div>
+
+        <div>
+            Buxgalteriya hisobi va hisoboti departamenti tomonidan xizmat safari bilan bog‘liq xarajatlar
+            uchun to‘lovlar belgilangan tartibda amalga oshirilsin.
+        </div>
+
+        {% if trip_notice_number %}
+         <div>
+            <span style="font-weight: bold">Asos: </span>{{ trip_notice_number }}-sonli
+            bildirishnoma;
+        </div>
+        {% endif %}
+
+        <div>
+            “O‘zsanoatqurilishbank” ATB xodimlarini xizmat safariga yuborish to‘g‘risidagi Tartib;
+        </div>
+
+        <div>
+            O‘zR MKning 287-moddasi;
+        </div>
+
+        <div>
+            Vazirlar Mahkamasining 2022-yil 2-avgustdagi “O‘zbekiston Respublikasi hududida xizmat safarlari
+            to‘g‘risidagi” 424-sonli Nizom.
+        </div>
+    </div>
+    {% endif %}
+
+    {{ signers|safe }}
+
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        {#        <div style="font-size: 12px">#}
+        {#            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},#}
+        {#            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}#}
+        {#        </div>#}
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 32px; font-size: 14px; font-weight: bolder">
+        Bank xizmatlari ofisini boshqarish uchun
+    </div>
+
+    <div style="text-align: center; font-size: 14px; font-weight: bolder">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Ushbu ishonchnoma orqali “O‘zbekiston sanoat-qurilish banki” aksiyadorlik tijorat banki (“O‘zsanoatqurilishbank”
+            ATB) (keyingi o‘rinlarda – Bank) nomidan 2024-yil 18-noyabrdagi
+            04-07/250-sonli ishonchnoma asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139 va 144-moddalariga amal qilgan holda Bankning
+            {{ employee_company }}
+            (keyingi o‘rinlarda – Ofis)
+            {{ employee_position }}
+            <span style="font-weight: bold">
+          {{ employee_name }}
+         </span>
+            (keyingi o‘rinlarda – Boshqaruvchi)ga Ofisi quyidagi vakolatlar doirasida boshqarishga ishonch bildiradi:
+        </div>
+
+        <div>
+            1. Ofis tomonidan Bank nomidan Bank Ustavi, Bankka berilgan litsenziya va Ofis Nizomida ko‘zda tutilgan
+            operatsiyalarni Bank tomonidan Ofis uchun o‘rnatilgan limit va vakolatlar doirasida amalga oshirish hamda uni
+            amalga oshirish bilan bog‘liq bo‘lgan hujjatlarni imzolash;
+        </div>
+
+        <div>
+            2. Ofis faoliyatidan kelib chiqqan va chiqadigan masalalarni hal etishda barcha davlat va jamoat organlari,
+            boshqa muassasa, tashkilot va korxonalarda hamda jismoniy va yuridik shaxslar bilan munosabatlarda Bank
+            manfaatlarini ko‘zlab ish yuritish;
+        </div>
+
+        <div>
+            3. Ofis tomonidan Bank nomidan belgilangan tartibda bank hisobvarag‘i, omonat, kredit, garov (ipoteka), kafolat,
+            kafillik shartnomalari, aksiyalar, obligatsiyalar va Bank tomonidan chiqariladigan qimmatli qog‘ozlarni
+            tarqatish (sotish) bo‘yicha, bank balansidagi ko‘char va ko‘chmas mulklarning oldi-sotdi shartnomalarini va
+            boshqa shartnomalarni (mehnat munosabatlari bilan bog‘liq bo‘lgan shartnoma va kelishuvlar bundan mustasno)
+            imzolash, vakolatli kollegial organ qarori asosida ularga tegishli o‘zgartirish va qo‘shimchalar kiritish, bekor
+            qilish haqida kelishuvlarni imzolash, shuningdek Bank nomidan Markaz faoliyatiga taalluqli shartnomalar ijrosini
+            qabul qilish, notarial idora/notariuslarda Bank vakili sifatida qatnashish.
+        </div>
+
+        {% include "poa/poa_ban_block.html" %}
+
+        <div>
+            4. Ofis faoliyatidan kelib chiqqan sudlov ishlari bo‘yicha barcha sud va huquqni muhofaza qiluvchi organlarda
+            taraflarning barcha protsessual harakatlarini amalga oshirish huquqi bilan Bankning huquq va manfaatlarini
+            himoya qilish va vakil sifatida ishtirok etish;
+        </div>
+
+        <div>
+            5. Boshqaruvchi Ofis faoliyatidan kelib chiqqan sud ishlari bo‘yicha Bank nomidan ariza, da’vo ariza, shikoyatni
+            imzolash, shu jumladan sud hujjati ustidan apellyatsiya, kassatsiya, taftish shikoyatlarini imzolash hamda sud
+            hujjatini yangi ochilgan holatlar bo‘yicha qayta ko‘rib chiqish to‘g‘risidagi arizani imzolash, ishni hakamlik
+            sudiga topshirish, da’vo (arz qilingan talab) predmetini yoki asosini o‘zgartirish, da’vo talablari miqdorini
+            ko‘paytirish yoki kamaytirish, ijro hujjatini tegishli davlat organiga, tashkilotga yoki uning mansabdor
+            shaxsiga ijrosini ta’minlash uchun topshirish, sud hujjatining majburiy ijro etilishini talab qilish, davlat
+            ijrochisining xatti-harakatlari (harakat yoki harakatsizligi) ustidan shikoyat berish va uni rad qilish,
+            undirilgan mol-mulkni yoki pulni olish huquqiga ega bo‘ladi.
+        </div>
+
+        {% include "poa/poa_validity_block.html" %}
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+[
+  {
+    "model": "reference.documenttype",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-08-09T12:34:31.224Z",
+      "modified_date": "2024-08-06T10:58:47.138Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Raport",
+      "name_uz": "Bildirishnoma",
+      "name_ru": "Рапорт",
+      "name_en": "Raport",
+      "short_name": "report",
+      "is_for_compose": true,
+      "journal": 2
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 2,
+    "fields": {
+      "created_date": "2023-08-10T11:41:59.562Z",
+      "modified_date": "2024-08-12T14:32:59.105Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Order",
+      "name_uz": "Buyruq",
+      "name_ru": "Приказ",
+      "name_en": "Order",
+      "short_name": "order",
+      "is_for_compose": true,
+      "journal": 5
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 3,
+    "fields": {
+      "created_date": "2024-07-23T13:39:04.266Z",
+      "modified_date": "2024-08-12T14:36:21.519Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xizmat yozishmasi",
+      "name_uz": "Xizmat yozishmasi",
+      "name_ru": "Служебная записка",
+      "name_en": null,
+      "short_name": null,
+      "is_for_compose": true,
+      "journal": 2
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 4,
+    "fields": {
+      "created_date": "2024-07-23T13:39:52.089Z",
+      "modified_date": "2024-10-12T10:38:41.401Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": false,
+      "name": "Farmoyish",
+      "name_uz": "Farmoyish",
+      "name_ru": "Распоряжение",
+      "name_en": null,
+      "short_name": null,
+      "is_for_compose": true,
+      "journal": 5
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 5,
+    "fields": {
+      "created_date": "2024-08-05T06:03:20.033Z",
+      "modified_date": "2024-08-05T06:03:20.033Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Application",
+      "name_uz": "Ariza",
+      "name_ru": "Заявление",
+      "name_en": "Application",
+      "short_name": "application",
+      "is_for_compose": true,
+      "journal": 7
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 6,
+    "fields": {
+      "created_date": "2024-08-18T19:00:36.265Z",
+      "modified_date": "2024-08-18T19:00:36.265Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bayon",
+      "name_uz": "Bayon",
+      "name_ru": "Протокол",
+      "name_en": null,
+      "short_name": null,
+      "is_for_compose": false,
+      "journal": 17
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 7,
+    "fields": {
+      "created_date": "2024-08-18T19:06:19.407Z",
+      "modified_date": "2024-08-18T19:06:19.407Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Qaror",
+      "name_uz": "Qaror",
+      "name_ru": "Решения",
+      "name_en": null,
+      "short_name": null,
+      "is_for_compose": false,
+      "journal": 18
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 8,
+    "fields": {
+      "created_date": "2024-11-30T10:43:15.725Z",
+      "modified_date": "2024-11-30T10:43:15.725Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "PowerOfAttorney",
+      "name_uz": "Ishonchnoma",
+      "name_ru": "Доверенность",
+      "name_en": "PowerOfAttorney",
+      "short_name": null,
+      "is_for_compose": true,
+      "journal": 19
+    }
+  },
+  {
+    "model": "reference.documenttype",
+    "pk": 9,
+    "fields": {
+      "created_date": "2025-08-27T05:44:42.780Z",
+      "modified_date": "2025-08-27T05:44:42.780Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Act",
+      "name_uz": "Dalolatnoma",
+      "name_ru": "Акт",
+      "name_en": "Act",
+      "short_name": null,
+      "is_for_compose": true,
+      "journal": 20
+    }
+  }
+]

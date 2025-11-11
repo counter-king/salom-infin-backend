@@ -1,0 +1,2 @@
+API_SECRET_UUID = 'b550b67f-521b-4bee-a272-5b5c1172d6ea'
+API_PUBLIC_UUID = '4df2b0a4-5c3d-4e6b-8f1c-7d9a2e5f3b8b'

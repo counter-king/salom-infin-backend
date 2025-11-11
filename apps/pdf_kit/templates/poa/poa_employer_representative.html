@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 32px; font-size: 14px; font-weight: bolder">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Mazkur ishonchnoma orqali Toshkent shahri, Shahrisabz ko‘chasi, 3-uyda joylashgan “O‘zbekiston sanoat-qurilish
+            banki” aksiyadorlik tijorat banki (“O‘zsanoatqurilishbank” АTB, keyingi o‘rinlarda - Bank) nomidan uning Ustavi
+            asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            {{ employee_position }} {{ employee_name }}ga
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139, 144-moddalariga asosan quyidagi vakolatlarni
+            beradi:
+        </div>
+
+        <div>
+            Bank Boshqaruvi Raisi nomidan “Ish beruvchining vakili” sifatida vazifalar taqsimotiga asosan o‘ziga
+            biriktirilgan yo‘nalishlardagi Bosh bank va tarmoqlar xodimlari (departament direktorlari, ularning
+            o‘rinbosarlari, bank tarmoqlari boshqaruvchilari (rahbarlari) va ularning o‘rinbosarlari bundan mustasno)
+            (keyingi o‘rinlarda - xodimlar) bilan mehnat shartnomalarini, mehnat shartnomasiga doir qo‘shimcha kelishuvlarni
+            imzolash;
+        </div>
+
+        <div>
+            ishga qabul qilish to‘g‘risida, xodimni boshqa ishga o‘tkazish to‘g‘risida, mehnat shartnomasida nazarda
+            tutilgan mehnat shartlarini o‘zgartirish haqida, mehnat shartnomasida shart qilib ko‘rsatilgan ish joyini
+            o‘zgartirish to‘g‘risida, ish beruvchining boshqa joyga ko‘chishi munosabati bilan joyni o‘zgartirish haqida,
+            xodimni boshqa ish beruvchiga vaqtincha xizmat safariga yuborish haqida, xodim bilan tuzilgan mehnat shartnomasi
+            alohida asoslarga ko‘ra bekor qilinganda xodimni boshqa ishga o‘tkazish haqida, xodimlarni rag‘batlantirish va
+            intizomiy jazo choralari qo‘llash to‘g‘risida, bir necha kasbda (lavozimda) ishlash, xizmat ko‘rsatish doirasini
+            kengaytirish, ish hajmini ko‘paytirish, vaqtincha yo‘q bo‘lgan xodimning majburiyatlarini mehnat shartnomasida
+            belgilangan ishdan ozod etilmagan holda bajarish haqida, shuningdek mehnat ta’tili va boshqa ta’tillar berish
+            haqida, mahalliy xizmat safarlari, malaka oshirish va o’quv kurslariga yuborish bilan bog’liq bo‘lgan
+            buyruqlarni imzolash.
+        </div>
+
+        <div style="font-style: italic">
+            {% if old_attorney_exists == 'exists' %}
+                Ushbu ishonchnomaning berilishi munosabati bilan {{ old_attorney_date }}-yilda berilgan
+                {{ old_attorney_number }}-sonli ishonchnoma
+                o‘z kuchini yo‘qotadi.
+            {% endif %}
+            Mazkur ishonchnomaning amal qilish muddati u orqali berilgan vakolatlarni boshqa shaxsga o‘tkazish huquqisiz
+            {{ deadline_in_words }}ni tashkil etadi.
+        </div>
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

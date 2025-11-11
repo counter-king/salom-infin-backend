@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Business Trip Notice V2</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+
+        .business-trip-table,
+        .business-trip-table tr,
+        .business-trip-table td {
+            border: none;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        .business-trip-table td {
+            padding: 4px !important;
+        }
+
+        .bg-greyscale-100 {
+            background: #F2F2F2;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .text-sm {
+            font-size: 14px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-2 {
+            margin-top: 8px;
+        }
+
+        .mt-4 {
+            margin-top: 16px;
+        }
+
+        .font-semibold {
+            font-weight: bold;
+        }
+
+        .booking-table {
+            border-collapse: collapse;
+        }
+
+        .booking-table td {
+            border: 1px solid #E2E8F0;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px;">
+    <div
+            class="font-medium text-12"
+            style="margin-bottom: 16px; font-weight: bolder; font-size: 12px"
+    >SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,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"
+                        alt="Logo"
+                        style="width: 114px; height: 100%"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">"O'ZBEKISTON SANOAT-QURILISH
+                        BANKI" AKSIYADORLIK TIJORAT BANKI
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">АКЦИОНЕРНЫЙ КОММЕРЧЕСКИЙ БАНК "УЗБЕКСКИЙ
+                        ПРОМЫШЛЕННО-СТРОИТЕЛЬНЫЙ БАНК"
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="width: 100%; border-radius: 6px; background-color: #F7F7F9; font-size: 16px; font-weight: bolder; padding: 4px 12px; margin-top: 10px; color: #003D64">
+        {{ sender }}
+    </div>
+
+    <div style="font-size: 14px; font-weight: bolder; margin-top: 16px">
+        <div style="margin-bottom: 4px">№ {{ register_number }}</div>
+        <div>{{ register_date }}</div>
+    </div>
+
+    <table style="width: 100%; margin-top: 16px">
+        <tr>
+            <td style="width: 50%;">
+                <img style="width: 60px; height: 60px;"
+                     src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0wIDBIMTZWMi4yODU3MUgwVjBaTTIyLjg1NzEgMEgyNS4xNDI5VjIuMjg1NzFIMjIuODU3MVYwWk0yNy40Mjg2IDBIMjkuNzE0M1YyLjI4NTcxSDI3LjQyODZWMFpNMzIgMEg0OFYyLjI4NTcxSDMyVjBaTTAgMi4yODU3MUgyLjI4NTcxVjQuNTcxNDNIMFYyLjI4NTcxWk0xMy43MTQzIDIuMjg1NzFIMTZWNC41NzE0M0gxMy43MTQzVjIuMjg1NzFaTTIyLjg1NzEgMi4yODU3MUgyNS4xNDI5VjQuNTcxNDNIMjIuODU3MVYyLjI4NTcxWk0zMiAyLjI4NTcxSDM0LjI4NTdWNC41NzE0M0gzMlYyLjI4NTcxWk00NS43MTQzIDIuMjg1NzFINDhWNC41NzE0M0g0NS43MTQzVjIuMjg1NzFaTTAgNC41NzE0M0gyLjI4NTcxVjYuODU3MTRIMFY0LjU3MTQzWk00LjU3MTQzIDQuNTcxNDNIMTEuNDI4NlY2Ljg1NzE0SDQuNTcxNDNWNC41NzE0M1pNMTMuNzE0MyA0LjU3MTQzSDE2VjYuODU3MTRIMTMuNzE0M1Y0LjU3MTQzWk0xOC4yODU3IDQuNTcxNDNIMjAuNTcxNFY2Ljg1NzE0SDE4LjI4NTdWNC41NzE0M1pNMjIuODU3MSA0LjU3MTQzSDI5LjcxNDNWNi44NTcxNEgyMi44NTcxVjQuNTcxNDNaTTMyIDQuNTcxNDNIMzQuMjg1N1Y2Ljg1NzE0SDMyVjQuNTcxNDNaTTM2LjU3MTQgNC41NzE0M0g0My40Mjg2VjYuODU3MTRIMzYuNTcxNFY0LjU3MTQzWk00NS43MTQzIDQuNTcxNDNINDhWNi44NTcxNEg0NS43MTQzVjQuNTcxNDNaTTAgNi44NTcxNEgyLjI4NTcxVjkuMTQyODZIMFY2Ljg1NzE0Wk00LjU3MTQzIDYuODU3MTRIMTEuNDI4NlY5LjE0Mjg2SDQuNTcxNDNWNi44NTcxNFpNMTMuNzE0MyA2Ljg1NzE0SDE2VjkuMTQyODZIMTMuNzE0M1Y2Ljg1NzE0Wk0xOC4yODU3IDYuODU3MTRIMjIuODU3MVY5LjE0Mjg2SDE4LjI4NTdWNi44NTcxNFpNMjUuMTQyOSA2Ljg1NzE0SDI3LjQyODZWOS4xNDI4NkgyNS4xNDI5VjYuODU3MTRaTTMyIDYuODU3MTRIMzQuMjg1N1Y5LjE0Mjg2SDMyVjYuODU3MTRaTTM2LjU3MTQgNi44NTcxNEg0My40Mjg2VjkuMTQyODZIMzYuNTcxNFY2Ljg1NzE0Wk00NS43MTQzIDYuODU3MTRINDhWOS4xNDI4Nkg0NS43MTQzVjYuODU3MTRaTTAgOS4xNDI4NkgyLjI4NTcxVjExLjQyODZIMFY5LjE0Mjg2Wk00LjU3MTQzIDkuMTQyODZIMTEuNDI4NlYxMS40Mjg2SDQuNTcxNDNWOS4xNDI4NlpNMTMuNzE0MyA5LjE0Mjg2SDE2VjExLjQyODZIMTMuNzE0M1Y5LjE0Mjg2Wk0xOC4yODU3IDkuMTQyODZIMjIuODU3MVYxMS40Mjg2SDE4LjI4NTdWOS4xNDI4NlpNMjcuNDI4NiA5LjE0Mjg2SDI5LjcxNDNWMTEuNDI4NkgyNy40Mjg2VjkuMTQyODZaTTMyIDkuMTQyODZIMzQuMjg1N1YxMS40Mjg2SDMyVjkuMTQyODZaTTM2LjU3MTQgOS4xNDI4Nkg0My40Mjg2VjExLjQyODZIMzYuNTcxNFY5LjE0Mjg2Wk00NS43MTQzIDkuMTQyODZINDhWMTEuNDI4Nkg0NS43MTQzVjkuMTQyODZaTTAgMTEuNDI4NkgyLjI4NTcxVjEzLjcxNDNIMFYxMS40Mjg2Wk0xMy43MTQzIDExLjQyODZIMTZWMTMuNzE0M0gxMy43MTQzVjExLjQyODZaTTE4LjI4NTcgMTEuNDI4NkgyMC41NzE0VjEzLjcxNDNIMTguMjg1N1YxMS40Mjg2Wk0yMi44NTcxIDExLjQyODZIMjUuMTQyOVYxMy43MTQzSDIyLjg1NzFWMTEuNDI4NlpNMjcuNDI4NiAxMS40Mjg2SDI5LjcxNDNWMTMuNzE0M0gyNy40Mjg2VjExLjQyODZaTTMyIDExLjQyODZIMzQuMjg1N1YxMy43MTQzSDMyVjExLjQyODZaTTQ1LjcxNDMgMTEuNDI4Nkg0OFYxMy43MTQzSDQ1LjcxNDNWMTEuNDI4NlpNMCAxMy43MTQzSDE2VjE2SDBWMTMuNzE0M1pNMTguMjg1NyAxMy43MTQzSDIwLjU3MTRWMTZIMTguMjg1N1YxMy43MTQzWk0yMi44NTcxIDEzLjcxNDNIMjUuMTQyOVYxNkgyMi44NTcxVjEzLjcxNDNaTTI3LjQyODYgMTMuNzE0M0gyOS43MTQzVjE2SDI3LjQyODZWMTMuNzE0M1pNMzIgMTMuNzE0M0g0OFYxNkgzMlYxMy43MTQzWk0xOC4yODU3IDE2SDI5LjcxNDNWMTguMjg1N0gxOC4yODU3VjE2Wk0wIDE4LjI4NTdIMi4yODU3MVYyMC41NzE0SDBWMTguMjg1N1pNNC41NzE0MyAxOC4yODU3SDE2VjIwLjU3MTRINC41NzE0M1YxOC4yODU3Wk0yNS4xNDI5IDE4LjI4NTdIMjcuNDI4NlYyMC41NzE0SDI1LjE0MjlWMTguMjg1N1pNMzIgMTguMjg1N0g0My40Mjg2VjIwLjU3MTRIMzJWMTguMjg1N1pNMi4yODU3MSAyMC41NzE0SDQuNTcxNDNWMjIuODU3MUgyLjI4NTcxVjIwLjU3MTRaTTYuODU3MTQgMjAuNTcxNEg5LjE0Mjg2VjIyLjg1NzFINi44NTcxNFYyMC41NzE0Wk0xOC4yODU3IDIwLjU3MTRIMjAuNTcxNFYyMi44NTcxSDE4LjI4NTdWMjAuNTcxNFpNMjkuNzE0MyAyMC41NzE0SDMyVjIyLjg1NzFIMjkuNzE0M1YyMC41NzE0Wk0zNC4yODU3IDIwLjU3MTRINDhWMjIuODU3MUgzNC4yODU3VjIwLjU3MTRaTTAgMjIuODU3MUg0LjU3MTQzVjI1LjE0MjlIMFYyMi44NTcxWk05LjE0Mjg2IDIyLjg1NzFIMTEuNDI4NlYyNS4xNDI5SDkuMTQyODZWMjIuODU3MVpNMTMuNzE0MyAyMi44NTcxSDE4LjI4NTdWMjUuMTQyOUgxMy43MTQzVjIyLjg1NzFaTTIwLjU3MTQgMjIuODU3MUgzNC4yODU3VjI1LjE0MjlIMjAuNTcxNFYyMi44NTcxWk0zOC44NTcxIDIyLjg1NzFINDEuMTQyOVYyNS4xNDI5SDM4Ljg1NzFWMjIuODU3MVpNNDMuNDI4NiAyMi44NTcxSDQ1LjcxNDNWMjUuMTQyOUg0My40Mjg2VjIyLjg1NzFaTTIuMjg1NzEgMjUuMTQyOUg5LjE0Mjg2VjI3LjQyODZIMi4yODU3MVYyNS4xNDI5Wk0xMS40Mjg2IDI1LjE0MjlIMTMuNzE0M1YyNy40Mjg2SDExLjQyODZWMjUuMTQyOVpNMjAuNTcxNCAyNS4xNDI5SDI3LjQyODZWMjcuNDI4NkgyMC41NzE0VjI1LjE0MjlaTTI5LjcxNDMgMjUuMTQyOUgzMlYyNy40Mjg2SDI5LjcxNDNWMjUuMTQyOVpNMzYuNTcxNCAyNS4xNDI5SDQ4VjI3LjQyODZIMzYuNTcxNFYyNS4xNDI5Wk00LjU3MTQzIDI3LjQyODZIOS4xNDI4NlYyOS43MTQzSDQuNTcxNDNWMjcuNDI4NlpNMTMuNzE0MyAyNy40Mjg2SDE4LjI4NTdWMjkuNzE0M0gxMy43MTQzVjI3LjQyODZaTTIwLjU3MTQgMjcuNDI4NkgyMi44NTcxVjI5LjcxNDNIMjAuNTcxNFYyNy40Mjg2Wk0yNS4xNDI5IDI3LjQyODZIMjcuNDI4NlYyOS43MTQzSDI1LjE0MjlWMjcuNDI4NlpNMzIgMjcuNDI4NkgzNC4yODU3VjI5LjcxNDNIMzJWMjcuNDI4NlpNMzYuNTcxNCAyNy40Mjg2SDQxLjE0MjlWMjkuNzE0M0gzNi41NzE0VjI3LjQyODZaTTQzLjQyODYgMjcuNDI4Nkg0NS43MTQzVjI5LjcxNDNINDMuNDI4NlYyNy40Mjg2Wk0xOC4yODU3IDI5LjcxNDNIMjAuNTcxNFYzMkgxOC4yODU3VjI5LjcxNDNaTTIyLjg1NzEgMjkuNzE0M0gyNS4xNDI5VjMySDIyLjg1NzFWMjkuNzE0M1pNMjkuNzE0MyAyOS43MTQzSDQ4VjMySDI5LjcxNDNWMjkuNzE0M1pNMCAzMkgxNlYzNC4yODU3SDBWMzJaTTI1LjE0MjkgMzJIMjkuNzE0M1YzNC4yODU3SDI1LjE0MjlWMzJaTTM4Ljg1NzEgMzJINDEuMTQyOVYzNC4yODU3SDM4Ljg1NzFWMzJaTTQzLjQyODYgMzJINDUuNzE0M1YzNC4yODU3SDQzLjQyODZWMzJaTTAgMzQuMjg1N0gyLjI4NTcxVjM2LjU3MTRIMFYzNC4yODU3Wk0xMy43MTQzIDM0LjI4NTdIMTZWMzYuNTcxNEgxMy43MTQzVjM0LjI4NTdaTTE4LjI4NTcgMzQuMjg1N0gyMC41NzE0VjM2LjU3MTRIMTguMjg1N1YzNC4yODU3Wk0yMi44NTcxIDM0LjI4NTdIMjcuNDI4NlYzNi41NzE0SDIyLjg1NzFWMzQuMjg1N1pNMjkuNzE0MyAzNC4yODU3SDMyVjM2LjU3MTRIMjkuNzE0M1YzNC4yODU3Wk0zNi41NzE0IDM0LjI4NTdIMzguODU3MVYzNi41NzE0SDM2LjU3MTRWMzQuMjg1N1pNNDEuMTQyOSAzNC4yODU3SDQzLjQyODZWMzYuNTcxNEg0MS4xNDI5VjM0LjI4NTdaTTQ1LjcxNDMgMzQuMjg1N0g0OFYzNi41NzE0SDQ1LjcxNDNWMzQuMjg1N1pNMCAzNi41NzE0SDIuMjg1NzFWMzguODU3MUgwVjM2LjU3MTRaTTQuNTcxNDMgMzYuNTcxNEgxMS40Mjg2VjM4Ljg1NzFINC41NzE0M1YzNi41NzE0Wk0xMy43MTQzIDM2LjU3MTRIMTZWMzguODU3MUgxMy43MTQzVjM2LjU3MTRaTTE4LjI4NTcgMzYuNTcxNEgyMi44NTcxVjM4Ljg1NzFIMTguMjg1N1YzNi41NzE0Wk0yNy40Mjg2IDM2LjU3MTRIMjkuNzE0M1YzOC44NTcxSDI3LjQyODZWMzYuNTcxNFpNMzIgMzYuNTcxNEgzNC4yODU3VjM4Ljg1NzFIMzJWMzYuNTcxNFpNMzYuNTcxNCAzNi41NzE0SDM4Ljg1NzFWMzguODU3MUgzNi41NzE0VjM2LjU3MTRaTTQzLjQyODYgMzYuNTcxNEg0OFYzOC44NTcxSDQzLjQyODZWMzYuNTcxNFpNMCAzOC44NTcxSDIuMjg1NzFWNDEuMTQyOUgwVjM4Ljg1NzFaTTQuNTcxNDMgMzguODU3MUgxMS40Mjg2VjQxLjE0MjlINC41NzE0M1YzOC44NTcxWk0xMy43MTQzIDM4Ljg1NzFIMTZWNDEuMTQyOUgxMy43MTQzVjM4Ljg1NzFaTTE4LjI4NTcgMzguODU3MUgyMi44NTcxVjQxLjE0MjlIMTguMjg1N1YzOC44NTcxWk0yOS43MTQzIDM4Ljg1NzFIMzJWNDEuMTQyOUgyOS43MTQzVjM4Ljg1NzFaTTM0LjI4NTcgMzguODU3MUg0MS4xNDI5VjQxLjE0MjlIMzQuMjg1N1YzOC44NTcxWk0wIDQxLjE0MjlIMi4yODU3MVY0My40Mjg2SDBWNDEuMTQyOVpNNC41NzE0MyA0MS4xNDI5SDExLjQyODZWNDMuNDI4Nkg0LjU3MTQzVjQxLjE0MjlaTTEzLjcxNDMgNDEuMTQyOUgxNlY0My40Mjg2SDEzLjcxNDNWNDEuMTQyOVpNMTguMjg1NyA0MS4xNDI5SDIwLjU3MTRWNDMuNDI4NkgxOC4yODU3VjQxLjE0MjlaTTI1LjE0MjkgNDEuMTQyOUgzMlY0My40Mjg2SDI1LjE0MjlWNDEuMTQyOVpNMCA0My40Mjg2SDIuMjg1NzFWNDUuNzE0M0gwVjQzLjQyODZaTTEzLjcxNDMgNDMuNDI4NkgxNlY0NS43MTQzSDEzLjcxNDNWNDMuNDI4NlpNMjAuNTcxNCA0My40Mjg2SDIyLjg1NzFWNDUuNzE0M0gyMC41NzE0VjQzLjQyODZaTTM2LjU3MTQgNDMuNDI4Nkg0My40Mjg2VjQ1LjcxNDNIMzYuNTcxNFY0My40Mjg2Wk0wIDQ1LjcxNDNIMTZWNDhIMFY0NS43MTQzWk0xOC4yODU3IDQ1LjcxNDNIMjAuNTcxNFY0OEgxOC4yODU3VjQ1LjcxNDNaTTIyLjg1NzEgNDUuNzE0M0gyNy40Mjg2VjQ4SDIyLjg1NzFWNDUuNzE0M1pNMzIgNDUuNzE0M0gzNC4yODU3VjQ4SDMyVjQ1LjcxNDNaTTQzLjQyODYgNDUuNzE0M0g0NS43MTQzVjQ4SDQzLjQyODZWNDUuNzE0M1oiIGZpbGw9ImJsYWNrIi8+DQo8L3N2Zz4NCg=="
+                     alt="qr-code"/>
+                <div style="font-size: 14px; margin-top: 4px">
+                    Topshiriq: {{ performers }}
+                </div>
+            </td>
+            <td style="width: 50%">
+                <div style="text-align: end; font-size: 14px; font-weight: bolder; margin: 16px 0">
+                    <div>"O‘zsanoatqurilishbank" ATB</div>
+                    <div>{{ curator_position }}</div>
+                    <div>{{ curator_name }}ga</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="font-size: 16px; font-weight: bold; margin: 20px auto; text-align: center">
+        BILDIRISHNOMA
+    </div>
+    <div style="text-indent: 30px; font-style: italic; font-weight: 500; margin-top: 32px; font-size: 13px;">
+        Qisqacha mazmuni: {{ short_description }}
+    </div>
+
+    <div style="margin: 16px 0 32px 0; text-align: justify;">
+        {{ content|safe }}
+    </div>
+
+    <!-- Loop according to groups -->
+    {% for group in groups %}
+        <div>
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 5%; text-align: start">
+                        №
+                    </td>
+                    <td style="width: 30%;">
+                        F.I.Sh
+                    </td>
+                    <td style="width: 30%;">
+                        Lavozimi
+                    </td>
+                    <td style="width: 35%;">
+                        Tarkibiy tuzilmasi
+                    </td>
+                </tr>
+
+                <!-- Loop according to group users -->
+                <!-- Loop over group users -->
+                {% for trip in group.trips %}
+                    <tr>
+                        <td style="text-align: start">{{ forloop.counter }}.</td>
+                        <td>{{ trip.full_name }}</td>
+                        <td>{{ trip.position }}</td>
+                        <td>{{ trip.department }}</td>
+                    </tr>
+                {% endfor %}
+                <!-- /Loop according to group users -->
+            </table>
+
+            {% if document_sub_type_id == 40 %}
+                <table class="business-trip-table w-full text-sm text-center mt-2" style="width: 100%;">
+                    <tr class="bg-greyscale-100 font-semibold">
+                        <td style="width: 50%;">
+                            Qayerdan
+                        </td>
+                        <td style="width: 33%">
+                            Qayerga
+                        </td>
+                    </tr>
+
+                    <!-- Loop over locations -->
+                    {% for location in group.trips.0.countries %}
+                        <tr>
+                            <td>{% if forloop.first %}{{ group.trips.0.sender_location }}{% endif %}</td>
+                            <td>{{ location.name }}</td>
+                        </tr>
+                    {% endfor %}
+                    <!-- /Loop according to group regions -->
+                 </table>
+            {% else %}
+                 <table class="business-trip-table w-full text-sm text-center mt-2" style="width: 100%;">
+                    <tr class="bg-greyscale-100 font-semibold">
+                        <td style="width: 33%;">
+                            Qayerdan
+                        </td>
+                        <td style="width: 33%">
+                            Qayerga
+                        </td>
+                        <td style="width: 34%">
+                            Mamlakat
+                        </td>
+                    </tr>
+
+                    <!-- Loop over locations -->
+                    {% for location in group.trips.0.locations %}
+                        <tr>
+                            <td>{% if forloop.first %}{{ group.trips.0.sender_location }}{% endif %}</td>
+                            <td>{{ location.name }}</td>
+                            <td>{% if forloop.first %}{{ location.country.name }}{% endif %}</td>
+                        </tr>
+                    {% endfor %}
+                    <!-- /Loop according to group regions -->
+                </table>
+            {% endif %}
+
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 33%; text-align: start">
+                        Xizmat safari muddati:
+                    </td>
+                    <td style="width: 33%">
+                        Boshlanish sanasi
+                    </td>
+                    <td style="width: 34%">
+                        Tugash sanasi
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td>{{ group.trips.0.start_date }}</td>
+                    <td>{{ group.trips.0.end_date }}</td>
+                </tr>
+            </table>
+
+            <table class="business-trip-table w-full text-sm text-center mt-2">
+                <tr class="bg-greyscale-100 font-semibold">
+                    <td style="width: 5%; text-align: start">№</td>
+                    <td style="width: 95%; text-align: start">
+                        Xizmat safari maqsadi:
+                    </td>
+                </tr>
+
+                <!-- Loop according to group tags -->
+                {% for goal in group.trips.0.goals %}
+                    <tr>
+                        <td style="text-align: start">{{ forloop.counter }}.</td>
+                        <td style="text-align: start">{{ goal }}</td>
+                    </tr>
+                {% endfor %}
+                <!-- /Loop according to group tags -->
+            </table>
+
+            {% if not forloop.last %}
+                <div style="margin: 32px 0; border: 1px solid #ADB7C2"></div>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <!-- /Loop according to groups -->
+
+{#    <div style="margin: 16px 0; border: 1px solid #ADB7C2"></div>#}
+
+{#    <table class="business-trip-table w-full text-sm text-center">#}
+{#        <tr class="bg-greyscale-100 font-semibold">#}
+{#            <td style="width: 33%; text-align: start">#}
+{#                Xizmat safari rejasi:#}
+{#            </td>#}
+{#            <td style="width: 33%">#}
+{#                Reja#}
+{#            </td>#}
+{#            <td style="width: 34%">#}
+{#                Ijrochilar#}
+{#            </td>#}
+{#        </tr>#}
+{##}
+{#        <!-- Loop according to trip plans -->#}
+{#        {% for trip_plan in trip_plans %}#}
+{#            <tr>#}
+{#                <td></td>#}
+{#                <td>#}
+{#                    {{ trip_plan.text }}#}
+{#                </td>#}
+{#                <td>#}
+{#                    <!-- Loop according to trip plan users-->#}
+{#                    {% for user in trip_plan.users %}#}
+{#                        <span>{{ user }}{% if not forloop.last %}, {% endif %}<br></span>#}
+{#                    {% endfor %}#}
+{#                    <!-- /Loop according to trip plan users-->#}
+{#                </td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        <!-- /Loop according to trip plans -->#}
+{#    </table>#}
+
+{#    <div style="margin: 16px 0; border: 1px solid #ADB7C2"></div>#}
+
+{#    <table class="booking-table w-full text-sm text-center" style="margin-bottom: 24px">#}
+{#        <tr class="bg-greyscale-100 font-semibold">#}
+{#            <td>Marshrut</td>#}
+{#            <td>Transport</td>#}
+{#            <td>Qayerdan</td>#}
+{#            <td>Qayerga</td>#}
+{#            <td>Klass</td>#}
+{#            <td>Jo'nash vaqti</td>#}
+{#            <td>Yo'lovchilar</td>#}
+{#        </tr>#}
+{##}
+{#        <!-- Loop according to booking segments -->#}
+{#        {% for booking in booking_data %}#}
+{#            <!-- First segment details with route, transport, and passengers -->#}
+{#            <tr>#}
+{#                <td rowspan="{{ booking.segments|length }}">{{ booking.route }}</td>#}
+{#                <td rowspan="{{ booking.segments|length }}">{{ booking.transport }}</td>#}
+{##}
+{#                <!-- First segment details -->#}
+{#                <td>{{ booking.segments.0.departure_city }}</td>#}
+{#                <td>{{ booking.segments.0.arrival_city }}</td>#}
+{#                <td>{{ booking.segments.0.segment_class }}</td>#}
+{#                <td>#}
+{#                    {{ booking.segments.0.departure_date }} <br>#}
+{#                    {{ booking.segments.0.time_range }}#}
+{#                </td>#}
+{##}
+{#                <td rowspan="{{ booking.segments|length }}">#}
+{#                    <!-- Loop through passengers -->#}
+{#                    {% for passenger in booking.passengers %}#}
+{#                        <span>{{ passenger }}{% if not forloop.last %}, {% endif %}<br></span>#}
+{#                    {% endfor %}#}
+{#                </td>#}
+{#            </tr>#}
+{##}
+{#            <!-- Remaining segments (for all except the first) -->#}
+{#            {% for segment in booking.segments|slice:"1:" %}#}
+{#                <tr>#}
+{#                    <td>{{ segment.departure_city }}</td>#}
+{#                    <td>{{ segment.arrival_city }}</td>#}
+{#                    <td>{{ segment.segment_class }}</td>#}
+{#                    <td>#}
+{#                        {{ segment.departure_date }} <br>#}
+{#                        {{ segment.time_range }}#}
+{#                    </td>#}
+{#                </tr>#}
+{#            {% endfor %}#}
+{#        {% endfor %}#}
+{#        <!-- /Loop according to booking segments -->#}
+{#    </table>#}
+
+    <!--- Loop signers-->
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="font-size: 12px; margin-bottom: 4px;"><span
+                style="font-weight: bolder">Ijrochi:</span> {{ executor }}
+        </div>
+        <div style="font-size: 12px; margin-bottom: 4px;"><span style="font-weight: bolder">Tel:</span> {{ phone }}
+        </div>
+        <div style="font-size: 12px;">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }}
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

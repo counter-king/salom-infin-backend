@@ -1,0 +1,884 @@
+[
+  {
+    "model": "reference.actiondescription",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-08-05T06:55:11.583Z",
+      "modified_date": "2024-01-26T05:21:46.283Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document has been created",
+      "description_uz": "Hujjat yaratildi",
+      "description_ru": "Документ был создан",
+      "description_en": "The document has been created",
+      "code": "100",
+      "icon_name": "CheckCircleIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 2,
+    "fields": {
+      "created_date": "2023-08-05T06:56:12.194Z",
+      "modified_date": "2024-01-26T05:22:05.091Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document number has been changed",
+      "description_uz": "Hujjat raqami o'zgartirildi",
+      "description_ru": "Номер документа изменен",
+      "description_en": "The document number has been changed",
+      "code": "101",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 3,
+    "fields": {
+      "created_date": "2023-08-05T06:56:45.848Z",
+      "modified_date": "2024-01-26T05:21:29.819Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document registration date has been changed",
+      "description_uz": "Hujjat ro'yxatga olinish sanasi o'zgartirildi",
+      "description_ru": "Дата регистрации документа изменена",
+      "description_en": "The document registration date has been changed",
+      "code": "102",
+      "icon_name": "CalendarMinimalisticIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 4,
+    "fields": {
+      "created_date": "2023-08-05T06:59:32.671Z",
+      "modified_date": "2024-01-26T05:22:11.487Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document code has been changed",
+      "description_uz": "Hujjat kodi o'zgartirildi",
+      "description_ru": "Код документа изменен",
+      "description_en": "The document code has been changed",
+      "code": "103",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 5,
+    "fields": {
+      "created_date": "2023-08-05T07:00:11.005Z",
+      "modified_date": "2024-01-26T05:22:18.165Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document priority has been changed",
+      "description_uz": "Hujjat ustuvorligi o'zgartirildi",
+      "description_ru": "Приоритет документа изменен",
+      "description_en": "The document priority has been changed",
+      "code": "104",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 6,
+    "fields": {
+      "created_date": "2023-08-05T07:00:49.796Z",
+      "modified_date": "2024-01-26T05:22:26.110Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document style has been changed",
+      "description_uz": "Hujjat grifi o'zgartirildi",
+      "description_ru": "Изменен стиль документа.",
+      "description_en": "The document style has been changed",
+      "code": "105",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 7,
+    "fields": {
+      "created_date": "2023-08-05T07:01:36.869Z",
+      "modified_date": "2024-01-26T05:22:33.908Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document issue number has been changed",
+      "description_uz": "Hujjat chiqish raqami o'zgartirildi",
+      "description_ru": "Номер выдачи документа изменен",
+      "description_en": "The document issue number has been changed",
+      "code": "106",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 8,
+    "fields": {
+      "created_date": "2023-08-05T07:02:12.071Z",
+      "modified_date": "2024-01-26T05:22:54.942Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The release date of the document has been changed",
+      "description_uz": "Hujjat chiqish sanasi o'zgartirildi",
+      "description_ru": "Дата выпуска документа изменена",
+      "description_en": "The release date of the document has been changed",
+      "code": "107",
+      "icon_name": "CalendarMinimalisticIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 9,
+    "fields": {
+      "created_date": "2023-08-05T07:03:22.398Z",
+      "modified_date": "2024-01-26T05:23:08.368Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document description has been changed",
+      "description_uz": "Hujjat tavsifi o'zgartirildi",
+      "description_ru": "Описание документа было изменено",
+      "description_en": "The document description has been changed",
+      "code": "108",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 10,
+    "fields": {
+      "created_date": "2023-08-05T07:04:33.881Z",
+      "modified_date": "2024-01-26T05:24:26.429Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document name has been changed",
+      "description_uz": "Hujjat nomi o'zgartirildi",
+      "description_ru": "Название документа изменено",
+      "description_en": "The document name has been changed",
+      "code": "109",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 11,
+    "fields": {
+      "created_date": "2023-08-05T07:06:33.338Z",
+      "modified_date": "2024-01-26T05:24:20.392Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document correspondent has been changed",
+      "description_uz": "Hujjat korrespondenti o'zgartirildi",
+      "description_ru": "Корреспондент документа был изменен",
+      "description_en": "The document correspondent has been changed",
+      "code": "110",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 12,
+    "fields": {
+      "created_date": "2023-08-05T07:07:02.330Z",
+      "modified_date": "2024-01-26T05:24:13.796Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document type has been changed",
+      "description_uz": "Hujjat turi o'zgartirildi",
+      "description_ru": "Тип документа был изменен",
+      "description_en": "The document type has been changed",
+      "code": "111",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 13,
+    "fields": {
+      "created_date": "2023-08-05T07:08:07.760Z",
+      "modified_date": "2024-01-26T05:24:07.516Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document journal has been changed",
+      "description_uz": "Hujjat jurnali o'zgartirildi",
+      "description_ru": "Журнал документов изменен",
+      "description_en": "The document journal has been changed",
+      "code": "112",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 14,
+    "fields": {
+      "created_date": "2023-08-05T07:08:42.565Z",
+      "modified_date": "2024-01-26T05:24:01.245Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document language has been changed",
+      "description_uz": "Hujjat tili o'zgartirildi",
+      "description_ru": "Язык документа был изменен",
+      "description_en": "The document language has been changed",
+      "code": "113",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 15,
+    "fields": {
+      "created_date": "2023-08-05T07:09:13.267Z",
+      "modified_date": "2024-01-26T05:23:55.098Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document delivery type has been changed",
+      "description_uz": "Hujjat yetkazib berish turi o'zgartirildi",
+      "description_ru": "Тип доставки документа изменен",
+      "description_en": "The document delivery type has been changed",
+      "code": "114",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 16,
+    "fields": {
+      "created_date": "2023-08-05T08:56:39.439Z",
+      "modified_date": "2024-01-26T05:21:07.971Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "User added for review",
+      "description_uz": "Ko'rib chiqish uchun foydalanuvchi qo'shildi",
+      "description_ru": "Пользователь добавлен для рассмотрения",
+      "description_en": "User added for review",
+      "code": "115",
+      "icon_name": "UserIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 17,
+    "fields": {
+      "created_date": "2023-08-05T09:08:05.350Z",
+      "modified_date": "2024-01-26T05:20:42.943Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The file has been attached to the document",
+      "description_uz": "Fayl hujjatga ilova qilindi",
+      "description_ru": "Файл прикреплен к документу",
+      "description_en": "The file has been attached to the document",
+      "code": "116",
+      "icon_name": "DownloadMinimalisticIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 18,
+    "fields": {
+      "created_date": "2023-08-05T09:12:06.415Z",
+      "modified_date": "2024-01-26T05:20:30.391Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The user has been removed from consideration",
+      "description_uz": "Foydalanuvchi ko'rib chiqishdan olib tashlandi",
+      "description_ru": "Пользователь был удален из рассмотрения",
+      "description_en": "The user has been removed from consideration",
+      "code": "117",
+      "icon_name": "XIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 19,
+    "fields": {
+      "created_date": "2023-08-05T09:12:50.762Z",
+      "modified_date": "2024-01-26T05:20:18.763Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The file has been deleted",
+      "description_uz": "Fayl o'chirildi",
+      "description_ru": "Файл был удален",
+      "description_en": "The file has been deleted",
+      "code": "118",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 20,
+    "fields": {
+      "created_date": "2023-08-05T15:59:46.923Z",
+      "modified_date": "2024-01-26T05:20:07.394Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The correspondent has been created",
+      "description_uz": "Korrespondent yaratildi",
+      "description_ru": "Корреспондент был создан",
+      "description_en": "The correspondent has been created",
+      "code": "119",
+      "icon_name": "CheckCircleIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 21,
+    "fields": {
+      "created_date": "2023-08-05T16:07:38.171Z",
+      "modified_date": "2024-01-26T05:19:40.019Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The correspondent has been updated",
+      "description_uz": "Korrespondent yangilandi",
+      "description_ru": "Корреспондент был обновлен",
+      "description_en": "The correspondent has been updated",
+      "code": "120",
+      "icon_name": "PenIcon",
+      "color": "#9CA8B9"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 22,
+    "fields": {
+      "created_date": "2023-08-05T16:21:44.034Z",
+      "modified_date": "2024-01-26T05:19:26.531Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The employee group has been created",
+      "description_uz": "Xodimlar guruhi tuzildi",
+      "description_ru": "Группа сотрудников создана.",
+      "description_en": "The employee group has been created",
+      "code": "121",
+      "icon_name": "UsersGroupRoundedIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 23,
+    "fields": {
+      "created_date": "2023-08-05T16:22:15.012Z",
+      "modified_date": "2024-01-26T05:19:04.869Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The employee group has been update",
+      "description_uz": "Xodimlar guruhi yangilandi",
+      "description_ru": "Группа сотрудников обновлена",
+      "description_en": "The employee group has been update",
+      "code": "122",
+      "icon_name": "PenIcon",
+      "color": "#9CA8B9"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 24,
+    "fields": {
+      "created_date": "2023-09-06T12:31:01.919Z",
+      "modified_date": "2024-01-26T05:18:50.494Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Signer added",
+      "description_uz": "Imzolovchi qo'shildi",
+      "description_ru": "Подписант добавлен",
+      "description_en": "Signer added",
+      "code": "123",
+      "icon_name": "UserIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 25,
+    "fields": {
+      "created_date": "2023-09-06T12:32:10.405Z",
+      "modified_date": "2024-01-26T05:18:28.173Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Approver added",
+      "description_uz": "Kelishuvchi qo'shildi",
+      "description_ru": "Утверждающий добавлен",
+      "description_en": "Approver added",
+      "code": "124",
+      "icon_name": "UserIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 26,
+    "fields": {
+      "created_date": "2023-09-06T12:36:36.586Z",
+      "modified_date": "2024-01-26T05:18:16.162Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Signer deleted",
+      "description_uz": "Imzolovchi oʻchirildi",
+      "description_ru": "Подписант удален",
+      "description_en": "Signer deleted",
+      "code": "125",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 27,
+    "fields": {
+      "created_date": "2023-09-06T12:38:28.399Z",
+      "modified_date": "2024-01-26T05:18:03.114Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Approver deleted",
+      "description_uz": "Kelishuvchi oʻchirildi",
+      "description_ru": "Утверждающий удален",
+      "description_en": "Approver deleted",
+      "code": "126",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 28,
+    "fields": {
+      "created_date": "2023-09-06T12:54:08.777Z",
+      "modified_date": "2024-01-26T05:17:49.638Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Approver rejected",
+      "description_uz": "Kelishuvchi rad etdi",
+      "description_ru": "Утверждающий отклонен",
+      "description_en": "Approver rejected",
+      "code": "127",
+      "icon_name": "XIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 29,
+    "fields": {
+      "created_date": "2023-09-06T12:55:13.327Z",
+      "modified_date": "2024-01-26T05:17:38.792Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The document is agreed",
+      "description_uz": "Hujjat kelishildi",
+      "description_ru": "Документ согласован",
+      "description_en": "The document is agreed",
+      "code": "128",
+      "icon_name": "CheckCircleIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 30,
+    "fields": {
+      "created_date": "2023-09-07T12:58:34.070Z",
+      "modified_date": "2024-01-26T05:17:26.532Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The performer has been added",
+      "description_uz": "Ijrochi qo'shildi",
+      "description_ru": "Исполнитель добавлен",
+      "description_en": "The performer has been added",
+      "code": "129",
+      "icon_name": "UserIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 31,
+    "fields": {
+      "created_date": "2023-09-07T13:00:13.944Z",
+      "modified_date": "2024-01-26T05:16:52.008Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The controller has been added",
+      "description_uz": "Nazoratchi qo'shildi",
+      "description_ru": "Контроллер был добавлен",
+      "description_en": "The controller has been added",
+      "code": "130",
+      "icon_name": "UserIcon",
+      "color": "#11A5ED"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 32,
+    "fields": {
+      "created_date": "2023-09-07T13:09:12.952Z",
+      "modified_date": "2024-01-26T05:16:38.085Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The controller has been deleted",
+      "description_uz": "Nazoratchi o'chirildi",
+      "description_ru": "Контроллер был удален",
+      "description_en": "The controller has been deleted",
+      "code": "131",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 33,
+    "fields": {
+      "created_date": "2023-09-07T13:09:54.739Z",
+      "modified_date": "2024-01-26T05:16:25.086Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The performer has been deleted",
+      "description_uz": "Ijrochi o'chirildi",
+      "description_ru": "Исполнитель удален",
+      "description_en": "The performer has been deleted",
+      "code": "132",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 34,
+    "fields": {
+      "created_date": "2023-09-10T08:58:53.852Z",
+      "modified_date": "2024-01-26T05:16:10.749Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The resolution has been deleted",
+      "description_uz": "Rezolyutsiya oʻchirildi",
+      "description_ru": "Резолюция была удалена",
+      "description_en": "The resolution has been deleted",
+      "code": "133",
+      "icon_name": "TrashIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 35,
+    "fields": {
+      "created_date": "2023-09-10T09:08:40.944Z",
+      "modified_date": "2024-01-26T05:15:56.814Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The resolution was rejected",
+      "description_uz": "Rezolutsiya rad etildi",
+      "description_ru": "Резолюция была отклонена",
+      "description_en": "The resolution was rejected",
+      "code": "134",
+      "icon_name": "XIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 36,
+    "fields": {
+      "created_date": "2023-09-10T11:00:02.682Z",
+      "modified_date": "2024-01-26T05:15:43.254Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Task completed",
+      "description_uz": "Topshiriq bajarildi",
+      "description_ru": "Задача выполнена",
+      "description_en": "Task completed",
+      "code": "135",
+      "icon_name": "UserCheckIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 37,
+    "fields": {
+      "created_date": "2023-09-10T11:02:04.691Z",
+      "modified_date": "2024-01-26T05:15:22.877Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Completed task changed",
+      "description_uz": "Bajarilgan topshiriq o'zgartirildi",
+      "description_ru": "Выполненная задача изменена",
+      "description_en": "Completed task changed",
+      "code": "136",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 38,
+    "fields": {
+      "created_date": "2023-09-21T13:57:55.550Z",
+      "modified_date": "2024-01-26T05:14:56.005Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Document redirected",
+      "description_uz": "Hujjat qayta yoʻnaltirildi",
+      "description_ru": "Документ перенавлен",
+      "description_en": "Document redirected",
+      "code": "137",
+      "icon_name": "ForwardIcon",
+      "color": "#635AFF"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 39,
+    "fields": {
+      "created_date": "2023-09-25T05:33:22.720Z",
+      "modified_date": "2024-01-26T05:14:39.109Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The resolution has been signed",
+      "description_uz": "Rezolutsiya imzolandi",
+      "description_ru": "Резолюция была подписана",
+      "description_en": "The resolution has been signed",
+      "code": "138",
+      "icon_name": "CheckCircleIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 40,
+    "fields": {
+      "created_date": "2024-01-11T07:23:04.008Z",
+      "modified_date": "2024-01-26T05:14:27.632Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Removed from control",
+      "description_uz": "Nazarotdan yechildi",
+      "description_ru": "Снят с контроля",
+      "description_en": "Removed from control",
+      "code": "139",
+      "icon_name": "XIcon",
+      "color": "#9CA8B9"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 41,
+    "fields": {
+      "created_date": "2024-01-11T07:25:38.257Z",
+      "modified_date": "2024-01-26T05:14:13.702Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Signed",
+      "description_uz": "Imzolandi",
+      "description_ru": "Подписано",
+      "description_en": "Signed",
+      "code": "140",
+      "icon_name": "CheckCircleIcon",
+      "color": "#63BA3D"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 42,
+    "fields": {
+      "created_date": "2024-01-11T08:03:01.398Z",
+      "modified_date": "2024-01-26T05:13:51.284Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Rejected",
+      "description_uz": "Rad etildi",
+      "description_ru": "Отклоненный",
+      "description_en": "Rejected",
+      "code": "141",
+      "icon_name": "XIcon",
+      "color": "#F3335C"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 43,
+    "fields": {
+      "created_date": "2024-02-14T07:33:12.991Z",
+      "modified_date": "2024-02-14T07:33:44.298Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The text of the document has been changed",
+      "description_uz": "Hujjatning matni o'zgartirildi",
+      "description_ru": "Текст документа изменен",
+      "description_en": "The text of the document has been changed",
+      "code": "142",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 44,
+    "fields": {
+      "created_date": "2024-09-28T07:33:18.139Z",
+      "modified_date": "2025-05-14T15:23:52.990Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "A role has been assigned to the user",
+      "description_uz": "Foydalanuvchiga rol biriktirildi",
+      "description_ru": "Пользователю назначена роль",
+      "description_en": "A role has been assigned to the user",
+      "code": "143",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 45,
+    "fields": {
+      "created_date": "2024-09-28T07:34:23.506Z",
+      "modified_date": "2025-05-14T15:24:09.384Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "The role has been removed from the user",
+      "description_uz": "Foydalanuvchidan rol olib tashlandi",
+      "description_ru": "Роль удалена у пользователя",
+      "description_en": "The role has been removed from the user",
+      "code": "144",
+      "icon_name": "XIcon",
+      "color": "#9CA8B9"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 46,
+    "fields": {
+      "created_date": "2024-09-28T09:18:20.831Z",
+      "modified_date": "2025-05-14T15:24:37.400Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "New permission granted",
+      "description_uz": "Yangi ruxsat berildi",
+      "description_ru": "Новое разрешение предоставлено",
+      "description_en": "New permission granted",
+      "code": "145",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 47,
+    "fields": {
+      "created_date": "2024-09-28T09:19:13.905Z",
+      "modified_date": "2025-05-14T15:24:50.802Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "New permission removed",
+      "description_uz": "Yangi ruxsat olib tashlandi",
+      "description_ru": "Новое разрешение удалено",
+      "description_en": "New permission removed",
+      "code": "146",
+      "icon_name": "XIcon",
+      "color": "#9CA8B9"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 48,
+    "fields": {
+      "created_date": "2025-05-14T15:22:22.483Z",
+      "modified_date": "2025-05-14T15:25:02.957Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "A text message was sent about a business trip.",
+      "description_uz": "Xizmat safari haqida sms yuborildi",
+      "description_ru": "Пришло текстовое сообщение о командировке",
+      "description_en": "A text message was sent about a business trip.",
+      "code": "147",
+      "icon_name": "PenIcon",
+      "color": "#FFC352"
+    }
+  },
+  {
+    "model": "reference.actiondescription",
+    "pk": 49,
+    "fields": {
+      "created_date": "2025-05-14T16:28:35.517Z",
+      "modified_date": "2025-05-14T16:28:35.517Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "description": "Failed to send sms about business trip",
+      "description_uz": "Xizmat safari haqida SMS yuborishda xatolik ro'y berdi",
+      "description_ru": "Не удалось отправить смс о командировке",
+      "description_en": "Failed to send sms about business trip",
+      "code": "148",
+      "icon_name": "XIcon",
+      "color": "#9CA8B9"
+    }
+  }
+]

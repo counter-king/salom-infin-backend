@@ -1,0 +1,154 @@
+[
+  {
+    "model": "company.department",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-08-26T06:03:47.810Z",
+      "modified_date": "2023-08-26T06:03:47.810Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Department of Digital Technology Development",
+      "name_uz": "Raqamli texnologiyalarni rivojlantirish departamenti",
+      "name_ru": "Департамент развития цифровых технологий",
+      "name_en": "Department of Digital Technology Development",
+      "code": "100",
+      "parent_code": "000",
+      "parent": null,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 2,
+    "fields": {
+      "created_date": "2023-08-26T06:05:53.093Z",
+      "modified_date": "2023-08-26T06:05:53.093Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Software Development Department",
+      "name_uz": "Dasturiy ta'minotlarni ishlab chiqish boshqarmasi",
+      "name_ru": "Управление разработки программного обеспечения",
+      "name_en": "Software Development Department",
+      "code": "101",
+      "parent_code": "100",
+      "parent": 1,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 3,
+    "fields": {
+      "created_date": "2023-08-26T06:07:09.284Z",
+      "modified_date": "2023-08-26T06:08:09.766Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Department of Infrastructure and Analytics",
+      "name_uz": "Infratuzilma va analitiklar boshqarmasi",
+      "name_ru": "Управление инфраструктуры и аналитики",
+      "name_en": "Department of Infrastructure and Analytics",
+      "code": "102",
+      "parent_code": "100",
+      "parent": 1,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 4,
+    "fields": {
+      "created_date": "2023-08-26T06:08:41.932Z",
+      "modified_date": "2023-08-26T06:09:11.389Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Internal software development department",
+      "name_uz": "Ichki dasturiy ta'minotlarni ishlab chiqish bo'limi",
+      "name_ru": "Внутренний отдел разработки программного обеспечения",
+      "name_en": "Internal software development department",
+      "code": "103",
+      "parent_code": "101",
+      "parent": 2,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 5,
+    "fields": {
+      "created_date": "2023-08-26T06:10:24.638Z",
+      "modified_date": "2023-08-26T06:10:24.638Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Department of business systems development",
+      "name_uz": "Biznes tizimlarini rivojlantirish bo'limi",
+      "name_ru": "Отдел разработки бизнес-систем",
+      "name_en": "Department of business systems development",
+      "code": "104",
+      "parent_code": "101",
+      "parent": 2,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 6,
+    "fields": {
+      "created_date": "2023-08-26T06:11:31.691Z",
+      "modified_date": "2023-08-26T06:11:31.691Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Dept. of DevOps Engineers",
+      "name_uz": "DevOps muhandirslari bo'limi",
+      "name_ru": "Департамент инженеров DevOps",
+      "name_en": "Dept. of DevOps Engineers",
+      "code": "104",
+      "parent_code": "102",
+      "parent": 3,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 7,
+    "fields": {
+      "created_date": "2023-08-26T06:12:17.969Z",
+      "modified_date": "2023-08-26T06:12:17.969Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Department of Business Analysts",
+      "name_uz": "Biznes analitiklar bo'limi",
+      "name_ru": "Департамент бизнес-аналитиков",
+      "name_en": "Department of Business Analysts",
+      "code": "105",
+      "parent_code": "102",
+      "parent": 3,
+      "company": 1,
+      "condition": "A"
+    }
+  },
+  {
+    "model": "company.department",
+    "pk": 8,
+    "fields": {
+      "created_date": "2023-08-26T06:17:13.500Z",
+      "modified_date": "2023-08-26T06:17:13.500Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "name": "Department of Information Technology",
+      "name_uz": "Axborot texnologiyalari departamenti",
+      "name_ru": "Департамент информационных технологий",
+      "name_en": "Department of Information Technology",
+      "code": "106",
+      "parent_code": "000",
+      "parent": null,
+      "company": 1,
+      "condition": "A"
+    }
+  }
+]

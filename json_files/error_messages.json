@@ -1,0 +1,1676 @@
+[
+  {
+    "model": "reference.errormessage",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-07-08T09:55:32.598Z",
+      "modified_date": "2023-07-30T17:02:48.357Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You do not have enough permission to perform this action",
+      "message_uz": "Ushbu amalni bajarish uchun sizda yetarli huquqlar mavjud emas",
+      "message_ru": "У вас недостаточно прав для выполнения этого действия",
+      "message_en": "You do not have enough permission to perform this action",
+      "status": "fail",
+      "status_code": "403",
+      "code": 700
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 3,
+    "fields": {
+      "created_date": "2023-07-08T11:12:21.952Z",
+      "modified_date": "2024-02-14T05:30:57.069Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Login or password is incorrect",
+      "message_uz": "Login yoki parol noto'g'ri",
+      "message_ru": "Логин или пароль неверны",
+      "message_en": "Login or password is incorrect",
+      "status": "fail",
+      "status_code": "400",
+      "code": 701
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 4,
+    "fields": {
+      "created_date": "2023-07-08T11:13:29.289Z",
+      "modified_date": "2024-02-14T05:31:01.283Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Account is not active",
+      "message_uz": "Akkount aktiv holatda emas",
+      "message_ru": "Аккаунт еще не активирован",
+      "message_en": "Account is not active",
+      "status": "fail",
+      "status_code": "400",
+      "code": 702
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 5,
+    "fields": {
+      "created_date": "2023-07-08T11:14:35.766Z",
+      "modified_date": "2024-02-14T05:31:05.144Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Account did not register",
+      "message_uz": "Foydalanuvchi ro'yxatdan o'tmagan",
+      "message_ru": "Пользователь не зарегистрирован",
+      "message_en": "Account did not register",
+      "status": "fail",
+      "status_code": "400",
+      "code": 703
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 6,
+    "fields": {
+      "created_date": "2023-07-29T07:19:13.919Z",
+      "modified_date": "2023-07-30T17:02:57.680Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{type} field is required",
+      "message_uz": "{type} to'ldirilishi shart",
+      "message_ru": "{type} поле является обязательным",
+      "message_en": "{type} field is required",
+      "status": "fail",
+      "status_code": "400",
+      "code": 600
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 7,
+    "fields": {
+      "created_date": "2023-07-29T07:58:58.431Z",
+      "modified_date": "2023-07-30T17:03:05.703Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{req_field} is required when type is {type}",
+      "message_uz": "Turi {type} boʻlsa, {req_field} talab qilinadi",
+      "message_ru": "{req_field} требуется, если тип {type}",
+      "message_en": "{req_field} is required when type is {type}",
+      "status": "fail",
+      "status_code": "400",
+      "code": 601
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 8,
+    "fields": {
+      "created_date": "2023-07-29T11:35:32.852Z",
+      "modified_date": "2023-07-30T17:03:12.733Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "This {object} already exists",
+      "message_uz": "Bu {object} allaqachon mavjud",
+      "message_ru": "Этот {object} уже существует",
+      "message_en": "This {object} already exists",
+      "status": "fail",
+      "status_code": "400",
+      "code": 602
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 9,
+    "fields": {
+      "created_date": "2023-07-30T17:04:19.575Z",
+      "modified_date": "2023-07-30T17:04:19.575Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{pk} does not exist in {model}",
+      "message_uz": "{pk} {model} da mavjud emas",
+      "message_ru": "{pk} не существует в {model}",
+      "message_en": "{pk} does not exist in {model}",
+      "status": "fail",
+      "status_code": "400",
+      "code": 603
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 10,
+    "fields": {
+      "created_date": "2023-08-05T16:50:54.048Z",
+      "modified_date": "2023-08-05T16:50:54.048Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You can't delete this object because it is connected to other objects",
+      "message_uz": "Bu obyektni oʻchira olmaysiz, chunki u boshqa obyektlarga ulangan",
+      "message_ru": "Вы не можете удалить этот объект, так как он связан с другими объектами",
+      "message_en": "You can't delete this object because it is connected to other objects",
+      "status": "fail",
+      "status_code": "403",
+      "code": 604
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 11,
+    "fields": {
+      "created_date": "2023-08-26T08:50:29.405Z",
+      "modified_date": "2023-08-26T08:50:29.405Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Please select at least one signer",
+      "message_uz": "Kamida bitta imzolovchini tanlang",
+      "message_ru": "Пожалуйста, выберите хотя бы одного подписывающего лица",
+      "message_en": "Please select at least one signer",
+      "status": "fail",
+      "status_code": "400",
+      "code": 605
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 12,
+    "fields": {
+      "created_date": "2023-08-26T09:11:38.130Z",
+      "modified_date": "2024-08-03T08:11:53.567Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{object} is not a valid choice",
+      "message_uz": "{object} toʻgʻri tanlov emas",
+      "message_ru": "{object} не является допустимым выбором",
+      "message_en": "{object} is not a valid choice",
+      "status": "fail",
+      "status_code": "400",
+      "code": 606
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 13,
+    "fields": {
+      "created_date": "2023-08-26T11:50:41.386Z",
+      "modified_date": "2023-08-26T11:50:41.386Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Please leave a comment",
+      "message_uz": "Iltimos, izoh qoldiring",
+      "message_ru": "Пожалуйста, оставьте комментарий",
+      "message_en": "Please leave a comment",
+      "status": "fail",
+      "status_code": "400",
+      "code": 607
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 14,
+    "fields": {
+      "created_date": "2023-08-26T11:54:32.006Z",
+      "modified_date": "2023-08-26T11:54:32.006Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You have already rejected",
+      "message_uz": "Siz allaqachon rad etgansiz",
+      "message_ru": "Вы уже отклонили",
+      "message_en": "You have already rejected",
+      "status": "fail",
+      "status_code": "400",
+      "code": 608
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 15,
+    "fields": {
+      "created_date": "2023-08-26T11:58:47.087Z",
+      "modified_date": "2023-08-26T11:58:47.087Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You can't reject after you approve",
+      "message_uz": "Tasdiqlaganingizdan keyin rad eta olmaysiz",
+      "message_ru": "Вы не можете отклонить после одобрения",
+      "message_en": "You can't reject after you approve",
+      "status": "fail",
+      "status_code": "400",
+      "code": 609
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 16,
+    "fields": {
+      "created_date": "2023-08-26T12:40:40.811Z",
+      "modified_date": "2023-08-26T12:40:40.811Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You are already acquainted with this document",
+      "message_uz": "Siz ushbu hujjat bilan allaqachon tanishgansiz",
+      "message_ru": "Вы уже оснокомлены с этим документом",
+      "message_en": "You are already acquainted with this document",
+      "status": "fail",
+      "status_code": "400",
+      "code": 610
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 17,
+    "fields": {
+      "created_date": "2023-08-26T12:47:58.817Z",
+      "modified_date": "2023-08-26T12:47:58.817Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You can't forward this document to the selected user because He/She already exists",
+      "message_uz": "Siz ushbu hujjatni tanlangan foydalanuvchiga yubora olmaysiz, chunki u allaqachon mavjud",
+      "message_ru": "Вы не можете переслать этот документ выбранному пользователю, поскольку он/она уже существует.",
+      "message_en": "You can't forward this document to the selected user because He/She already exists",
+      "status": "fail",
+      "status_code": "400",
+      "code": 611
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 18,
+    "fields": {
+      "created_date": "2023-08-26T12:49:56.648Z",
+      "modified_date": "2023-08-26T12:49:56.648Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The document has been forwarded successfully",
+      "message_uz": "Hujjat muvaffaqiyatli yuborildi",
+      "message_ru": "Документ успешно отправлен",
+      "message_en": "The document has been forwarded successfully",
+      "status": "success",
+      "status_code": "200",
+      "code": 800
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 19,
+    "fields": {
+      "created_date": "2023-08-26T12:52:22.388Z",
+      "modified_date": "2023-08-26T12:52:22.388Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot send this document to anyone because you have appointed executors",
+      "message_uz": "Siz bu hujjatni hech kimga yubora olmaysiz, chunki siz ijrochilarni tayinlagansiz",
+      "message_ru": "Вы не можете никому отправить этот документ, так как вы назначили исполнителей",
+      "message_en": "You cannot send this document to anyone because you have appointed executors",
+      "status": "fail",
+      "status_code": "400",
+      "code": 612
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 20,
+    "fields": {
+      "created_date": "2023-09-06T13:03:50.779Z",
+      "modified_date": "2023-09-06T13:04:24.732Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You have already agreed",
+      "message_uz": "Siz allaqachon kelishgansiz",
+      "message_ru": "Вы уже согласились",
+      "message_en": "You have already agreed",
+      "status": "fail",
+      "status_code": "400",
+      "code": 613
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 21,
+    "fields": {
+      "created_date": "2023-09-07T12:33:51.773Z",
+      "modified_date": "2023-09-07T12:33:51.773Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Deadline required if type is control point",
+      "message_uz": "Agar turi nazorat punkti bo'lsa, ijro muddat talab qilinadi",
+      "message_ru": "Крайний срок требуется, если тип является контрольным пунктом",
+      "message_en": "Deadline required if type is control point",
+      "status": "fail",
+      "status_code": "400",
+      "code": 614
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 22,
+    "fields": {
+      "created_date": "2023-09-08T14:51:48.324Z",
+      "modified_date": "2023-09-08T14:51:48.324Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Please select performers",
+      "message_uz": "Iltimos, ijrochilarni tanlang",
+      "message_ru": "Пожалуйста, выберите исполнителей",
+      "message_en": "Please select performers",
+      "status": "fail",
+      "status_code": "400",
+      "code": 615
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 23,
+    "fields": {
+      "created_date": "2023-09-10T08:38:46.210Z",
+      "modified_date": "2023-09-10T08:38:46.210Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot delete an approved resolution",
+      "message_uz": "Tasdiqlangan rezolutsiyani o‘chira olmaysiz",
+      "message_ru": "Вы не можете удалить одобренную резолюцию.",
+      "message_en": "You cannot delete an approved resolution",
+      "status": "fail",
+      "status_code": "400",
+      "code": 616
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 24,
+    "fields": {
+      "created_date": "2023-09-10T08:39:54.815Z",
+      "modified_date": "2023-09-10T08:39:54.815Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Please leave a comment",
+      "message_uz": "Iltimos izoh qoldiring",
+      "message_ru": "Пожалуйста, оставьте комментарий",
+      "message_en": "Please leave a comment",
+      "status": "fail",
+      "status_code": "400",
+      "code": 617
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 25,
+    "fields": {
+      "created_date": "2023-09-10T08:46:43.320Z",
+      "modified_date": "2023-09-10T08:46:43.320Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{object} has been deleted successfully",
+      "message_uz": "{object} muvaffaqiyatli oʻchirildi",
+      "message_ru": "{object} успешно удален",
+      "message_en": "{object} has been deleted successfully",
+      "status": "success",
+      "status_code": "204",
+      "code": 801
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 26,
+    "fields": {
+      "created_date": "2023-09-10T09:06:09.786Z",
+      "modified_date": "2023-09-10T09:06:09.786Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The resolution was rejected",
+      "message_uz": "Rezolutsiya rad etildi",
+      "message_ru": "Резолюция была отклонена",
+      "message_en": "The resolution was rejected",
+      "status": "success",
+      "status_code": "200",
+      "code": 802
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 27,
+    "fields": {
+      "created_date": "2023-09-10T10:44:10.232Z",
+      "modified_date": "2023-09-10T10:44:10.232Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Please mark as acquainted before performing the assignment",
+      "message_uz": "Iltimos, topshiriqni bajarishdan oldin tanishdim deb belgilang",
+      "message_ru": "Перед выполнением задания отметьте пожалуйста как ознакомленное",
+      "message_en": "Please mark as acquainted before performing the assignment",
+      "status": "fail",
+      "status_code": "400",
+      "code": 618
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 28,
+    "fields": {
+      "created_date": "2023-09-19T06:57:05.154Z",
+      "modified_date": "2023-09-19T06:57:05.154Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{curator} does not have a assistant please add an assistant",
+      "message_uz": "{curator}ni yordamchisi yo'q, yordamchini qo'shing iltimos",
+      "message_ru": "У {curator}а нет помощника, пожалуйста, добавьте помощника",
+      "message_en": "{curator} does not have a assistant please add an assistant",
+      "status": "fail",
+      "status_code": "400",
+      "code": 619
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 29,
+    "fields": {
+      "created_date": "2023-09-19T11:30:52.078Z",
+      "modified_date": "2023-09-19T11:30:52.079Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "An unknown error occurred. Please get in touch with the admin",
+      "message_uz": "Noma'lum xatolik yuz berdi. Iltimos admin bilan bog'laning",
+      "message_ru": "Произошла неизвестная ошибка. Пожалуйста, свяжитесь с администратором",
+      "message_en": "An unknown error occurred. Please get in touch with the admin",
+      "status": "fail",
+      "status_code": "500",
+      "code": 777
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 30,
+    "fields": {
+      "created_date": "2023-12-15T11:08:53.964Z",
+      "modified_date": "2023-12-15T11:08:53.964Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot delete this division because it has a child department",
+      "message_uz": "Siz bu tarkibiy tuzilmani oʻchira olmaysiz, chunki unda quyi tarkibiy tuzilmalar mavjud",
+      "message_ru": "Вы не можете удалить это подразделение, поскольку у него есть дочерний отдел",
+      "message_en": "You cannot delete this division because it has a child department",
+      "status": "fail",
+      "status_code": "200",
+      "code": 620
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 31,
+    "fields": {
+      "created_date": "2023-12-15T12:07:16.468Z",
+      "modified_date": "2023-12-15T12:07:16.468Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot delete this division because it has employees",
+      "message_uz": "Siz bu tarkibiy tuzilmani oʻchira olmaysiz, chunki unda xodimlar bor",
+      "message_ru": "Вы не можете удалить это подразделение, поскольку в нем есть сотрудники",
+      "message_en": "You cannot delete this division because it has employees",
+      "status": "fail",
+      "status_code": "400",
+      "code": 621
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 32,
+    "fields": {
+      "created_date": "2023-12-18T10:21:41.444Z",
+      "modified_date": "2023-12-18T10:22:09.088Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Users have been added to department successfully",
+      "message_uz": "Foydalanuvchilar bo'limga qo'shildi",
+      "message_ru": "Пользователи добавлены в структуру",
+      "message_en": "Users have been added to department successfully",
+      "status": "success",
+      "status_code": "200",
+      "code": 803
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 33,
+    "fields": {
+      "created_date": "2023-12-18T10:49:23.446Z",
+      "modified_date": "2023-12-18T10:49:23.446Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{object} has already in department. You can move him/her to another department",
+      "message_uz": "{object} allaqachon tarkibiy tuzilmada. Siz uni boshqa bo'limga ko'chirishingiz mumkin",
+      "message_ru": "{object} уже находится в структуре. Вы можете переместить его в другой раздел",
+      "message_en": "{object} has already in department. You can move him/her to another department",
+      "status": "fail",
+      "status_code": "400",
+      "code": 622
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 34,
+    "fields": {
+      "created_date": "2024-01-06T04:56:04.505Z",
+      "modified_date": "2024-01-06T04:56:04.505Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Token is invalid or expired",
+      "message_uz": "Sessiya vaqti tugadi yoki token yaroqsiz",
+      "message_ru": "Токен недействителен или срок его действия истек.",
+      "message_en": "Token is invalid or expired",
+      "status": "fail",
+      "status_code": "401",
+      "code": 704
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 35,
+    "fields": {
+      "created_date": "2024-01-06T05:05:39.042Z",
+      "modified_date": "2024-01-06T05:05:39.042Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Old password is incorrect",
+      "message_uz": "Eski parol noto'g'ri",
+      "message_ru": "Старый пароль неверен",
+      "message_en": "Old password is incorrect",
+      "status": "fail",
+      "status_code": "400",
+      "code": 705
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 36,
+    "fields": {
+      "created_date": "2024-01-06T05:07:14.980Z",
+      "modified_date": "2024-01-06T05:07:35.699Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "No token generated",
+      "message_uz": "Hech qanday token yaratilmadi",
+      "message_ru": "Токен не создан",
+      "message_en": "No token generated",
+      "status": "fail",
+      "status_code": "304",
+      "code": 706
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 37,
+    "fields": {
+      "created_date": "2024-01-06T05:08:28.135Z",
+      "modified_date": "2024-01-06T05:08:28.135Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Invalid data sent",
+      "message_uz": "Noto'g'ri maʼlumotlar yuborildi",
+      "message_ru": "Отправлены неверные данные",
+      "message_en": "Invalid data sent",
+      "status": "fail",
+      "status_code": "400",
+      "code": 707
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 38,
+    "fields": {
+      "created_date": "2024-01-06T05:36:46.358Z",
+      "modified_date": "2024-01-06T05:36:46.358Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "{object} not found",
+      "message_uz": "{object} topilmadi",
+      "message_ru": "{object} не найден",
+      "message_en": "{object} not found",
+      "status": "fail",
+      "status_code": "404",
+      "code": 623
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 39,
+    "fields": {
+      "created_date": "2024-01-11T10:46:17.722Z",
+      "modified_date": "2024-01-11T10:46:17.722Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "User did not match",
+      "message_uz": "Foydalanuvchi mos kelmadi",
+      "message_ru": "Пользователь не соответствует",
+      "message_en": "User did not match",
+      "status": "fail",
+      "status_code": "400",
+      "code": 624
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 40,
+    "fields": {
+      "created_date": "2024-01-11T10:48:13.975Z",
+      "modified_date": "2024-01-11T10:48:13.975Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Error in e-signature {e}",
+      "message_uz": "E-imzoda xatolik {e}",
+      "message_ru": "Ошибка в электронной подписи {e}",
+      "message_en": "Error in e-signature {e}",
+      "status": "fail",
+      "status_code": "400",
+      "code": 625
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 41,
+    "fields": {
+      "created_date": "2024-02-13T12:03:20.574Z",
+      "modified_date": "2024-02-13T12:03:20.574Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You can not create private chat with yourself",
+      "message_uz": "You can not create private chat with yourself",
+      "message_ru": "Вы не можете создать приватный чат с самим собой",
+      "message_en": "You can not create private chat with yourself",
+      "status": "fail",
+      "status_code": "400",
+      "code": 626
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 42,
+    "fields": {
+      "created_date": "2024-02-13T12:26:30.528Z",
+      "modified_date": "2024-02-13T12:26:30.528Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Chat already exists",
+      "message_uz": "Chat allaqachon mavjud",
+      "message_ru": "Чат уже существует",
+      "message_en": "Chat already exists",
+      "status": "fail",
+      "status_code": "400",
+      "code": 627
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 43,
+    "fields": {
+      "created_date": "2024-02-20T09:22:53.389Z",
+      "modified_date": "2024-02-20T09:22:53.389Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The document was not agreed with the negotiators",
+      "message_uz": "Hujjat kelishuvchilar bilan kelishilmadi",
+      "message_ru": "Документ не был согласован с переговорщиками",
+      "message_en": "The document was not agreed with the negotiators",
+      "status": "fail",
+      "status_code": "400",
+      "code": 628
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 44,
+    "fields": {
+      "created_date": "2024-08-03T06:38:11.922Z",
+      "modified_date": "2024-08-03T06:38:11.922Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Pass code formant is incorrect {e}.",
+      "message_uz": "Pass kodi formati noto'g'ri {e}.",
+      "message_ru": "Неверный формат кода доступа {e}.",
+      "message_en": "Pass code formant is incorrect {e}.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 629
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 45,
+    "fields": {
+      "created_date": "2024-08-03T06:39:52.059Z",
+      "modified_date": "2024-08-03T06:39:52.059Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Successfully changed",
+      "message_uz": "Muvaffaqiyatli o'zgartirildi",
+      "message_ru": "Успешно изменено",
+      "message_en": "Successfully changed",
+      "status": "success",
+      "status_code": "200",
+      "code": 804
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 46,
+    "fields": {
+      "created_date": "2024-08-03T06:41:19.909Z",
+      "modified_date": "2024-08-03T06:41:26.193Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Successfully created",
+      "message_uz": "Muvaffaqiyatli yaratildi",
+      "message_ru": "Успешно создано",
+      "message_en": "Successfully created",
+      "status": "success",
+      "status_code": "201",
+      "code": 805
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 47,
+    "fields": {
+      "created_date": "2024-08-03T06:43:23.892Z",
+      "modified_date": "2024-08-03T06:43:23.892Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Passcode matches",
+      "message_uz": "Pass kodi to'g'ri keldi",
+      "message_ru": "Код доступа совпадает",
+      "message_en": "Passcode matches",
+      "status": "success",
+      "status_code": "200",
+      "code": 806
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 48,
+    "fields": {
+      "created_date": "2024-08-03T06:44:56.421Z",
+      "modified_date": "2024-08-03T06:44:56.421Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Passcode does not match",
+      "message_uz": "Parol kodi mos emas",
+      "message_ru": "Код доступа не совпадает",
+      "message_en": "Passcode does not match",
+      "status": "fail",
+      "status_code": "400",
+      "code": 630
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 49,
+    "fields": {
+      "created_date": "2024-08-21T05:35:49.073Z",
+      "modified_date": "2024-08-21T05:35:49.073Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "First, it is necessary to indicate the time when the employee arrived",
+      "message_uz": "Avval xodim qachon yetib kelgan vaqtini ko'rsatish kerak",
+      "message_ru": "Сначала необходимо указать время прибытия сотрудника.",
+      "message_en": "First, it is necessary to indicate the time when the employee arrived",
+      "status": "fail",
+      "status_code": "400",
+      "code": 631
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 50,
+    "fields": {
+      "created_date": "2024-08-21T05:40:03.500Z",
+      "modified_date": "2024-08-21T05:40:03.500Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee's arrival time has already been set",
+      "message_uz": "Xodim kelgan vaqti allaqachon belgilangan",
+      "message_ru": "Время прибытия сотрудника уже назначено",
+      "message_en": "The employee's arrival time has already been set",
+      "status": "fail",
+      "status_code": "400",
+      "code": 632
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 51,
+    "fields": {
+      "created_date": "2024-08-21T05:42:31.593Z",
+      "modified_date": "2024-08-21T05:42:31.593Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee's departure time has already been set",
+      "message_uz": "Xodimning ketish vaqti allaqachon belgilangan",
+      "message_ru": "Время ухода сотрудника уже установлено",
+      "message_en": "The employee's departure time has already been set",
+      "status": "fail",
+      "status_code": "400",
+      "code": 633
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 52,
+    "fields": {
+      "created_date": "2024-08-21T14:50:22.491Z",
+      "modified_date": "2024-08-21T14:50:22.491Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The business trip is not over yet",
+      "message_uz": "Xizmat safari hali yakunlanmadi",
+      "message_ru": "Командировка еще не окончена.",
+      "message_en": "The business trip is not over yet",
+      "status": "fail",
+      "status_code": "400",
+      "code": 634
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 53,
+    "fields": {
+      "created_date": "2024-08-21T15:31:44.126Z",
+      "modified_date": "2024-08-21T15:31:44.126Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee has not returned from the last visited address, so you cannot mark him as present",
+      "message_uz": "Xodim ohirgi tashrif buyurgan manzilidan qaytib kelmagan, shuning uchun uni kelgan deb begilay olmaysiz",
+      "message_ru": "Сотрудник не вернулся с последнего посещенного адреса, поэтому вы не можете отметить его как присутствующего",
+      "message_en": "The employee has not returned from the last visited address, so you cannot mark him as present",
+      "status": "fail",
+      "status_code": "400",
+      "code": 635
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 54,
+    "fields": {
+      "created_date": "2024-08-24T15:10:58.431Z",
+      "modified_date": "2024-08-24T15:10:58.431Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee has not left the initial address so you can't mark as arrived",
+      "message_uz": "Xodim dastlabki manzilni tark etmagan, shuning uchun siz yetib kelgan deb belgilay olmaysiz",
+      "message_ru": "Сотрудник не ушел первоначального адреса, поэтому вы не можете отметить его как прибывшего",
+      "message_en": "The employee has not left the initial address so you can't mark as arrived",
+      "status": "fail",
+      "status_code": "400",
+      "code": 636
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 55,
+    "fields": {
+      "created_date": "2024-09-19T17:09:47.583Z",
+      "modified_date": "2024-09-19T17:12:09.005Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot deactivate this role, since it was assigned to {number} users",
+      "message_uz": "Siz bu rolni oʻchira olmaysiz, chunki u {number} ta foydalanuvchiga tayinlangan",
+      "message_ru": "Вы не можете деактивировать эту роль, так как она была назначена {number} пользователям",
+      "message_en": "You cannot deactivate this role, since it was assigned to {number} users",
+      "status": "fail",
+      "status_code": "400",
+      "code": 637
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 56,
+    "fields": {
+      "created_date": "2024-10-04T09:18:19.682Z",
+      "modified_date": "2024-10-04T09:18:19.682Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Multiple objects found for this {object}, please contact the administrator",
+      "message_uz": "Bu {object} bo'yicha bir nechta obyekt topildi, iltimos administrator bilan bog'laning",
+      "message_ru": "Для этого {object} найдено несколько объектов, обратитесь к администратору",
+      "message_en": "Multiple objects found for this {object}, please contact the administrator",
+      "status": "fail",
+      "status_code": "400",
+      "code": 638
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 57,
+    "fields": {
+      "created_date": "2024-11-16T06:30:40.884Z",
+      "modified_date": "2024-11-16T06:30:40.884Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Document has not been signed yet",
+      "message_uz": "Hujjat hali imzolanmagan",
+      "message_ru": "Документ еще не подписан",
+      "message_en": "Document has not been signed yet",
+      "status": "fail",
+      "status_code": "400",
+      "code": 639
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 58,
+    "fields": {
+      "created_date": "2024-11-19T07:22:00.999Z",
+      "modified_date": "2024-11-19T07:22:00.999Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot react to your own birthday",
+      "message_uz": "Siz tug'ilgan kuningizga munosabat bildira olmaysiz",
+      "message_ru": "Вы не можете реагировать на свой день рождения",
+      "message_en": "You cannot react to your own birthday",
+      "status": "fail",
+      "status_code": "400",
+      "code": 640
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 59,
+    "fields": {
+      "created_date": "2024-11-19T07:24:03.356Z",
+      "modified_date": "2024-11-19T07:24:03.356Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Selected user's birthday is not today",
+      "message_uz": "Tanlangan foydalanuvchining tug'ilgan kuni bugun emas",
+      "message_ru": "У выбранного пользователя сегодня не день рождения",
+      "message_en": "Selected user's birthday is not today",
+      "status": "fail",
+      "status_code": "400",
+      "code": 641
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 60,
+    "fields": {
+      "created_date": "2024-11-19T07:27:57.162Z",
+      "modified_date": "2024-11-19T07:27:57.162Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You have already celebrated birthday of this user",
+      "message_uz": "Siz allaqachon ushbu foydalanuvchining tug'ilgan kuni bilan tabriklagansiz",
+      "message_ru": "Вы уже отметили день рождения этого пользователя",
+      "message_en": "You have already celebrated birthday of this user",
+      "status": "fail",
+      "status_code": "400",
+      "code": 642
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 61,
+    "fields": {
+      "created_date": "2024-11-21T05:36:09.153Z",
+      "modified_date": "2024-11-21T05:36:09.153Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You have already shown your mood for today",
+      "message_uz": "Siz allaqachon bugungi kayfiyatingizni ko'rsatdingiz",
+      "message_ru": "Вы уже показали свое настроение на сегодня",
+      "message_en": "You have already shown your mood for today",
+      "status": "fail",
+      "status_code": "400",
+      "code": 643
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 62,
+    "fields": {
+      "created_date": "2024-12-07T07:34:29.857Z",
+      "modified_date": "2024-12-07T07:34:29.857Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Rank must be between 1 and 5",
+      "message_uz": "Reyting 1 dan 5 gacha bo'lishi kerak",
+      "message_ru": "Рейтинг должен быть от 1 до 5",
+      "message_en": "Rank must be between 1 and 5",
+      "status": "fail",
+      "status_code": "400",
+      "code": 644
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 63,
+    "fields": {
+      "created_date": "2024-12-12T16:28:05.380Z",
+      "modified_date": "2024-12-12T16:28:05.380Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Published news cannot be edited",
+      "message_uz": "Chop etilgan yangiliklarni tahrirlash mumkin emas",
+      "message_ru": "Опубликованные новости не могут быть отредактированы",
+      "message_en": "Published news cannot be edited",
+      "status": "fail",
+      "status_code": "400",
+      "code": 645
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 64,
+    "fields": {
+      "created_date": "2025-01-11T10:46:58.216Z",
+      "modified_date": "2025-01-11T10:46:58.216Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You cannot moderate published news",
+      "message_uz": "Siz chop etilgan yangiliklarni moderatsiya qila olmaysiz",
+      "message_ru": "Вы не можете модерировать опубликованные новости",
+      "message_en": "You cannot moderate published news",
+      "status": "fail",
+      "status_code": "400",
+      "code": 646
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 65,
+    "fields": {
+      "created_date": "2025-01-11T10:53:57.192Z",
+      "modified_date": "2025-01-11T10:53:57.192Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The news status must be under moderation to change the status",
+      "message_uz": "Maqomini o'zgartirish uchun yangilik holati moderatsiya ostida bo'lishi kerak",
+      "message_ru": "Статус новости должен быть на модерации, чтобы изменить статус",
+      "message_en": "The news status must be under moderation to change the status",
+      "status": "fail",
+      "status_code": "400",
+      "code": 647
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 66,
+    "fields": {
+      "created_date": "2025-01-27T06:39:18.422Z",
+      "modified_date": "2025-01-27T06:39:18.422Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You can't write a comment on your own birthday",
+      "message_uz": "O'zingizni tug'ilgan kuningizga o'zingiz sharh yoza olmaysiz",
+      "message_ru": "Вы не можете написать комментарий в свой день рождения.",
+      "message_en": "You can't write a comment on your own birthday",
+      "status": "fail",
+      "status_code": "400",
+      "code": 648
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 67,
+    "fields": {
+      "created_date": "2025-01-27T06:40:55.606Z",
+      "modified_date": "2025-01-27T06:40:55.606Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "A comment can only be written on the user's birthday",
+      "message_uz": "Sharhni faqat foydalanuvchining tug'ilgan kunida yozish mumkin",
+      "message_ru": "Комментарий можно написать только в день рождения пользователя",
+      "message_en": "A comment can only be written on the user's birthday",
+      "status": "fail",
+      "status_code": "400",
+      "code": 649
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 68,
+    "fields": {
+      "created_date": "2025-01-27T06:46:53.951Z",
+      "modified_date": "2025-01-27T06:46:53.951Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The comment should not exceed {length} characters",
+      "message_uz": "Izoh {length} ta harfdan ko'p bo'lmasligi kerak",
+      "message_ru": "Длина комментария не должна превышать {length} символов",
+      "message_en": "The comment should not exceed {length} characters",
+      "status": "fail",
+      "status_code": "400",
+      "code": 650
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 69,
+    "fields": {
+      "created_date": "2025-02-06T15:26:08.795Z",
+      "modified_date": "2025-02-06T15:26:08.795Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You are not a member of this chat",
+      "message_uz": "Siz bu chatga aʼzo emassiz",
+      "message_ru": "Вы не являетесь участником этого чата",
+      "message_en": "You are not a member of this chat",
+      "status": "fail",
+      "status_code": "400",
+      "code": 651
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 70,
+    "fields": {
+      "created_date": "2025-02-06T15:28:23.708Z",
+      "modified_date": "2025-02-06T15:28:23.708Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "No members provided",
+      "message_uz": "Foydalanuvchi tanlanmagan",
+      "message_ru": "Члены не указаны",
+      "message_en": "No members provided",
+      "status": "400",
+      "status_code": "fail",
+      "code": 652
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 71,
+    "fields": {
+      "created_date": "2025-02-06T15:29:49.430Z",
+      "modified_date": "2025-02-06T15:29:49.430Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "All users are already in the chat or invalid",
+      "message_uz": "Barcha foydalanuvchilar allaqachon chatda mavjud yoki aktiv xolatda emas",
+      "message_ru": "Все пользователи уже в чате или недействительны",
+      "message_en": "All users are already in the chat or invalid",
+      "status": "fail",
+      "status_code": "400",
+      "code": 653
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 72,
+    "fields": {
+      "created_date": "2025-02-06T15:31:10.435Z",
+      "modified_date": "2025-02-06T15:31:42.151Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "New members added successfully",
+      "message_uz": "Yangi foydalanuvchilar muvaffaqiyatli qoʻshildi",
+      "message_ru": "Новые участники успешно добавлены",
+      "message_en": "New members added successfully",
+      "status": "success",
+      "status_code": "201",
+      "code": 807
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 73,
+    "fields": {
+      "created_date": "2025-02-18T15:19:07.592Z",
+      "modified_date": "2025-02-18T15:19:07.592Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Only images are allowed",
+      "message_uz": "Faqat rasmlar yuklash kerak",
+      "message_ru": "Разрешены только изображения",
+      "message_en": "Only images are allowed",
+      "status": "fail",
+      "status_code": "400",
+      "code": 654
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 74,
+    "fields": {
+      "created_date": "2025-06-10T08:49:09.599Z",
+      "modified_date": "2025-06-10T08:49:09.599Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Your business trip is temporarily suspended due to changes.",
+      "message_uz": "Xizmat safaringiz o'zgartirilayotkanligi sababli vaqtincha to'xtatilgan",
+      "message_ru": "Ваша командировка временно приостановлена ​​в связи с изменениями.",
+      "message_en": "Your business trip is temporarily suspended due to changes.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 655
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 75,
+    "fields": {
+      "created_date": "2025-07-10T14:47:20.307Z",
+      "modified_date": "2025-07-10T14:47:20.307Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Confirmation code expired",
+      "message_uz": "Tasdiq kodi muddati tugadi",
+      "message_ru": "Код подтверждения истек",
+      "message_en": "Confirmation code expired",
+      "status": "fail",
+      "status_code": "400",
+      "code": 656
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 76,
+    "fields": {
+      "created_date": "2025-07-10T14:49:31.666Z",
+      "modified_date": "2025-07-10T14:49:31.666Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Confirmation code is wrong",
+      "message_uz": "Tasdiq kodi noto‘g‘ri",
+      "message_ru": "Код подтверждения неверный",
+      "message_en": "Confirmation code is wrong",
+      "status": "fail",
+      "status_code": "400",
+      "code": 657
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 77,
+    "fields": {
+      "created_date": "2025-07-10T14:59:34.012Z",
+      "modified_date": "2025-07-10T14:59:34.012Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Maximum number of confirmation code attempts exceeded",
+      "message_uz": "Tasdiq kodi kiritish urinishlari maksimal chegarasidan oshdi",
+      "message_ru": "Превышено максимальное количество попыток ввода кода подтверждения",
+      "message_en": "Maximum number of confirmation code attempts exceeded",
+      "status": "fail",
+      "status_code": "400",
+      "code": 658
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 78,
+    "fields": {
+      "created_date": "2025-07-10T15:19:59.307Z",
+      "modified_date": "2025-07-10T15:19:59.307Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee has already visited another region",
+      "message_uz": "Xodim allaqachon boshqa hududga tashrif buyurgan",
+      "message_ru": "Сотрудник уже посетил другой регион",
+      "message_en": "The employee has already visited another region",
+      "status": "fail",
+      "status_code": "400",
+      "code": 659
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 79,
+    "fields": {
+      "created_date": "2025-07-10T15:20:48.677Z",
+      "modified_date": "2025-07-10T15:20:48.677Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee’s arrival time has not been set",
+      "message_uz": "Xodimning tashrif vaqti belgilanmagan",
+      "message_ru": "Время прибытия сотрудника не указано",
+      "message_en": "The employee’s arrival time has not been set",
+      "status": "fail",
+      "status_code": "400",
+      "code": 660
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 80,
+    "fields": {
+      "created_date": "2025-07-10T15:21:25.903Z",
+      "modified_date": "2025-07-10T15:21:25.903Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "The employee must reset their departure status first",
+      "message_uz": "Xodim avval ketish holatini bekor qilishi kerak",
+      "message_ru": "Сначала сотрудник должен сбросить статус отбытия",
+      "message_en": "The employee must reset their departure status first",
+      "status": "fail",
+      "status_code": "400",
+      "code": 661
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 81,
+    "fields": {
+      "created_date": "2025-09-04T14:03:32.725Z",
+      "modified_date": "2025-09-04T14:03:32.725Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "No documents found for this period",
+      "message_uz": "Tanlangan davr uchun hujjatlar topilmadi",
+      "message_ru": "Документы за выбранный период не найдены",
+      "message_en": "No documents found for this period",
+      "status": "fail",
+      "status_code": "404",
+      "code": 890
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 82,
+    "fields": {
+      "created_date": "2025-09-04T14:05:03.117Z",
+      "modified_date": "2025-09-04T14:05:03.117Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Region is required",
+      "message_uz": "Hududni tanlash majburiy",
+      "message_ru": "Регион обязателен для заполнения",
+      "message_en": "Region is required",
+      "status": "fail",
+      "status_code": "400",
+      "code": 891
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 83,
+    "fields": {
+      "created_date": "2025-09-04T14:06:40.791Z",
+      "modified_date": "2025-09-04T14:06:40.791Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "No verification exists for this region",
+      "message_uz": "Tanlangan hudud uchun verifikatsiya topilmadi",
+      "message_ru": "Для выбранного региона не найдено верификаций",
+      "message_en": "No verification exists for this region",
+      "status": "fail",
+      "status_code": "404",
+      "code": 892
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 84,
+    "fields": {
+      "created_date": "2025-09-04T14:07:19.668Z",
+      "modified_date": "2025-09-04T14:07:19.668Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Previous verification for this region is not completed yet",
+      "message_uz": "Ushbu hudud bo‘yicha oldingi verifikatsiya hali yakunlanmagan",
+      "message_ru": "Предыдущая верификация для этого региона еще не завершена",
+      "message_en": "Previous verification for this region is not completed yet",
+      "status": "fail",
+      "status_code": "400",
+      "code": 893
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 85,
+    "fields": {
+      "created_date": "2025-10-17T15:27:21.556Z",
+      "modified_date": "2025-10-17T15:27:21.556Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "End time must be after start time",
+      "message_uz": "Tugash vaqti boshlanish vaqtidan keyin bo'lishi kerak",
+      "message_ru": "Время окончания должно быть позже времени начала",
+      "message_en": "End time must be after start time",
+      "status": "fail",
+      "status_code": "400",
+      "code": 894
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 86,
+    "fields": {
+      "created_date": "2025-10-17T15:29:36.172Z",
+      "modified_date": "2025-10-17T15:29:36.172Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Start time and end time required",
+      "message_uz": "Boshlanish vaqti va tugash vaqti talab qilinadi",
+      "message_ru": "Необходимо указать время начала и время окончания",
+      "message_en": "Start time and end time required",
+      "status": "fail",
+      "status_code": "400",
+      "code": 895
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 87,
+    "fields": {
+      "created_date": "2025-10-28T17:43:46Z",
+      "modified_date": "2025-10-28T17:43:46Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "No top level org found on you (branch or top level department)",
+      "message_uz": "Sizda yuqori darajadagi tashkilot topilmadi (filial yoki departament)",
+      "message_ru": "Для вас не найдено ни одной организации верхнего уровня (филиала или департамент)",
+      "message_en": "No top level org found on you (branch or top level department)",
+      "status": "fail",
+      "status_code": "400",
+      "code": 896
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 88,
+    "fields": {
+      "created_date": "2025-10-30T07:19:55.466Z",
+      "modified_date": "2025-10-30T07:19:55.466Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Cannot delete managers from an active department",
+      "message_uz": "Faol bo'limdan menejerlarni o'chirib bo'lmaydi",
+      "message_ru": "Невозможно удалить менеджеров из активного отдела",
+      "message_en": "Cannot delete managers from an active department",
+      "status": "fail",
+      "status_code": "400",
+      "code": 897
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 89,
+    "fields": {
+      "created_date": "2025-10-30T07:22:44.545Z",
+      "modified_date": "2025-10-30T07:22:44.545Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Cannot delete managers from an active branch",
+      "message_uz": "Faol filialdan menejerlarni o'chirib bo'lmaydi",
+      "message_ru": "Невозможно удалить менеджеров из активного филиала",
+      "message_en": "Cannot delete managers from an active branch",
+      "status": "fail",
+      "status_code": "400",
+      "code": 898
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 90,
+    "fields": {
+      "created_date": "2025-10-31T12:42:07.356Z",
+      "modified_date": "2025-10-31T12:42:07.356Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "You have already active Telegram profile, before adding new one please remove current active profile",
+      "message_uz": "Sizda allaqachon faol Telegram profili mavjud, yangisini qo'shishdan oldin, iltimos, joriy faol profilni olib tashlang",
+      "message_ru": "У вас уже есть активный профиль Telegram. Перед добавлением нового профиля, пожалуйста, удалите текущий активный профиль.",
+      "message_en": "You have already active Telegram profile, before adding new one please remove current active profile",
+      "status": "fail",
+      "status_code": "400",
+      "code": 899
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 91,
+    "fields": {
+      "created_date": "2025-11-04T16:17:11.555Z",
+      "modified_date": "2025-11-04T16:17:11.555Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Lunch start time must be after work start time.",
+      "message_uz": "Tushlik boshlanish vaqti ish boshlanishidan keyin bo‘lishi kerak.",
+      "message_ru": "Время начала обеда должно быть позже начала работы.",
+      "message_en": "Lunch start time must be after work start time.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 900
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 92,
+    "fields": {
+      "created_date": "2025-11-04T16:18:29.007Z",
+      "modified_date": "2025-11-04T16:18:29.007Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Lunch end time must be before work end time.",
+      "message_uz": "Tushlik tugash vaqti ish tugashidan oldin bo‘lishi kerak.",
+      "message_ru": "Время окончания обеда должно быть раньше окончания работы.",
+      "message_en": "Lunch end time must be before work end time.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 901
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 93,
+    "fields": {
+      "created_date": "2025-11-04T16:19:17.462Z",
+      "modified_date": "2025-11-04T16:19:17.462Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Lunch end time must be after lunch start time.",
+      "message_uz": "Tushlik tugash vaqti tushlik boshlanishidan keyin bo‘lishi kerak.",
+      "message_ru": "Время окончания обеда должно быть позже времени его начала.",
+      "message_en": "Lunch end time must be after lunch start time.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 902
+    }
+  },
+  {
+    "model": "reference.errormessage",
+    "pk": 94,
+    "fields": {
+      "created_date": "2025-11-04T16:20:20.872Z",
+      "modified_date": "2025-11-04T16:20:20.872Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "message": "Both lunch start and end times must be provided.",
+      "message_uz": "Tushlikning boshlanish va tugash vaqtlari ikkalasi ham kiritilishi kerak.",
+      "message_ru": "Необходимо указать как время начала, так и окончания обеда.",
+      "message_en": "Both lunch start and end times must be provided.",
+      "status": "fail",
+      "status_code": "400",
+      "code": 903
+    }
+  }
+]

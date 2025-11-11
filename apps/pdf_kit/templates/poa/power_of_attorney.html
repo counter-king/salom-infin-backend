@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Power of Attorney</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+    </style>
+</head>
+<body>
+<div style="padding: 8px; line-height: 20px;">
+    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
+        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <img
+                        src="data:image/png;base64,{{ company_logo }}"
+                        alt="Logo"
+                        style="width: {{ logo_size }};"
+                />
+            </td>
+            <td style="vertical-align: top; align-content: start; text-align: start">
+                <div style="margin-left: 8px">
+                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">
+                        {{ company_name_uz }}
+                    </div>
+                    <div style="font-size: 9px; font-weight: bold">
+                        {{ company_name_ru }}
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center; margin-top: 32px; font-size: 14px; font-weight: bolder">
+        ISHONCHNOMA
+    </div>
+
+    <div style="text-align: justify; text-indent: 32px; font-size: 14px; margin: 16px 0">
+        <div style="margin-top: 16px">
+            Мazkur ishonchnoma orqali Toshkent shahri, Shahrisabz ko‘chasi, 3-uyda joylashgan “O‘zbekiston sanoat-qurilish
+            banki” aksiyadorlik tijorat banki (keyingi o‘rinlarda – Bank) nomidan
+            2024-yil 18-noyabrdagi 04-07/250-sonli ishonchnoma asosida ish yurituvchi
+            {{ curator_position }} {{ curator_name }}
+            <span style="font-weight: bold">
+              {{ employee_position }} {{ employee_name }}
+             </span>ga
+            O‘zbekiston Respublikasi Fuqarolik kodeksining 134, 135, 138, 139 va 144-moddalariga asosan quyidagi
+            vakolatlarni beradi:
+        </div>
+        <div>
+            Bank va uning tarmoqlari faoliyatidan kelib chiqqan sudlov ishlari bo‘yicha O‘zbekiston Respublikasining
+            iqtisodiy, fuqarolik, jinoyat, maʼmuriy, hakamlik va boshqa sudlarining barcha instansiyalarida, shuningdek
+            Savdo-sanoat palatasi va uning hududiy boshqarmalarida, Majburiy ijro byurosi va uning hududiy bo‘limlari,
+            surishtiruv, tergov organlari, boshqa davlat organlari va tashkilotlarida Bankning ishonchli vakili sifatida
+            ishtirok etish;
+        </div>
+        <div>
+            ijro xatlarini rasmiylashtirish uchun notariuslarga barcha zarur hujjatlarni taqdim etish va ijro xatlarini
+            ulardan olish;
+        </div>
+        <div>
+            sudlarda Bank nomidan barcha protsessual harakatlarni amalga oshirish, xususan da’vo ariza, ariza, iltimos va
+            shikoyatni imzolash, sud hujjati ustidan apellyatsiya, kassatsiya, taftish va boshqa shikoyatlarni hamda
+            qarzdorga nisbatan to‘lovga qobiliyatsizlik to‘g‘risida ish qo‘zg‘atish haqidagi arizani imzolash, shuningdek
+            sud hujjatini yangi ochilgan holatlar bo‘yicha qayta ko‘rib chiqish to‘g‘risidagi arizani imzolash, ishni
+            hakamlik sudiga topshirish, da’vo (arz qilingan talab) predmetini yoki asosini o‘zgartirish, da’vo talablari
+            miqdorini ko‘paytirish yoki kamaytirish, ijro hujjatini undiruvga taqdim etish, ijro hujjatini tegishli davlat
+            organiga, tashkilotga yoki uning mansabdor shaxsiga ijrosini ta’minlash uchun topshirish, sud hujjatining
+            majburiy ijro etilishini talab qilish, davlat ijrochisining xatti-harakatlari (harakat yoki harakatsizligi)
+            ustidan shikoyat berish va uni rad qilish;
+        </div>
+        <div>
+            Bank faoliyatidan kelib chiqqan masalalar yuzasidan huquqni muhofaza qiluvchi organlarga tegishli tartibda
+            ariza, shikoyat, taklif hamda amaliy yordam ko‘rsatish to‘g’risidagi murojaatlarni imzolash.
+        </div>
+{#        <div>#}
+{#            {{ employee_position }} {{ employee_name }}ning ID pasport ma‘lumotlari:#}
+{#            {{ employee_passport_seria }} {{ employee_passport_number }}, {{ employee_passport_issue_date }} yilda#}
+{#            {{ employee_passport_issued_by }} tomonidan berilgan.#}
+{#        </div>#}
+        {% include "poa/poa_validity_block.html" %}
+    </div>
+
+    {{ signers|safe }}
+
+    <div style="padding: 0 24px; margin-top: 36px;">
+        <div style="margin-bottom: 4px; font-size: 12px;"><span style="font-weight: bolder">Ijrochi: </span>
+            {{ executor }}
+        </div>
+        <div style="margin-bottom: 4px; font-size: 12px"><span
+                style="font-weight: bolder">Tel: </span> {{ phone }}
+        </div>
+        <div style="font-size: 12px">
+            <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }},
+            <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+        </div>
+    </div>
+</div>
+</body>
+</html>

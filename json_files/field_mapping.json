@@ -1,0 +1,184 @@
+[
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 1,
+    "fields": {
+      "created_date": "2023-08-05T08:13:11.092Z",
+      "modified_date": "2023-08-05T08:13:11.092Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "register_number",
+      "action_code": "101"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 2,
+    "fields": {
+      "created_date": "2023-08-05T08:13:20.828Z",
+      "modified_date": "2023-08-05T08:13:20.828Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "register_date",
+      "action_code": "102"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 3,
+    "fields": {
+      "created_date": "2023-08-05T08:13:32.769Z",
+      "modified_date": "2023-08-05T08:13:32.769Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "code",
+      "action_code": "103"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 4,
+    "fields": {
+      "created_date": "2023-08-05T08:15:35.401Z",
+      "modified_date": "2023-08-05T08:45:53.427Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "priority",
+      "action_code": "104"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 5,
+    "fields": {
+      "created_date": "2023-08-05T08:15:47.204Z",
+      "modified_date": "2023-08-05T08:15:47.204Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "grif",
+      "action_code": "105"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 6,
+    "fields": {
+      "created_date": "2023-08-05T08:15:55.924Z",
+      "modified_date": "2023-08-05T08:15:55.924Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "outgoing_number",
+      "action_code": "106"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 7,
+    "fields": {
+      "created_date": "2023-08-05T08:16:06.317Z",
+      "modified_date": "2023-08-05T08:16:06.317Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "outgoing_date",
+      "action_code": "107"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 8,
+    "fields": {
+      "created_date": "2023-08-05T08:16:16.610Z",
+      "modified_date": "2023-08-05T08:16:16.610Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "description",
+      "action_code": "108"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 9,
+    "fields": {
+      "created_date": "2023-08-05T08:16:28.400Z",
+      "modified_date": "2023-08-05T08:16:36.429Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "title",
+      "action_code": "109"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 10,
+    "fields": {
+      "created_date": "2023-08-05T08:17:06.714Z",
+      "modified_date": "2023-08-05T08:17:06.714Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "correspondent",
+      "action_code": "110"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 11,
+    "fields": {
+      "created_date": "2023-08-05T08:17:17.571Z",
+      "modified_date": "2023-08-05T08:17:17.571Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "document_type",
+      "action_code": "111"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 12,
+    "fields": {
+      "created_date": "2023-08-05T08:17:27.192Z",
+      "modified_date": "2023-08-05T08:17:27.192Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "journal",
+      "action_code": "112"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 13,
+    "fields": {
+      "created_date": "2023-08-05T08:17:36.377Z",
+      "modified_date": "2023-08-05T08:17:36.377Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "language",
+      "action_code": "113"
+    }
+  },
+  {
+    "model": "reference.fieldactionmapping",
+    "pk": 14,
+    "fields": {
+      "created_date": "2023-08-05T08:17:45.833Z",
+      "modified_date": "2023-08-05T08:17:51.071Z",
+      "created_by": null,
+      "modified_by": null,
+      "is_active": true,
+      "field_name": "delivery_type",
+      "action_code": "114"
+    }
+  }
+]

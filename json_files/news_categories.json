@@ -1,0 +1,418 @@
+[
+  {
+    "model": "news.newscategory",
+    "pk": 4,
+    "fields": {
+      "created_date": "2024-12-27T10:18:45.539Z",
+      "modified_date": "2024-12-27T10:21:10.306Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank yangiliklari",
+      "name_uz": "Bank yangiliklari",
+      "name_ru": "Новости банка",
+      "name_en": null,
+      "color": "#007BFF"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 5,
+    "fields": {
+      "created_date": "2024-12-27T10:21:46.157Z",
+      "modified_date": "2024-12-27T10:21:46.157Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Moliyaviy hisobotlar",
+      "name_uz": "Moliyaviy hisobotlar",
+      "name_ru": "Финансовые отчёты",
+      "name_en": null,
+      "color": "#28A745"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 6,
+    "fields": {
+      "created_date": "2024-12-27T10:22:16.396Z",
+      "modified_date": "2024-12-27T10:22:16.396Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Mahsulotlar va xizmatlar",
+      "name_uz": "Mahsulotlar va xizmatlar",
+      "name_ru": "Продукты и услуги",
+      "name_en": null,
+      "color": "#FFC107"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 7,
+    "fields": {
+      "created_date": "2024-12-27T10:22:50.383Z",
+      "modified_date": "2024-12-27T10:22:50.383Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Regulyativ o‘zgarishlar",
+      "name_uz": "Regulyativ o‘zgarishlar",
+      "name_ru": "Регуляторные изменения",
+      "name_en": null,
+      "color": "#DC3545"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 8,
+    "fields": {
+      "created_date": "2024-12-27T10:23:23.942Z",
+      "modified_date": "2024-12-27T10:23:23.942Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Karera va rivojlanish",
+      "name_uz": "Karera va rivojlanish",
+      "name_ru": "Карьера и развитие",
+      "name_en": null,
+      "color": "#17A2B8"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 9,
+    "fields": {
+      "created_date": "2024-12-27T10:24:02.643Z",
+      "modified_date": "2024-12-27T10:24:02.643Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ta'lim va sertifikatsiya",
+      "name_uz": "Ta'lim va sertifikatsiya",
+      "name_ru": "Обучение и сертификация",
+      "name_en": null,
+      "color": "#6C757D"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 10,
+    "fields": {
+      "created_date": "2024-12-27T10:26:44.225Z",
+      "modified_date": "2024-12-27T10:26:44.225Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bayramlar va tadbirlar",
+      "name_uz": "Bayramlar va tadbirlar",
+      "name_ru": "Праздники и события",
+      "name_en": null,
+      "color": "#E83E8C"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 11,
+    "fields": {
+      "created_date": "2024-12-27T10:27:14.367Z",
+      "modified_date": "2024-12-27T10:27:14.367Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Muvaffaqiyat hikoyalari",
+      "name_uz": "Muvaffaqiyat hikoyalari",
+      "name_ru": "Истории успеха",
+      "name_en": null,
+      "color": "#20C997"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 12,
+    "fields": {
+      "created_date": "2024-12-27T10:27:50.091Z",
+      "modified_date": "2024-12-27T10:27:50.091Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Korporativ qadriyatlar",
+      "name_uz": "Korporativ qadriyatlar",
+      "name_ru": "Корпоративные ценности",
+      "name_en": null,
+      "color": "#343A40"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 13,
+    "fields": {
+      "created_date": "2024-12-27T10:28:27.328Z",
+      "modified_date": "2024-12-27T10:28:27.328Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ijtimoiy loyihalar",
+      "name_uz": "Ijtimoiy loyihalar",
+      "name_ru": "Социальные проекты",
+      "name_en": null,
+      "color": "#6610F2"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 14,
+    "fields": {
+      "created_date": "2024-12-27T10:28:55.592Z",
+      "modified_date": "2024-12-27T10:28:55.592Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Volontyorlik",
+      "name_uz": "Volontyorlik",
+      "name_ru": "Волонтёрство",
+      "name_en": null,
+      "color": "#FD7E14"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 15,
+    "fields": {
+      "created_date": "2024-12-27T10:29:18.084Z",
+      "modified_date": "2024-12-27T10:30:55.261Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ofis hayoti",
+      "name_uz": "Ofis hayoti",
+      "name_ru": "Офисная жизнь",
+      "name_en": null,
+      "color": "#6F42C1"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 16,
+    "fields": {
+      "created_date": "2024-12-27T10:29:48.777Z",
+      "modified_date": "2024-12-27T10:29:48.777Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "IT-tizim yangilanishlari",
+      "name_uz": "IT-tizim yangilanishlari",
+      "name_ru": "Обновления ИТ-систем",
+      "name_en": null,
+      "color": "#00C0EF"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 17,
+    "fields": {
+      "created_date": "2024-12-27T10:30:23.501Z",
+      "modified_date": "2024-12-27T10:30:23.502Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Kiberxavfsizlik",
+      "name_uz": "Kiberxavfsizlik",
+      "name_ru": "Кибербезопасность",
+      "name_en": null,
+      "color": "#FF5733"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 18,
+    "fields": {
+      "created_date": "2024-12-27T10:31:27.855Z",
+      "modified_date": "2024-12-27T10:31:27.855Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Jarayonlarni avtomatlashtirish",
+      "name_uz": "Jarayonlarni avtomatlashtirish",
+      "name_ru": "Автоматизация процессов",
+      "name_en": null,
+      "color": "#8E44AD"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 19,
+    "fields": {
+      "created_date": "2024-12-27T10:32:04.352Z",
+      "modified_date": "2024-12-27T10:32:04.352Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ko‘rsatmalar va hujjatlar",
+      "name_uz": "Ko‘rsatmalar va hujjatlar",
+      "name_ru": "Инструкции и документы",
+      "name_en": null,
+      "color": "#95A5A6"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 20,
+    "fields": {
+      "created_date": "2024-12-27T10:32:29.780Z",
+      "modified_date": "2024-12-27T10:32:29.780Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Iqtisodiyot va bozor",
+      "name_uz": "Iqtisodiyot va bozor",
+      "name_ru": "Экономика и рынок",
+      "name_en": null,
+      "color": "#27AE60"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 21,
+    "fields": {
+      "created_date": "2024-12-27T10:32:54.997Z",
+      "modified_date": "2024-12-27T10:32:54.997Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Investitsiya imkoniyatlari",
+      "name_uz": "Investitsiya imkoniyatlari",
+      "name_ru": "Инвестиционные возможности",
+      "name_en": null,
+      "color": "#F39C12"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 22,
+    "fields": {
+      "created_date": "2024-12-27T10:33:24.830Z",
+      "modified_date": "2024-12-27T10:33:24.830Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank texnologiyalari",
+      "name_uz": "Bank texnologiyalari",
+      "name_ru": "Банковские технологии",
+      "name_en": null,
+      "color": "#2980B9"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 23,
+    "fields": {
+      "created_date": "2024-12-27T10:33:52.658Z",
+      "modified_date": "2024-12-27T10:33:52.658Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Kun/hafta surati",
+      "name_uz": "Kun/hafta surati",
+      "name_ru": "Фото дня/недели",
+      "name_en": null,
+      "color": "#FF33CC"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 24,
+    "fields": {
+      "created_date": "2024-12-27T10:34:18.036Z",
+      "modified_date": "2024-12-27T10:34:18.036Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Layfxaklar",
+      "name_uz": "Layfxaklar",
+      "name_ru": "Лайфхаки",
+      "name_en": null,
+      "color": "#3498DB"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 25,
+    "fields": {
+      "created_date": "2024-12-27T10:34:39.561Z",
+      "modified_date": "2024-12-27T10:34:39.561Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xodimlarning ijodiy ishlari",
+      "name_uz": "Xodimlarning ijodiy ishlari",
+      "name_ru": "Творчество сотрудников",
+      "name_en": null,
+      "color": "#9B59B6"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 26,
+    "fields": {
+      "created_date": "2024-12-27T10:37:27.782Z",
+      "modified_date": "2024-12-27T10:37:27.782Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Tayinlov va ko‘tarilishlar",
+      "name_uz": "Tayinlov va ko‘tarilishlar",
+      "name_ru": "Назначения и продвижения",
+      "name_en": null,
+      "color": "#4CAF50"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 27,
+    "fields": {
+      "created_date": "2024-12-27T10:37:53.512Z",
+      "modified_date": "2024-12-27T10:37:53.512Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Yangi xodimlar",
+      "name_uz": "Yangi xodimlar",
+      "name_ru": "Новые сотрудники",
+      "name_en": null,
+      "color": "#2196F3"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 28,
+    "fields": {
+      "created_date": "2024-12-27T10:38:25.603Z",
+      "modified_date": "2024-12-27T10:38:25.603Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xotira",
+      "name_uz": "Xotira",
+      "name_ru": "Память",
+      "name_en": null,
+      "color": "#9E9E9E"
+    }
+  },
+  {
+    "model": "news.newscategory",
+    "pk": 29,
+    "fields": {
+      "created_date": "2024-12-27T10:39:36.700Z",
+      "modified_date": "2024-12-27T10:39:36.700Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Tug‘ilgan kunlar",
+      "name_uz": "Tug‘ilgan kunlar",
+      "name_ru": "Дни рождения",
+      "name_en": null,
+      "color": "#FFC107"
+    }
+  }
+]

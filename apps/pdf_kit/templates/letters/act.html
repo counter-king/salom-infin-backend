@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dalolatnoma</title>
+    <style>
+        :root {
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, serif;
+        }
+        .act-table,
+        .act-table tr,
+        .act-table td {
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        .act-table td,
+        .act-table th {
+            border: 1px solid #ADB7C2;
+            padding: 4px !important;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 12px;">
+        <div style="margin-bottom: 16px; font-weight: bold; font-size: 12px">
+            SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
+        </div>
+
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 30%;">
+                    <div style="margin-bottom: 2px; font-size: 14px; font-weight: bold">
+                        {{ curator_position }}
+                    </div>
+                    <div>
+                        <img style="width: 70px!important; height: 70px!important;"
+                             src="data:image/png;base64, {{ qr_b64 }}" alt="qr-code"/>
+                    </div>
+                    <div style="font-size: 14px; font-weight: bold">
+                        {{ curator_name }}
+                    </div>
+                </td>
+                <td style="width: 70%; vertical-align: top; text-align: end; font-size: 14px; font-weight: bold">
+                    <div style="margin-bottom: 4px">“TASDIQLAYMAN”</div>
+                    <div style="margin-bottom: 4px">“O‘zsanoatqurilishbank” ATB</div>
+                    <div style="margin-bottom: 4px">{{ curator_position }}</div>
+                    <div style="margin-bottom: 4px">{{ curator_name }}ga</div>
+                </td>
+            </tr>
+        </table>
+
+        <div style="font-size: 14px; text-align: center; margin-top: 16px">
+          Haq evaziga xizmat koʼrsatish shartnomasi boʼyicha amalga oshirilgan ishlar toʼgʼrisida
+        </div>
+
+        <div style="font-size: 14px; font-weight: bold; text-align: center; margin-top: 8px">DALOLATNOMA № {{ register_number }}</div>
+
+        <table style="width: 100%; margin-top: 16px; font-size: 14px">
+            <tr>
+                <td>{{ employee.user.company.region.name }}</td>
+                <td style="text-align: end">{{ register_date }}</td>
+            </tr>
+        </table>
+
+        <div style="margin: 16px 0 32px 0; text-align: justify;">
+            {{ content|safe }}
+        </div>
+
+        <table class="act-table" style="width: 100%; font-size: 14px">
+            <tr>
+                <th style="font-weight: bold; text-align: center; width: 50%">Amalga oshirilgan ishlarni qabul qildi:</th>
+                <th style="font-weight: bold; text-align: center; width: 50%">Amalga oshirdi:</th>
+            </tr>
+
+            {% for signer in signers %}
+            	<tr>
+                    <td>
+                        <div style="font-weight: bold">
+                            {{ signer.department }} - {{ signer.position }}
+                        </div>
+                        <div style="margin-top: 4px">
+                            {{ signer.full_name }}
+                        </div>
+                        <div style="margin: 4px 0">
+                            <img style="width: 70px!important; height: 70px!important;"
+                             src="data:image/png;base64, {{ qr_b64 }}" alt="qr-code"/>
+                        </div>
+                    </td>
+
+                    {% if forloop.first %}
+                    <td rowspan="{{ signers|length }}" style="vertical-align: top">
+                        <div style="font-weight: bold">Ijrochi</div>
+                        <div style="margin-top: 4px">{{ employee_name }}</div>
+                        <div style="margin: 4px 0">
+                            <img style="width: 70px!important; height: 70px!important;"
+                             src="data:image/png;base64, {{ qr_b64 }}" alt="qr-code"/>
+                        </div>
+                    </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </table>
+
+        <div style="padding: 0 24px; margin-top: 36px;">
+            <div style="font-size: 12px; margin-bottom: 4px;"><span
+                    style="font-weight: bolder">Ijrochi:</span> {{ executor }}
+            </div>
+            <div style="font-size: 12px; margin-bottom: 4px;"><span style="font-weight: bolder">Tel:</span> {{ phone }}
+            </div>
+            <div style="font-size: 12px;">
+                <span style="font-weight: bolder">Kiritildi:</span> {{ created_date }}
+                <span style="font-weight: bolder">Imzolandi:</span> {{ signed_date }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

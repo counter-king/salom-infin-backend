@@ -1,0 +1,11 @@
+<div style="font-style: italic">
+    {% if old_attorney_exists == 'exists' %}
+        Ushbu ishonchnomaning berilishi munosabati bilan {{ old_attorney_date }}-yilda berilgan
+        {{ old_attorney_number }}-sonli ishonchnoma
+        o‘z kuchini yo‘qotadi.
+    {% endif %}
+    Mazkur ishonchnomaning amal qilish muddati u orqali berilgan vakolatlarni boshqa shaxsga o‘tkazish huquqisiz
+    {{ deadline_in_words }}ni tashkil etadi.
+    Ushbu ishonchnoma orqali ishonch bildiriluvchi shaxs boshqa ish (lavozim)ga o’tkazilganda, u bilan tuzilgan mehnat
+    shartnomasi bekor qilinganda yoki ishonchnoma muddatidan oldin bekor qilinganda o’z kuchini yo‘qotadi.
+</div>

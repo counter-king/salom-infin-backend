@@ -1,0 +1,16 @@
+[
+  {
+    "model": "core.cachekey",
+    "pk": 1,
+    "fields": {
+      "created_date": "2024-11-19T05:23:18.988Z",
+      "modified_date": "2024-11-19T05:24:34.968Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "key": "birthday_users",
+      "description": "This key is designated to show birthdays of users for today and tomorrow",
+      "expires_in": 36000
+    }
+  }
+]

@@ -1,0 +1,1005 @@
+[
+  {
+    "model": "reference.documentsubtype",
+    "pk": 1,
+    "fields": {
+      "created_date": "2024-08-05T06:04:00.606Z",
+      "modified_date": "2024-08-05T06:04:00.606Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Labor leave",
+      "name_uz": "Mehnat ta'tili",
+      "name_ru": "Трудовой отпуск",
+      "name_en": "Labor leave",
+      "short_name": "laborleave",
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 2,
+    "fields": {
+      "created_date": "2024-08-08T14:23:19.491Z",
+      "modified_date": "2024-08-18T18:46:58.827Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip",
+      "name_uz": "Xizmat safari bildirishnomasi",
+      "name_ru": "Командировочный рапорт",
+      "name_en": "Business trip",
+      "short_name": null,
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 3,
+    "fields": {
+      "created_date": "2024-08-10T06:29:06.742Z",
+      "modified_date": "2024-08-10T06:29:06.742Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Service letter",
+      "name_uz": "Xizmat yozishmasi",
+      "name_ru": "Служебная переписка",
+      "name_en": "Service letter",
+      "short_name": "SL",
+      "document_type": 3
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 4,
+    "fields": {
+      "created_date": "2024-08-12T14:46:04.548Z",
+      "modified_date": "2024-08-12T16:41:08.657Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip order",
+      "name_uz": "Xizmat safari buyrug'i",
+      "name_ru": "Командировочный приказ",
+      "name_en": "Business trip order",
+      "short_name": null,
+      "document_type": 2
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 5,
+    "fields": {
+      "created_date": "2024-08-18T18:03:00.400Z",
+      "modified_date": "2024-08-18T18:47:19.572Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Modiy yordam",
+      "name_uz": "Modiy yordam",
+      "name_ru": "Материалка",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 6,
+    "fields": {
+      "created_date": "2024-08-18T18:43:21.115Z",
+      "modified_date": "2024-08-18T18:43:21.115Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "O‘quv ta’tili",
+      "name_uz": "O‘quv ta’tili",
+      "name_ru": "Учебный отпуск",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 7,
+    "fields": {
+      "created_date": "2024-08-18T18:45:20.175Z",
+      "modified_date": "2024-08-18T18:45:20.175Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "O'z hisobidan ta'til",
+      "name_uz": "O'z hisobidan ta'til",
+      "name_ru": "В отпуск за свой счет",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 8,
+    "fields": {
+      "created_date": "2024-08-18T18:46:23.833Z",
+      "modified_date": "2024-08-18T18:46:23.833Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bola parvarishlash ta’tili",
+      "name_uz": "Bola parvarishlash ta’tili",
+      "name_ru": "Отпуск по уходу за ребенком",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 9,
+    "fields": {
+      "created_date": "2024-08-18T18:57:14.465Z",
+      "modified_date": "2024-09-23T18:13:14.761Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Notice",
+      "name_uz": "Bildirishnoma",
+      "name_ru": "Рапорт",
+      "name_en": "Notice",
+      "short_name": "r",
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 10,
+    "fields": {
+      "created_date": "2024-08-18T18:58:01.083Z",
+      "modified_date": "2024-09-14T08:13:12.939Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xizmat safari farmoyish",
+      "name_uz": "Xizmat safari farmoyish",
+      "name_ru": "Распоряжение",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 4
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 11,
+    "fields": {
+      "created_date": "2024-08-18T19:07:12.506Z",
+      "modified_date": "2024-08-18T19:11:13.511Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank Boshqaruvi qarori",
+      "name_uz": "Bank Boshqaruvi qarori",
+      "name_ru": "Bank Boshqaruvi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 12,
+    "fields": {
+      "created_date": "2024-08-18T19:07:43.117Z",
+      "modified_date": "2024-08-18T19:11:04.043Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Investitsiya qo‘mitasi qarori",
+      "name_uz": "Investitsiya qo‘mitasi qarori",
+      "name_ru": "Investitsiya qo‘mitasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 13,
+    "fields": {
+      "created_date": "2024-08-18T19:08:07.172Z",
+      "modified_date": "2024-08-18T19:10:54.035Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Katta kredit qo‘mitasi qarori",
+      "name_uz": "Katta kredit qo‘mitasi qarori",
+      "name_ru": "Katta kredit qo‘mitasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 14,
+    "fields": {
+      "created_date": "2024-08-18T19:08:34.968Z",
+      "modified_date": "2024-08-18T19:10:44.652Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Kichik kredit qo‘mitasi qarori",
+      "name_uz": "Kichik kredit qo‘mitasi qarori",
+      "name_ru": "Kichik kredit qo‘mitasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 15,
+    "fields": {
+      "created_date": "2024-08-18T19:10:25.925Z",
+      "modified_date": "2024-08-18T19:10:25.925Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Muammoli qarzdorliklar bilan ishlash qo‘mitasi qarori",
+      "name_uz": "Muammoli qarzdorliklar bilan ishlash qo‘mitasi qarori",
+      "name_ru": "Muammoli qarzdorliklar bilan ishlash qo‘mitasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 16,
+    "fields": {
+      "created_date": "2024-08-18T19:11:57.834Z",
+      "modified_date": "2024-08-18T19:11:57.834Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Aktiv va passivlarni boshqarish qo‘mitasi qarori",
+      "name_uz": "Aktiv va passivlarni boshqarish qo‘mitasi qarori",
+      "name_ru": "Aktiv va passivlarni boshqarish qo‘mitasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 17,
+    "fields": {
+      "created_date": "2024-08-18T19:12:35.777Z",
+      "modified_date": "2024-08-18T19:12:35.777Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank mahsulotlarini boshqarish komissiyasi qarori",
+      "name_uz": "Bank mahsulotlarini boshqarish komissiyasi qarori",
+      "name_ru": "Bank mahsulotlarini boshqarish komissiyasi qarori",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 7
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 18,
+    "fields": {
+      "created_date": "2024-08-18T19:13:09.613Z",
+      "modified_date": "2024-08-18T19:13:09.613Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank Boshqaruvi buyruqlari",
+      "name_uz": "Bank Boshqaruvi buyruqlari",
+      "name_ru": "Bank Boshqaruvi buyruqlari",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 2
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 19,
+    "fields": {
+      "created_date": "2024-08-18T19:14:33.053Z",
+      "modified_date": "2024-08-18T19:14:33.053Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Tender komissiyasining yig‘ilish bayoni",
+      "name_uz": "Tender komissiyasining yig‘ilish bayoni",
+      "name_ru": "Tender komissiyasining yig‘ilish bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 20,
+    "fields": {
+      "created_date": "2024-08-18T19:15:10.108Z",
+      "modified_date": "2024-08-18T19:15:10.108Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xarid komissiyasining yig‘ilish bayoni",
+      "name_uz": "Xarid komissiyasining yig‘ilish bayoni",
+      "name_ru": "Xarid komissiyasining yig‘ilish bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 21,
+    "fields": {
+      "created_date": "2024-08-18T19:15:36.406Z",
+      "modified_date": "2024-08-18T19:15:36.406Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Asosiy vositalarni hisobdan chiqarish yig‘ilish bayoni",
+      "name_uz": "Asosiy vositalarni hisobdan chiqarish yig‘ilish bayoni",
+      "name_ru": "Asosiy vositalarni hisobdan chiqarish yig‘ilish bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 22,
+    "fields": {
+      "created_date": "2024-08-18T19:16:08.328Z",
+      "modified_date": "2024-08-18T19:16:08.328Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Axborot texnologiyalari qumitasi majlis bayoni",
+      "name_uz": "Axborot texnologiyalari qumitasi majlis bayoni",
+      "name_ru": "Axborot texnologiyalari qumitasi majlis bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 23,
+    "fields": {
+      "created_date": "2024-08-18T19:16:38.931Z",
+      "modified_date": "2024-08-18T19:16:38.931Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank kuzatuv Kengashi bayoni",
+      "name_uz": "Bank kuzatuv Kengashi bayoni",
+      "name_ru": "Bank kuzatuv Kengashi bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 24,
+    "fields": {
+      "created_date": "2024-08-18T19:17:08.072Z",
+      "modified_date": "2024-08-18T19:17:08.072Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank Boshqaruv yig‘ilish bayoni",
+      "name_uz": "Bank Boshqaruv yig‘ilish bayoni",
+      "name_ru": "Bank Boshqaruv yig‘ilish bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 25,
+    "fields": {
+      "created_date": "2024-08-18T19:17:35.051Z",
+      "modified_date": "2024-08-18T19:17:35.051Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Bank Boshqaruv shaxsiy qabul bayoni",
+      "name_uz": "Bank Boshqaruv shaxsiy qabul bayoni",
+      "name_ru": "Bank Boshqaruv shaxsiy qabul bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 26,
+    "fields": {
+      "created_date": "2024-08-18T19:18:15.689Z",
+      "modified_date": "2024-08-18T19:18:15.689Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xodimlarining mehnatiga haq to‘lash va rag‘batlantirish bo‘yicha Maxsus komissiya yig‘ilishi bayoni",
+      "name_uz": "Xodimlarining mehnatiga haq to‘lash va rag‘batlantirish bo‘yicha Maxsus komissiya yig‘ilishi bayoni",
+      "name_ru": "Xodimlarining mehnatiga haq to‘lash va rag‘batlantirish bo‘yicha Maxsus komissiya yig‘ilishi bayoni",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 6
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 27,
+    "fields": {
+      "created_date": "2024-08-18T19:19:03.817Z",
+      "modified_date": "2024-08-18T19:19:03.817Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ariza",
+      "name_uz": "Ariza",
+      "name_ru": "Заявление",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 28,
+    "fields": {
+      "created_date": "2024-09-21T09:31:28.965Z",
+      "modified_date": "2024-09-21T09:31:28.965Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xizmat safari farmoyishi (mahalliy)",
+      "name_uz": "Xizmat safari farmoyishi (mahalliy)",
+      "name_ru": "Командировочный распоряжение (локальный)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 4
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 29,
+    "fields": {
+      "created_date": "2024-09-23T17:03:14.857Z",
+      "modified_date": "2024-09-23T17:03:14.857Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xizmat safari buyrug'i (mahalliy)",
+      "name_uz": "Xizmat safari buyrug'i (mahalliy)",
+      "name_ru": "Командировочный приказ (локальный)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 2
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 30,
+    "fields": {
+      "created_date": "2024-10-22T06:06:14.530Z",
+      "modified_date": "2024-10-22T06:06:14.530Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ishga qabul qilish bildirishnomasi",
+      "name_uz": "Ishga qabul qilish bildirishnomasi",
+      "name_ru": "Рапорт на приеме на работу",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 31,
+    "fields": {
+      "created_date": "2024-10-22T06:06:41.424Z",
+      "modified_date": "2024-10-22T06:06:41.424Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ishga qabul qilish buyrug'i",
+      "name_uz": "Ishga qabul qilish buyrug'i",
+      "name_ru": "Приказ о приеме на работу",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 2
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 32,
+    "fields": {
+      "created_date": "2024-11-30T10:58:48.242Z",
+      "modified_date": "2024-11-30T10:58:48.242Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "For legal services",
+      "name_uz": "Yuridik xizmat uchun",
+      "name_ru": "Для юридических услуг",
+      "name_en": "For legal services",
+      "short_name": "YXU",
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 33,
+    "fields": {
+      "created_date": "2024-12-07T12:31:09.635Z",
+      "modified_date": "2024-12-07T12:31:09.635Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXM boshqaruvchi vazifasini bajaruvchi",
+      "name_uz": "BXM boshqaruvchi vazifasini bajaruvchi",
+      "name_ru": "Исполняющий обязанности управляющего ЦБУ",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 34,
+    "fields": {
+      "created_date": "2024-12-07T13:45:29.338Z",
+      "modified_date": "2025-08-08T11:28:08.890Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXM boshqaruvchisi o'rinbosari (biznes)",
+      "name_uz": "BXM boshqaruvchisi o'rinbosari (biznes)",
+      "name_ru": "Заместитель управляющего ЦБУ (бизнес)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 35,
+    "fields": {
+      "created_date": "2024-12-27T06:42:31.842Z",
+      "modified_date": "2025-07-18T09:15:31.267Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip (local)",
+      "name_uz": "Xizmat safari (mahalliy)",
+      "name_ru": "Командировка (местная)",
+      "name_en": "Business trip (local)",
+      "short_name": null,
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 36,
+    "fields": {
+      "created_date": "2025-01-06T08:49:14.802Z",
+      "modified_date": "2025-07-18T09:16:13.493Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip decree (local)",
+      "name_uz": "Xizmat safari farmoyishi (mahalliy)",
+      "name_ru": "Командировочная распоряжения (местная)",
+      "name_en": "Business trip decree (local)",
+      "short_name": null,
+      "document_type": 4
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 37,
+    "fields": {
+      "created_date": "2025-05-26T06:06:26.096Z",
+      "modified_date": "2025-05-26T06:06:26.096Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Extend business trip",
+      "name_uz": "Xizmat safarini uzaytirish",
+      "name_ru": "Продлить командировку",
+      "name_en": "Extend business trip",
+      "short_name": null,
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 38,
+    "fields": {
+      "created_date": "2025-05-26T06:08:53.711Z",
+      "modified_date": "2025-05-26T06:09:04.785Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Extend business trip decree",
+      "name_uz": "Xizmat safarini uzaytirish farmoyishi",
+      "name_ru": "Продлить командировку распоряжения",
+      "name_en": "Extend business trip decree",
+      "short_name": null,
+      "document_type": 4
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 39,
+    "fields": {
+      "created_date": "2025-07-16T07:43:50.951Z",
+      "modified_date": "2025-07-16T07:43:50.951Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Explanation letter",
+      "name_uz": "Tushuntirish xati",
+      "name_ru": "Пояснительное письмо",
+      "name_en": "Explanation letter",
+      "short_name": null,
+      "document_type": 5
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 40,
+    "fields": {
+      "created_date": "2025-07-18T09:17:02.654Z",
+      "modified_date": "2025-07-18T09:17:02.654Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip (foreign)",
+      "name_uz": "Xizmat safari (chet el)",
+      "name_ru": "Командировка (зарубежная)",
+      "name_en": "Business trip (foreign)",
+      "short_name": null,
+      "document_type": 1
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 41,
+    "fields": {
+      "created_date": "2025-07-18T09:18:47.397Z",
+      "modified_date": "2025-07-18T09:18:47.397Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Business trip decree (foreign)",
+      "name_uz": "Xizmat safari farmoyishi (chet el)",
+      "name_ru": "Командировочная распоряжения (зарубежная)",
+      "name_en": "Business trip decree (foreign)",
+      "short_name": null,
+      "document_type": 4
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 42,
+    "fields": {
+      "created_date": "2025-08-08T06:54:52.172Z",
+      "modified_date": "2025-08-08T06:56:02.988Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "2nd type BSC manager",
+      "name_uz": "2-toifa BXM boshqarish",
+      "name_ru": "Управление ЦБУ типа 2",
+      "name_en": "2nd type BSC manager",
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 43,
+    "fields": {
+      "created_date": "2025-08-08T11:29:42.864Z",
+      "modified_date": "2025-08-09T06:29:01.519Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXM boshqaruvchisi o'rinbosari (chakana)",
+      "name_uz": "BXM boshqaruvchisi o'rinbosari (chakana)",
+      "name_ru": "Заместитель управляющего ЦБУ (розничная)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 44,
+    "fields": {
+      "created_date": "2025-08-09T05:16:19.115Z",
+      "modified_date": "2025-08-09T05:35:47.653Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXO boshqaruvchisi",
+      "name_uz": "BXO boshqaruvchisi",
+      "name_ru": "Управляющий ОБУ",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 45,
+    "fields": {
+      "created_date": "2025-08-09T05:51:28.665Z",
+      "modified_date": "2025-08-09T05:51:55.615Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXO boshqaruvchisi o'rinbosari (biznes)",
+      "name_uz": "BXO boshqaruvchisi o'rinbosari (biznes)",
+      "name_ru": "Заместитель управляющего ОБУ (бизнес)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 46,
+    "fields": {
+      "created_date": "2025-08-09T06:19:05.822Z",
+      "modified_date": "2025-08-09T06:19:05.822Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "BXO boshqaruvchisi o'rinbosari (chakana)",
+      "name_uz": "BXO boshqaruvchisi o'rinbosari (chakana)",
+      "name_ru": "Заместитель управляющего ОБУ (розничная)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 47,
+    "fields": {
+      "created_date": "2025-08-09T06:40:37.975Z",
+      "modified_date": "2025-08-22T09:31:34.302Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Mijoz menejeri (BXO)",
+      "name_uz": "Mijoz menejeri (BXO)",
+      "name_ru": "Клиент менеджер (ОБУ)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 48,
+    "fields": {
+      "created_date": "2025-08-09T07:34:39.593Z",
+      "modified_date": "2025-08-22T10:03:10.824Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Elektron raqamli imzo (BXO)",
+      "name_uz": "Elektron raqamli imzo (BXO)",
+      "name_ru": "Электронная цифровая подпись (ОБУ)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 49,
+    "fields": {
+      "created_date": "2025-08-09T08:25:08.802Z",
+      "modified_date": "2025-08-09T08:32:05.665Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Operatsion guruh nazoratchisi",
+      "name_uz": "Operatsion guruh nazoratchisi",
+      "name_ru": "Руководитель оперативной группы",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 50,
+    "fields": {
+      "created_date": "2025-08-09T08:41:25.330Z",
+      "modified_date": "2025-08-09T08:41:25.330Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ish beruvchi vakili",
+      "name_uz": "Ish beruvchi vakili",
+      "name_ru": "Представитель работодателя",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 51,
+    "fields": {
+      "created_date": "2025-08-14T05:40:33.131Z",
+      "modified_date": "2025-08-14T05:40:33.131Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ijro hujjatini qaytarib olish",
+      "name_uz": "Ijro hujjatini qaytarib olish",
+      "name_ru": "Возврат исполнительного документа",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 52,
+    "fields": {
+      "created_date": "2025-08-14T07:08:44.347Z",
+      "modified_date": "2025-08-14T07:08:44.347Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Mediativ kelishuv",
+      "name_uz": "Mediativ kelishuv",
+      "name_ru": "Посредническое соглашение",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 53,
+    "fields": {
+      "created_date": "2025-08-22T09:33:27.945Z",
+      "modified_date": "2025-08-22T09:41:05.403Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Mijoz menejeri (BXM)",
+      "name_uz": "Mijoz menejeri (BXM)",
+      "name_ru": "Клиент менеджер (ЦБУ)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 54,
+    "fields": {
+      "created_date": "2025-08-22T10:03:43.573Z",
+      "modified_date": "2025-08-22T10:03:43.573Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Elektron raqamli imzo (BXM)",
+      "name_uz": "Elektron raqamli imzo (BXM)",
+      "name_ru": "Электронная цифровая подпись (ЦБУ)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 55,
+    "fields": {
+      "created_date": "2025-08-22T11:37:23.392Z",
+      "modified_date": "2025-08-22T11:37:23.392Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ish beruvchi vakili rais o'rinbosarlariga",
+      "name_uz": "Ish beruvchi vakili rais o'rinbosarlariga",
+      "name_ru": "Представитель работодателя при заместителях председателя",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 56,
+    "fields": {
+      "created_date": "2025-08-22T12:01:39.717Z",
+      "modified_date": "2025-08-22T12:01:51.057Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Ish beruvchi vakili (Sh. Yakubov)",
+      "name_uz": "Ish beruvchi vakili (Sh. Yakubov)",
+      "name_ru": "Ish beruvchi vakili (Sh. Yakubov)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 57,
+    "fields": {
+      "created_date": "2025-08-22T12:11:16.958Z",
+      "modified_date": "2025-08-22T12:11:21.321Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Rais o'rinbosarlariga (umumiy)",
+      "name_uz": "Rais o'rinbosarlariga (umumiy)",
+      "name_ru": "Заместителям Председателя (общим)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 58,
+    "fields": {
+      "created_date": "2025-08-22T12:31:43.992Z",
+      "modified_date": "2025-08-22T12:38:24.130Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Rais o'rinbosari (F. Abduraxmanov)",
+      "name_uz": "Rais o'rinbosari (F. Abduraxmanov)",
+      "name_ru": "Rais o'rinbosari (F. Abduraxmanov)",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 8
+    }
+  },
+  {
+    "model": "reference.documentsubtype",
+    "pk": 59,
+    "fields": {
+      "created_date": "2025-08-27T05:47:53.809Z",
+      "modified_date": "2025-08-27T05:47:53.809Z",
+      "created_by": 1,
+      "modified_by": 1,
+      "is_active": true,
+      "name": "Xizmat shartnomasi ishlari",
+      "name_uz": "Xizmat shartnomasi ishlari",
+      "name_ru": "Работы по договору услуг",
+      "name_en": null,
+      "short_name": null,
+      "document_type": 9
+    }
+  }
+]
