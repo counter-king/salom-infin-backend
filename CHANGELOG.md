@@ -2,6 +2,10 @@
 
 <!-- version list -->
 
+## v1.0.0 (2025-11-11)
+
+- Initial Release
+
 ## v1.38.1 (2025-11-08)
 
 ### Performance Improvements
