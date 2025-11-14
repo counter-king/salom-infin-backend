@@ -121,7 +121,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
-            'hosts': [('127.0.0.1', 6379)],
+            'hosts': [(os.getenv('BROKER_IP'), 6379)],
             'capacity': 1500,
             'expiry': 10,
         },
@@ -146,7 +146,7 @@ DATABASES = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://localhost:6379/1',  # Replace with your Redis configuration
+        'LOCATION': os.getenv('BROKER_URL'),  # Replace with your Redis configuration
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         },
@@ -247,7 +247,7 @@ CELERY_RESULT_BACKEND = 'django-db'
 CELERY_TASK_SEND_SENT_EVENT = True  # Tracks task arguments
 CELERY_RESULT_EXTENDED = True  # Stores args & kwargs in result backend
 CELERY_APP_NAME = "config"
-BROKER_URL = 'redis://localhost:6379/0'
+BROKER_URL = os.getenv('BROKER_URL')
 CELERY_TIMEZONE = 'Asia/Tashkent'
 
 # CELERY BEAT
