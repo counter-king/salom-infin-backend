@@ -17,7 +17,7 @@ class CompanyAdmin(TranslationAdmin):
 
 @admin.register(Position)
 class PositionAdmin(TranslationAdmin):
-    list_display = ('iabs_post_id', 'name', 'condition', 'created_date', 'modified_date')
+    list_display = ('code', 'name', 'condition', 'created_date', 'modified_date')
     search_fields = ('name', 'code')
     readonly_fields = ('created_by', 'modified_by', 'created_date', 'modified_date')
     fields = (
@@ -29,12 +29,13 @@ class PositionAdmin(TranslationAdmin):
         'created_by',
         'created_date',
         'modified_by',
-        'modified_date')
+        'modified_date',
+    )
 
 
 @admin.register(Department)
 class DepartmentAdmin(TranslationAdmin):
-    list_display = ('code', 'parent_code', 'name', 'company', 'condition', 'sub_department_count')
+    list_display = ('code', 'parent_code', 'name', 'company', 'condition', 'sub_department_count', 'dep_index',)
     search_fields = ('name', 'code', 'parent_code', 'company__name')
     list_filter = ('condition', 'company__local_code')
     readonly_fields = (
@@ -57,6 +58,7 @@ class DepartmentAdmin(TranslationAdmin):
         'parent',
         'company',
         'condition',
+        'dep_index',
         'created_by',
         'created_date',
         'modified_by',
