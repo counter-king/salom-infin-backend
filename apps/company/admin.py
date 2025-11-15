@@ -57,6 +57,7 @@ class DepartmentAdmin(TranslationAdmin):
         'parent',
         'company',
         'condition',
+        'dep_index',
         'created_by',
         'created_date',
         'modified_by',
