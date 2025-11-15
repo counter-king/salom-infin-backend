@@ -177,6 +177,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
             'users',
             'children',
             'hik_org_code',
+            'dep_index',
         ]
         read_only_fields = [
             'sub_department_count',
