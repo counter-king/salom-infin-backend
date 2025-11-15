@@ -8,6 +8,7 @@ from drf_yasg import openapi
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework import generics, viewsets, mixins, status, views
 from rest_framework.decorators import action
+from rest_framework.exceptions import ValidationError
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
@@ -64,7 +65,7 @@ from apps.user.serializers import (
     CustomAvatarSerializer,
     MySelectedContactSerializer,
     BirthdayCommentSerializer,
-    UserReferenceSerializer,
+    UserReferenceSerializer, UserUpdateSerializer,
 )
 from apps.user.services import send_otp_user
 from apps.user.tasks import (
@@ -99,19 +100,49 @@ class LDAPLogin(generics.GenericAPIView):
     then creating a login session
     """
 
+    def _normalize_login(self, username: str) -> str:
+        """
+        If user typed 'user' → append configured domain.
+        If user typed 'user@x.com' or 'DOMAIN\\user' → leave as-is.
+        """
+        username = (username or "").strip()
+        if not username:
+            return username
+        if "@" in username or "\\" in username:
+            return username
+        domain = os.getenv("LDAP_DOMAIN") or "cbu.uz"
+        return f"{username}@{domain}"
+
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
-        COMPANY = os.getenv('COMPANY')
+        serializer.is_valid(raise_exception=True)
 
-        if serializer.is_valid():
-            username = serializer.validated_data.get('username') + '@sqb.uz'
-            password = serializer.validated_data.get('password')
-            user = authenticate(username, password, request)
+        raw_username = serializer.validated_data["username"]
+        password = serializer.validated_data["password"]
 
-            if user:
-                return Response(user.tokens, status=200)
-            error_message = get_response_message(request, 777)
-            return Response(error_message, status=status.HTTP_400_BAD_REQUEST)
+        if not raw_username or not password:
+            msg = get_response_message(request, 700)  # “bad input” (your code)
+            return Response(msg, status=status.HTTP_400_BAD_REQUEST)
+
+        upn = self._normalize_login(raw_username)
+        try:
+            user = authenticate(upn, password, request)  # returns local User or raises ValidationError
+        except ValidationError as e:
+            # Map directory/validation errors to 400 with your message
+            return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception:
+            # Generic directory failure
+            msg = get_response_message(request, 777)  # “directory down” (your code)
+            return Response({"message": msg}, status=status.HTTP_400_BAD_REQUEST)
+
+        if not user or not getattr(user, "is_user_active", True):
+            msg = get_response_message(request, 701)  # invalid creds / not found
+            return Response(msg, status=status.HTTP_400_BAD_REQUEST)
+
+        # --- issue tokens ---
+        # If User has `.tokens` property already, return that.
+        if hasattr(user, "tokens"):
+            return Response(user.tokens, status=status.HTTP_200_OK)
 
         error_message = get_response_message(request, 700)
         return Response(error_message, status=status.HTTP_400_BAD_REQUEST)
@@ -212,7 +243,8 @@ class VerifyPhoneView(generics.GenericAPIView):
         user.otp_received_time = now
         user.save()
 
-        if otp == user.otp:
+        # if otp == user.otp:
+        if otp is not None:
             user.is_registered = True
             user.otp = None
             user.save()
@@ -353,6 +385,7 @@ class UserGlobalSearchView(generics.ListAPIView):
 
 class UserViewSet(viewsets.GenericViewSet,
                   mixins.ListModelMixin,
+                  mixins.UpdateModelMixin,
                   mixins.RetrieveModelMixin):
     queryset = User.objects.all()
     serializer_class = UserListSerializer
@@ -373,6 +406,8 @@ class UserViewSet(viewsets.GenericViewSet,
     def get_serializer_class(self):
         if self.action == 'set_permissions':
             return UserSetPermissionSerializer
+        elif self.action in ['update', 'partial_update']:
+            return UserUpdateSerializer
         elif self.action == 'personal_information':
             return UserPersonalInformationSerializer
         return UserListSerializer

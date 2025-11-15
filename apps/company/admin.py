@@ -29,7 +29,8 @@ class PositionAdmin(TranslationAdmin):
         'created_by',
         'created_date',
         'modified_by',
-        'modified_date')
+        'modified_date',
+    )
 
 
 @admin.register(Department)

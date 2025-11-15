@@ -1,4 +1,5 @@
 import datetime
+import re
 
 from django.contrib.auth import authenticate
 from django.db import models
@@ -32,6 +33,9 @@ from utils.constants import CONSTANTS
 from utils.exception import get_response_message, ValidationError2
 from utils.serializer import SelectItemField
 from utils.tools import get_or_none
+
+STRICT_RE = re.compile(r'^998\d{9}$')
+LOOSE_RE = re.compile(r'^998\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$')
 
 
 class TreeSerializer(serializers.Serializer):
@@ -502,6 +506,7 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
     avatar = SelectItemField(model='document.File', extra_field=['id', 'name', 'url'], required=False)
     permissions = ProjectPermissionSerializer(many=True, read_only=True)
     is_favourite = serializers.SerializerMethodField()
+    phone_number = serializers.CharField(required=False, write_only=True)
 
     # roles = RoleModelSerializer(many=True, read_only=True)
 
@@ -523,16 +528,16 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
             'top_level_department',
             'permissions',
             'roles',
-            'hik_person_code',
             'normalized_cisco',
             'avatar',
             'is_favourite',
+            'phone_number',
         ]
 
     def validate(self, attrs):
         request = self.context.get('request')
         # pinfl = attrs.get('pinfl')
-        # phone = attrs.get('phone')
+        phone = attrs.get('phone_number')
         username = attrs.get('username')
         instance = self.instance
 
@@ -557,18 +562,30 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
         #     msg['message'] = msg['message'].format(object=f'{username} username')
         #     raise ValidationError2(msg)
 
+        if phone:
+            if not LOOSE_RE.fullmatch(phone):
+                raise ValidationError2(get_response_message(request, 629))
+            # normalize: remove spaces before saving/using
+            normalized = phone.replace(' ', '')
+            if not STRICT_RE.fullmatch(normalized):
+                raise ValidationError2(get_response_message(request, 630))
+
         return attrs
 
-    def update(self, instance, validated_data):
-        instance = super().update(instance, validated_data)
-        # instance.department_ids = validated_data.get('department_ids', instance.department_ids)
-        # instance.is_user_active = validated_data.get('is_user_active', instance.is_user_active)
-        # instance.save()
-        return instance
+    # def update(self, instance, validated_data):
+    #     phone_number = validated_data.pop('phone_number')
+    #     instance = super().update(instance, validated_data)
+    #     # instance.department_ids = validated_data.get('department_ids', instance.department_ids)
+    #     # instance.is_user_active = validated_data.get('is_user_active', instance.is_user_active)
+    #     instance.phone = phone_number
+    #     instance.username = phone_number
+    #     instance.save()
+    #     return instance
 
     def create(self, validated_data):
         phone = validated_data.get('phone')
         pinfl = validated_data.get('pinfl')
+        phone_number = validated_data.pop('phone_number')
 
         if pinfl is None:
             pinfl = get_random_string(length=14, allowed_chars='0123456789')
@@ -590,6 +607,34 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
     #     data = super().to_representation(instance)
     #     data['top_level_department'] = DepartmentSerializer(instance.top_level_department).data
     #     return data
+
+
+class UserUpdateSerializer(serializers.ModelSerializer):
+    phone = serializers.CharField(required=False)
+
+    class Meta:
+        model = User
+        fields = ['phone']
+
+    def validate_phone(self, value):
+        request = self.context.get('request')
+
+        # normalize: remove spaces before saving/using
+        normalized = value.replace(' ', '')
+
+        if not LOOSE_RE.fullmatch(normalized):
+            raise ValidationError2(get_response_message(request, 629))
+
+        if not STRICT_RE.fullmatch(normalized):
+            raise ValidationError2(get_response_message(request, 630))
+
+        return normalized
+
+    def update(self, instance, validated_data):
+        instance = super().update(instance, validated_data)
+        instance.username = validated_data.get('phone')
+        instance.save()
+        return instance
 
 
 class UserPersonalInformationSerializer(UserListSerializer):
