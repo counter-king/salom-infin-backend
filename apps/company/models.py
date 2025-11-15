@@ -52,6 +52,7 @@ class Department(BaseModel):
     level = models.IntegerField(default=0)
     sub_department_count = models.IntegerField(default=0)
     hik_org_code = models.CharField(max_length=50, null=True, blank=True, unique=True)
+    dep_index = models.PositiveIntegerField(null=True, blank=True, unique=True)
 
     def __str__(self):
         return self.name

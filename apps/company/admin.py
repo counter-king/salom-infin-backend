@@ -35,7 +35,7 @@ class PositionAdmin(TranslationAdmin):
 
 @admin.register(Department)
 class DepartmentAdmin(TranslationAdmin):
-    list_display = ('code', 'parent_code', 'name', 'company', 'condition', 'sub_department_count')
+    list_display = ('code', 'parent_code', 'name', 'company', 'condition', 'sub_department_count', 'dep_index',)
     search_fields = ('name', 'code', 'parent_code', 'company__name')
     list_filter = ('condition', 'company__local_code')
     readonly_fields = (
@@ -58,6 +58,7 @@ class DepartmentAdmin(TranslationAdmin):
         'parent',
         'company',
         'condition',
+        'dep_index',
         'created_by',
         'created_date',
         'modified_by',
