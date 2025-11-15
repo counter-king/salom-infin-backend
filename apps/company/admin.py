@@ -17,7 +17,7 @@ class CompanyAdmin(TranslationAdmin):
 
 @admin.register(Position)
 class PositionAdmin(TranslationAdmin):
-    list_display = ('iabs_post_id', 'name', 'condition', 'created_date', 'modified_date')
+    list_display = ('code', 'name', 'condition', 'created_date', 'modified_date')
     search_fields = ('name', 'code')
     readonly_fields = ('created_by', 'modified_by', 'created_date', 'modified_date')
     fields = (
