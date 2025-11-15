@@ -76,6 +76,7 @@ class DepartmentAdmin(TranslationAdmin):
         queryset.update(condition='P')
         self.message_user(request, 'Selected departments have been deactivated.')
 
+
     @admin.action(description='Recalculate sub department count')
     def recalculate_sub_department_count(self, request, queryset):
         for department in queryset:
