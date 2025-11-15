@@ -27,7 +27,7 @@ urlpatterns = [
     path('api/v1/user-search/', views.UserGlobalSearchView.as_view(), name='user-search'),
     path('api/v1/send-otp/', views.SendOTPToPhoneView.as_view(), name='send-otp'),
     path('api/v1/verify-phone/', views.VerifyPhoneView.as_view(), name='verify-phone'),
-    path('api/v1/login-1/', views.LoginView.as_view(), name='login'),
+    path('api/v1/login/', views.LoginView.as_view(), name='login'),
 
     path('api/v1/refresh-token/', TokenRefreshView.as_view(), name='refresh-token'),
     path('api/v1/blacklist-token/', TokenBlacklistView.as_view(), name='blacklist-token'),
