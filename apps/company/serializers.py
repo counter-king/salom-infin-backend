@@ -133,6 +133,7 @@ class DepartmentWithoutChildSerializer(serializers.ModelSerializer):
             'parent',
             'parent_code',
             'sub_department_count',
+            'dep_index',
         ]
 
     def get_employee_count(self, obj):
