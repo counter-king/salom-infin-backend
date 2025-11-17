@@ -31,7 +31,7 @@ from utils.exception import get_response_message, ValidationError2
 
 
 def authenticate(username: str, password: str, request):
-    LDAP_HOST = os.getenv("LDAP_HOST")  # e.g., "ldaps://ad.corp.example.com:636" or "ldap://..."
+    LDAP_HOST = os.getenv("LDAP_HOST", "ldap://10.130.20.101")  # e.g., "ldaps://ad.corp.example.com:636" or "ldap://..."
     BASE_DN = os.getenv("LDAP_BASE_DN", "OU=Bosh ofis,DC=cbu,DC=uz")  # e.g., "DC=corp,DC=example,DC=com"
     USE_STARTTLS = os.getenv("LDAP_STARTTLS", "0") == "1"
 

@@ -532,6 +532,7 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
             'avatar',
             'is_favourite',
             'phone_number',
+            'phone',
         ]
 
     def validate(self, attrs):
