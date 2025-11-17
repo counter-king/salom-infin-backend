@@ -32,7 +32,6 @@ def enable_db_access_for_all_tests(db):
 def api_client():
     return APIClient()
 
-
 @pytest.fixture
 def user_status():
     return UserStatus.objects.create(

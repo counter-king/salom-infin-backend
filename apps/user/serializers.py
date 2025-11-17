@@ -564,11 +564,11 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
 
         if phone:
             if not LOOSE_RE.fullmatch(phone):
-                raise ValidationError2(get_response_message(request, 629))
+                raise ValidationError2(get_response_message(request, 662))
             # normalize: remove spaces before saving/using
             normalized = phone.replace(' ', '')
             if not STRICT_RE.fullmatch(normalized):
-                raise ValidationError2(get_response_message(request, 630))
+                raise ValidationError2(get_response_message(request, 663))
 
         return attrs
 
