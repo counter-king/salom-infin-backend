@@ -2,6 +2,18 @@
 
 <!-- version list -->
 
+## v1.0.2 (2025-11-17)
+
+### Performance Improvements
+
+- Remove unnecessary blank line in `conftest.py`
+  ([`1290b17`](https://github.com/goaziz/salom-cbu/commit/1290b1761f3b5cc703f62734d9a9f19e063c0427))
+
+- Update error messages and validation codes for phone format in `error_messages.json` and
+  `serializers.py`
+  ([`88253cd`](https://github.com/goaziz/salom-cbu/commit/88253cd8b95635885635cfb476282333e0883947))
+
+
 ## v1.0.1 (2025-11-15)
 
 ### Chores
