@@ -355,7 +355,7 @@ class CityDistanceViewSet(viewsets.ModelViewSet):
 
 
 class DeliveryTypeViewSet(viewsets.ModelViewSet):
-    queryset = DeliveryType.objects.order_by('-created_date')
+    queryset = DeliveryType.objects.all()
     serializer_class = DeliveryTypeSerializer
     search_fields = ['name', 'name_uz', 'name_ru']
 
