@@ -235,6 +235,7 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
             'created_by',
             'created_date',
             'delivery_type',
+            'short_description',
             'description',
             'document_type',
             'files',

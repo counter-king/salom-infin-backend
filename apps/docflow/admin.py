@@ -7,7 +7,7 @@ from apps.docflow.models import BaseDocument, DocumentFile, Reviewer, Assignment
 
 @admin.register(BaseDocument)
 class BaseDocumentAdmin(admin.ModelAdmin):
-    fields = ['title', 'description', 'status', 'delivery_type', 'priority', 'document_type', 'correspondent',
+    fields = ['title', 'short_description', 'description', 'status', 'delivery_type', 'priority', 'document_type', 'correspondent',
               'journal', 'language', 'code', 'grif', 'register_date', 'register_number', 'outgoing_number',
               'outgoing_date', 'number_of_papers', 'is_deleted']
     list_display = ['register_number', 'register_date', 'status', 'correspondent',

@@ -10,6 +10,7 @@ class BaseDocumentManager(models.Manager):
 
 class BaseDocument(BaseModel):
     title = models.CharField(max_length=255, null=True, blank=True)
+    short_description = models.CharField(max_length=455, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     status = models.ForeignKey("reference.StatusModel", on_delete=models.SET_NULL, null=True, blank=True)
     delivery_type = models.ForeignKey("reference.DeliveryType", on_delete=models.SET_NULL, null=True, blank=True)
