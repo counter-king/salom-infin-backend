@@ -1,6 +1,15 @@
 from django.contrib import admin
 
-from apps.docflow.models import BaseDocument, DocumentFile, Reviewer, Assignment, Assignee
+from apps.docflow.models import (
+    Assignee,
+    Assignment,
+    BaseDocument,
+    DocumentFile,
+    InboxItem,
+    RegCounter,
+    Reviewer,
+)
+from apps.reference.models import ActionDescription
 
 
 # Register your models here.
@@ -59,3 +68,25 @@ class AssigneeAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'
     readonly_fields = ['assignment', 'user', 'performed_date', 'created_date', 'created_by', 'modified_date',
                        'modified_by']
+
+
+@admin.register(RegCounter)
+class RegCounterAdmin(admin.ModelAdmin):
+    list_display = ['journal', 'year', 'next_no']
+    readonly_fields = ['journal', 'year', 'next_no']
+    search_fields = ['next_no', 'year']
+    list_filter = ['year']
+
+
+@admin.register(InboxItem)
+class InboxItemAdmin(admin.ModelAdmin):
+    list_display = ['user', 'document', 'kind', 'read_time', 'created_date', 'created_by', ]
+    date_hierarchy = 'created_date'
+    search_fields = ['user__first_name', 'user__last_name']
+    list_filter = ['created_date', 'is_read']
+    readonly_fields = [
+        'user', 'document', 'review',
+        'kind', 'read_time', 'assignment',
+        'created_date', 'created_by',
+        'modified_date', 'modified_by'
+    ]

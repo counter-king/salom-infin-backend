@@ -1,6 +1,7 @@
 from rest_framework import serializers
 
 from apps.docflow.models import BaseDocument, DocumentFile, Reviewer
+from apps.docflow.services.allocate_reg_num import allocate_reg_number
 from apps.document.models import File
 from apps.reference.models import ActionDescription, FieldActionMapping, StatusModel, Correspondent
 from apps.reference.tasks import action_log
@@ -66,7 +67,8 @@ class ReviewerListSerializer(serializers.ModelSerializer):
                                         'top_level_department', 'department', 'company', 'email'],
                            )
     status = SelectItemField(model='reference.StatusModel', required=False, extra_field=['id', 'name'])
-    document = serializers.PrimaryKeyRelatedField(queryset=BaseDocument.objects.all(), required=False)
+    document = serializers.PrimaryKeyRelatedField(queryset=BaseDocument.objects.all(),
+                                                  required=False, allow_null=True)
 
     class Meta:
         model = Reviewer
@@ -256,7 +258,7 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
 
     def validate(self, attrs):
         journal = attrs.get('journal')
-        document_type = attrs.get('document_type')
+        register_date = attrs.get('register_date')
         request = self.context.get('request')
         message = get_response_message(request, 600)
 
@@ -264,8 +266,8 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
             message['message'] = message['message'].format(type='journal')
             raise ValidationError2(message)
 
-        if not document_type:
-            message['message'] = message['message'].format(type='document_type')
+        if not register_date:
+            message['message'] = message['message'].format(type='register_date')
             raise ValidationError2(message)
 
         return attrs
@@ -284,9 +286,13 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
         request = self.context.get('request')
         files = validated_data.pop('files', [])
         reviewers = validated_data.pop('reviewers', [])
+        register_date = validated_data.get('register_date')
+        journal = validated_data.get('journal')
+        reg_no, _, _ = allocate_reg_number(journal=journal, reg_date=register_date)
         instance = super().create(validated_data)
         status = get_or_none(StatusModel, request, is_default=True)
         instance.status_id = status.id
+        instance.register_number = reg_no
         instance.save()
 
         if files:
@@ -304,6 +310,9 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
         action_log.apply_async(
             (user_id, 'created', '100', ct_id,
              instance.id, user_ip, instance.register_number), countdown=3)
+
+        # Fan out to review
+        # fanout_to_review(instance.id)
         return instance
 
     def update(self, instance, validated_data):
@@ -328,6 +337,7 @@ class BaseDocFlowSerializer(ContentTypeMixin, serializers.ModelSerializer):
 
         self.update_nested_serializers(instance, DocumentFileSerializer, files, 'files')
         self.update_nested_serializers(instance, ReviewerListSerializer, reviewers, 'reviewers')
+        # fanout_to_review(instance.id)
 
         return instance
 

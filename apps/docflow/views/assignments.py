@@ -50,7 +50,7 @@ class ResolutionViewSet(viewsets.GenericViewSet,
         """
         user_id = get_current_user_id()
         user_ip = get_user_ip(self.request)
-        document_instance = instance.reference.document
+        document_instance = instance.reviewer.document
         ct_id = get_content_type_id(document_instance)
 
         # Map incoming UI action -> (description_code, event_action stored in ActionModel.action)
