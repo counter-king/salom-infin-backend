@@ -678,7 +678,7 @@ def register_decree(compose_id, request, notice_instance=None, **kwargs):
     #         phone = t.get('phone')
     #         full_name = t.get('full_name')
     #         start_date = t.get('start_date')
-    #         text = f"Hurmatli xodim! {start_date} dan xizmat safaringiz. SalomSQB ilovasini yuklang, safaringizni tasdiqlang: iOS https://bit.ly/3YMTOzu Android https://bit.ly/42vZoZC"
+    #         text = f"Hurmatli xodim! {start_date} dan xizmat safaringiz. SalomCBU ilovasini yuklang, safaringizni tasdiqlang: iOS https://bit.ly/3YMTOzu Android https://bit.ly/42vZoZC"
     #         is_ok, res = send_sms_to_phone(phone, text)
     #         if is_ok:
     #             action_log(compose_instance, request, 'created', '147', full_name)
@@ -719,7 +719,7 @@ def handle_trip_decree(compose, request, trips, register_number, register_date, 
         start_date = trip.get('start_date')
         message = (
             f"Hurmatli xodim! {start_date} dan xizmat safaringiz. "
-            "SalomSQB ilovasini yuklang, safaringizni tasdiqlang: "
+            "SalomCBU ilovasini yuklang, safaringizni tasdiqlang: "
             "iOS https://bit.ly/3YMTOzu Android https://bit.ly/4gNU7BU"
         )
         is_ok, res = send_sms_to_phone(phone, message)
