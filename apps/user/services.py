@@ -25,9 +25,9 @@ ENCODED_CHARS_MAP = {
 
 def send_otp_user(phone, code, otp_type, app_signature=''):
     if otp_type == CONSTANTS.OTP_TYPES.FOR_REGISTRATION:
-        text = f"Salom SQB portalida roʻyxatdan oʻtishni tasdiqlash kodi: {code}. Kodni hech kimga bermang. {app_signature}"
+        text = f"Salom CBU portalida roʻyxatdan oʻtishni tasdiqlash kodi: {code}. Kodni hech kimga bermang. {app_signature}"
     else:
-        text = f"Salom SQB portalida parolni tiklash kodi: {code}. Kodni hech kimga bermang. {app_signature}"
+        text = f"Salom CBU portalida parolni tiklash kodi: {code}. Kodni hech kimga bermang. {app_signature}"
     res = send_sms_to_phone(phone, text)
 
     return res

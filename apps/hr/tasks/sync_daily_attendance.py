@@ -482,7 +482,7 @@ def notify_users_about_lateness(users_latency_map: Dict[str, dict[str, int]]):
     #     first_name = info.get('first_name', '')
     #     last_name = info.get('last_name', '')
     #     late_minutes = info.get('late_minutes')
-    #     message = f"Hurmatli {first_name} {last_name}, Siz bugun ishga {late_minutes} daqiqa kechikdingiz. Iltimos, sababini SalomSQB tizimida kiriting."
+    #     message = f"Hurmatli {first_name} {last_name}, Siz bugun ishga {late_minutes} daqiqa kechikdingiz. Iltimos, sababini SalomCBU tizimida kiriting."
     #     try:
     #         send_sms_to_phone(phone, message)
     #     except Exception as e:
