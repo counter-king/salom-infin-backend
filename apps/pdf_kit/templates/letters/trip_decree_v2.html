@@ -96,28 +96,7 @@
 </head>
 <body>
 <div style="padding: 8px;">
-    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
-        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
-    </div>
-
-    <table>
-        <tr>
-            <td style="width: {{ logo_size }};">
-                <img
-                        src="data:image/png;base64,{{ company_logo }}"
-                        alt="Logo"
-                />
-            </td>
-            <td style="vertical-align: top; align-content: start; text-align: start">
-                <div style="margin-left: 8px">
-                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">{{ company_name_uz }}
-                    </div>
-                    <div style="font-size: 9px; font-weight: bold">{{ company_name_ru }}
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
+    {% include 'components/base_header.html' %}
 
     <div style="margin-top: 16px; font-size: 14px; font-weight: bolder">
         <div>№ {{ register_number }}</div>

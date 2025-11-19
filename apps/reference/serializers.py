@@ -129,31 +129,29 @@ class CorrespondentSerializer(ContentTypeMixin, serializers.ModelSerializer):
         }
 
         if request.method.lower() not in ['put', 'patch']:
-            if tin:
-                qs = Correspondent.objects.filter(tin=tin).exists()
-                if qs:
-                    message = get_response_message(request, 602)
-                    message['message'] = message['message'].format(object=f'INN: {tin}')
-                    raise ValidationError2(message)
+            qs = Correspondent.objects.filter(tin=tin).exists()
+            if qs:
+                message = get_response_message(request, 602)
+                message['message'] = message['message'].format(object=f'INN: {tin}')
+                raise ValidationError2(message)
 
-            if pinfl:
-                qs = Correspondent.objects.filter(pinfl=pinfl).exists()
-                if qs:
-                    message = get_response_message(request, 602)
-                    message['message'] = message['message'].format(object=f'PINFL: {pinfl}')
-                    raise ValidationError2(message)
+            qs = Correspondent.objects.filter(pinfl=pinfl).exists()
+            if qs:
+                message = get_response_message(request, 602)
+                message['message'] = message['message'].format(object=f'PINFL: {pinfl}')
+                raise ValidationError2(message)
 
         if type not in required_fields:
             message = get_response_message(request, 600)
             message['message'] = message['message'].format(type='type')
             raise ValidationError2(message)
 
-        for req_field in required_fields.get(type, []):
-            if not attrs.get(req_field):
-                request = self.context.get('request')
-                message = get_response_message(request, 601)
-                message['message'] = message['message'].format(req_field=req_field, type=type)
-                raise ValidationError2(message)
+        # for req_field in required_fields.get(type, []):
+        #     if not attrs.get(req_field):
+        #         request = self.context.get('request')
+        #         message = get_response_message(request, 601)
+        #         message['message'] = message['message'].format(req_field=req_field, type=type)
+        #         raise ValidationError2(message)
 
         return attrs
 

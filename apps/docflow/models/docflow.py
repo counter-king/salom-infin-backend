@@ -3,6 +3,16 @@ from django.db import models
 from base_model.models import BaseModel
 
 
+class RegCounter(models.Model):
+    journal = models.ForeignKey("reference.Journal", on_delete=models.CASCADE)
+    year = models.PositiveSmallIntegerField()  # e.g., 2025
+    next_no = models.PositiveIntegerField(default=1)  # next order to allocate
+
+    class Meta:
+        unique_together = [("journal", "year")]
+        indexes = [models.Index(fields=["journal", "year"])]
+
+
 class BaseDocumentManager(models.Manager):
     def get_queryset(self):
         return super(BaseDocumentManager, self).get_queryset().filter(is_deleted=False)
@@ -10,6 +20,7 @@ class BaseDocumentManager(models.Manager):
 
 class BaseDocument(BaseModel):
     title = models.CharField(max_length=255, null=True, blank=True)
+    short_description = models.CharField(max_length=455, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     status = models.ForeignKey("reference.StatusModel", on_delete=models.SET_NULL, null=True, blank=True)
     delivery_type = models.ForeignKey("reference.DeliveryType", on_delete=models.SET_NULL, null=True, blank=True)
@@ -50,7 +61,9 @@ class DocumentFile(BaseModel):
 
 
 class Reviewer(BaseModel):
-    document = models.ForeignKey("docflow.BaseDocument", on_delete=models.CASCADE, related_name="reviewers",
+    document = models.ForeignKey("docflow.BaseDocument",
+                                 on_delete=models.CASCADE,
+                                 related_name="reviewers",
                                  null=True, blank=True)
     user = models.ForeignKey("user.User", on_delete=models.SET_NULL, null=True, blank=True)
     status = models.ForeignKey("reference.StatusModel", on_delete=models.SET_NULL, null=True, blank=True)
@@ -115,7 +128,8 @@ class Assignment(BaseModel):
 
 
 class Assignee(BaseModel):
-    assignment = models.ForeignKey("docflow.Assignment", on_delete=models.CASCADE, related_name="assignees", null=True,
+    assignment = models.ForeignKey("docflow.Assignment", on_delete=models.CASCADE,
+                                   related_name="assignees", null=True,
                                    blank=True)
     content = models.TextField(null=True, blank=True)
     files = models.ManyToManyField("document.File", blank=True)
@@ -134,3 +148,29 @@ class Assignee(BaseModel):
 
     class Meta:
         ordering = ['-is_responsible']
+
+
+class InboxItem(BaseModel):
+    """
+    Denormalized fast list:
+      - to_acquaint  : reviewers/assistants before any resolution exists
+      - to_review    : reviewers/assistants on a draft root resolution (verify)
+      - to_assign    : (optional) managers/assistants while preparing performers
+      - to_execute   : performers with visible assignments
+    """
+    user = models.ForeignKey("user.User", on_delete=models.CASCADE)
+    document = models.ForeignKey(BaseDocument, on_delete=models.CASCADE)
+    kind = models.CharField(max_length=24)  # to_acquaint|to_review|to_assign|to_execute
+    review = models.ForeignKey("docflow.Reviewer", on_delete=models.SET_NULL, null=True, blank=True)
+    assignment = models.ForeignKey(Assignment, null=True, blank=True, on_delete=models.CASCADE)
+    is_read = models.BooleanField(default=False)
+    read_time = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["user", "is_read", "created_date"]),
+            models.Index(fields=["user", "kind", "created_date"]),
+        ]
+        constraints = [
+            models.UniqueConstraint(fields=["user", "document", "kind"], name="uniq_inbox_user_doc_kind"),
+        ]

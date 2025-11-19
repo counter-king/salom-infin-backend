@@ -31,8 +31,8 @@ from utils.exception import get_response_message, ValidationError2
 
 
 def authenticate(username: str, password: str, request):
-    LDAP_HOST = os.getenv("LDAP_HOST")  # e.g., "ldaps://ad.corp.example.com:636" or "ldap://..."
-    BASE_DN = os.getenv("LDAP_BASE_DN", "BC")  # e.g., "DC=corp,DC=example,DC=com"
+    LDAP_HOST = os.getenv("LDAP_HOST", "ldap://10.130.20.101")  # e.g., "ldaps://ad.corp.example.com:636" or "ldap://..."
+    BASE_DN = os.getenv("LDAP_BASE_DN", "OU=Bosh ofis,DC=cbu,DC=uz")  # e.g., "DC=corp,DC=example,DC=com"
     USE_STARTTLS = os.getenv("LDAP_STARTTLS", "0") == "1"
 
     if not LDAP_HOST or not BASE_DN:
@@ -60,7 +60,7 @@ def authenticate(username: str, password: str, request):
 
         # ---- Search current user entry to read tab number ----
         # Try multiple attributes; prefer env-defined TAB_ATTR first.
-        requested_attrs = ["pinfl"]
+        requested_attrs = ["postalCode"]
 
         # Find by either UPN or sAMAccountName
         # Use ldap.filter.escape_filter_chars if you allow special chars (sam is from input)
@@ -99,7 +99,7 @@ def authenticate(username: str, password: str, request):
 
         # ---- Find local Django user by tab number and return it ----
         # Adjust field name: assuming `User` has `tab_number` field
-        user = User.objects.filter(pinfl=pinfl, is_active=True).first()
+        user = User.objects.filter(pinfl=pinfl, is_user_active=True).first()
         if not user:
             # You can choose to auto-provision here if desired.
             # For now, mirror your old behavior:

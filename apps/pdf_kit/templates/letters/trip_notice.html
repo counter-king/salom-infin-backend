@@ -46,28 +46,7 @@
 </head>
 <body>
 <div style="padding: 8px;">
-    <div style="margin-bottom: 16px; font-weight: bolder; font-size: 12px">
-        SALOM.SQB.UZ tizimi orqali ERI bilan tasdiqlangan. Hujjat kodi: {{ check_id }}
-    </div>
-
-    <table style="width: 100%">
-        <tr>
-            <td style="width: {{ logo_size }};">
-                <img
-                        src="data:image/png;base64,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"
-                        alt="Logo"
-                />
-            </td>
-            <td style="vertical-align: top; text-align: left">
-                <div style="margin-left: 8px; text-align: left">
-                    <div style="font-size: 9px; font-weight: bold; margin-bottom: 2px">{{ company_name_uz }}
-                    </div>
-                    <div style="font-size: 9px; font-weight: bold">{{ company_name_ru }}
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </table>
+    {% include 'components/base_header.html' %}
 
     <div style="width: 100%; border-radius: 6px; background-color: #F7F7F9; font-size: 16px; font-weight: bolder; padding: 4px 12px; margin-top: 10px; color: #003D64">
         {{ sender }}

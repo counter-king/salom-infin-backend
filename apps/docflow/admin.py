@@ -1,13 +1,22 @@
 from django.contrib import admin
 
-from apps.docflow.models import BaseDocument, DocumentFile, Reviewer, Assignment, Assignee
+from apps.docflow.models import (
+    Assignee,
+    Assignment,
+    BaseDocument,
+    DocumentFile,
+    InboxItem,
+    RegCounter,
+    Reviewer,
+)
+from apps.reference.models import ActionDescription
 
 
 # Register your models here.
 
 @admin.register(BaseDocument)
 class BaseDocumentAdmin(admin.ModelAdmin):
-    fields = ['title', 'description', 'status', 'delivery_type', 'priority', 'document_type', 'correspondent',
+    fields = ['title', 'short_description', 'description', 'status', 'delivery_type', 'priority', 'document_type', 'correspondent',
               'journal', 'language', 'code', 'grif', 'register_date', 'register_number', 'outgoing_number',
               'outgoing_date', 'number_of_papers', 'is_deleted']
     list_display = ['register_number', 'register_date', 'status', 'correspondent',
@@ -59,3 +68,25 @@ class AssigneeAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_date'
     readonly_fields = ['assignment', 'user', 'performed_date', 'created_date', 'created_by', 'modified_date',
                        'modified_by']
+
+
+@admin.register(RegCounter)
+class RegCounterAdmin(admin.ModelAdmin):
+    list_display = ['journal', 'year', 'next_no']
+    readonly_fields = ['journal', 'year', 'next_no']
+    search_fields = ['next_no', 'year']
+    list_filter = ['year']
+
+
+@admin.register(InboxItem)
+class InboxItemAdmin(admin.ModelAdmin):
+    list_display = ['user', 'document', 'kind', 'read_time', 'created_date', 'created_by', ]
+    date_hierarchy = 'created_date'
+    search_fields = ['user__first_name', 'user__last_name']
+    list_filter = ['created_date', 'is_read']
+    readonly_fields = [
+        'user', 'document', 'review',
+        'kind', 'read_time', 'assignment',
+        'created_date', 'created_by',
+        'modified_date', 'modified_by'
+    ]
