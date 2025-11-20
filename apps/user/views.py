@@ -1,7 +1,7 @@
 import os
 from datetime import datetime, timedelta
 
-from django.db.models import Q, Count, OuterRef, Exists
+from django.db.models import Q, Count, OuterRef, Exists, F
 from django.utils import timezone
 from django.utils.crypto import get_random_string
 from drf_yasg import openapi

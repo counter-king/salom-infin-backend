@@ -1,5 +1,6 @@
 from rest_framework import serializers
 
+from django.db.models import F
 from apps.company.models import Company, Position, Department
 from apps.company.tasks import recalculate_sub_department_count
 from apps.user.models import User
