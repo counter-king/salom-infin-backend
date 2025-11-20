@@ -190,10 +190,15 @@ class NewCountsView(views.APIView):
         return Response(context)
 
     def new_for_review_count(self, user_id):
+        user = get_object_or_404(User, id=user_id)
+        user_ids = [user_id] + list(user.assistants.values_list('id', flat=True))
+
         query = """
-        SELECT COUNT(*) FROM docflow_reviewer
-        WHERE user_id = %(user_id)s AND is_read = FALSE
-        """
+                SELECT COUNT(*)
+                FROM docflow_reviewer
+                WHERE user_id IN %(user_ids)s
+                  AND is_read = FALSE \
+                """
         cursor = connection.cursor()
         params = {
             'user_id': user_id
