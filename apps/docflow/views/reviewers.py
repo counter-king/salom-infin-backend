@@ -61,27 +61,29 @@ class ReviewerViewSet(viewsets.ModelViewSet):
             message = get_response_message(request, 610)
             return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
-        assistant_ids = list(instance.user.assistants.values_list('id', flat=True))
-        if instance.user_id == user_id or user_id in assistant_ids:
-            instance.read_time = timezone.now()
-            instance.is_read = True
-            instance.status_id = get_in_progress_base_doc_status_id()
-            instance.save()
+        instance.read_time = timezone.now()
+        instance.is_read = True
+        instance.status_id = get_in_progress_base_doc_status_id()
+        instance.save()
 
-            data = {
-                'id': instance.id,
-                'is_read': instance.is_read,
-                'read_time': str(instance.read_time),
-                'user_id': instance.user_id,
-                'type': 'review_document_acquainted'
-            }
+        data = {
+            'id': instance.id,
+            'is_read': instance.is_read,
+            'read_time': str(instance.read_time),
+            'user_id': instance.user_id,
+            'type': 'review_document_acquainted'
+        }
 
-            # a = [instance.user_id]
-            # send_to_socket_user(data, *a)
+        # a = [instance.user_id]
+        # send_to_socket_user(data, *a)
 
-            return Response(data, status=200)
-        message = get_response_message(request, 700)
-        return Response(message, status=status.HTTP_400_BAD_REQUEST)
+        return Response(data, status=200)
+
+        # if instance.user_id == user_id:
+        #     # or user_id in instance.user.assistants
+        #
+        # message = get_response_message(request, 700)
+        # return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
     def record_activity(self, instance, action, comment=None):
         """
