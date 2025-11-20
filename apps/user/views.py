@@ -384,6 +384,7 @@ class UserGlobalSearchView(generics.ListAPIView):
 
 
 class UserViewSet(viewsets.GenericViewSet,
+                  mixins.CreateModelMixin,
                   mixins.ListModelMixin,
                   mixins.UpdateModelMixin,
                   mixins.RetrieveModelMixin):
