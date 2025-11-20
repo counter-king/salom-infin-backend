@@ -201,7 +201,7 @@ class NewCountsView(views.APIView):
                 """
         cursor = connection.cursor()
         params = {
-            'user_id': user_id
+            'user_ids': user_ids
         }
         cursor.execute(query, params)
         return cursor.fetchone()[0]
