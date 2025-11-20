@@ -61,8 +61,7 @@ class ReviewerViewSet(viewsets.ModelViewSet):
             message = get_response_message(request, 610)
             return Response(message, status=status.HTTP_400_BAD_REQUEST)
 
-        if instance.user_id == user_id:
-            # or user_id in instance.user.assistants
+        if instance.user_id == user_id or user_id in instance.user.assistants:
             instance.read_time = timezone.now()
             instance.is_read = True
             instance.status_id = get_in_progress_base_doc_status_id()
