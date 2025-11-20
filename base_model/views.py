@@ -190,7 +190,7 @@ class NewCountsView(views.APIView):
         return Response(context)
 
     def new_for_review_count(self, user_id):
-        user = get_object_or_404(User, id=user_id)
+        user = generics.get_object_or_404(User, id=user_id)
         user_ids = [user_id] + list(user.assistants.values_list('id', flat=True))
 
         query = """
