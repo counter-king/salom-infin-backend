@@ -407,7 +407,7 @@ class UserViewSet(viewsets.GenericViewSet,
     def get_serializer_class(self):
         if self.action == 'set_permissions':
             return UserSetPermissionSerializer
-        elif self.action in ['update', 'partial_update']:
+        elif self.action in ['partial_update']:
             return UserUpdateSerializer
         elif self.action == 'personal_information':
             return UserPersonalInformationSerializer
