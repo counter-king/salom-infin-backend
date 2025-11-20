@@ -379,7 +379,7 @@ class UserGlobalSearchView(generics.ListAPIView):
 
     def get_queryset(self):
         status_ids = user_search_status_ids()
-        q = User.objects.filter(status_id__in=status_ids)
+        q = User.objects.filter(status_id__in=status_ids).order_by(F('rank').desc(nulls_last=True))
         return q
 
 

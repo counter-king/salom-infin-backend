@@ -288,5 +288,5 @@ class DepartmentWithUserSerializer(serializers.ModelSerializer):
     def get_users(self, obj):
         from apps.user.serializers import UserReferenceSerializer
         status_ids = user_search_status_ids()
-        users = obj.employees.filter(status_id__in=status_ids)
+        users = obj.employees.filter(status_id__in=status_ids).order_by(F('rank').desc(nulls_last=True))
         return UserReferenceSerializer(users, many=True).data
