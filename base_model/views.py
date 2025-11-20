@@ -30,7 +30,7 @@ class UnreadCountViewSet(views.APIView):
             CONSTANTS.DOC_TYPE_ID.TRIP_DECREE_V2,
             CONSTANTS.DOC_TYPE_ID.EXTEND_TRIP_DECREE_V2,
         ]
-        user_or_assistant = Q(user_id=user_id)  # | Q(user__assistants__assistant_id=user_id)
+        user_or_assistant = Q(user_id=user_id) | Q(user__assistants__assistant_id=user_id)
         unread_for_review = Reviewer.objects.filter(user_or_assistant & Q(is_read=False)).count()
         unread_assignments = Assignee.objects.filter(
             user_or_assistant & Q(is_read=False) & Q(assignment__is_verified=True)).count()
