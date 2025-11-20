@@ -193,15 +193,14 @@ class NewCountsView(views.APIView):
         user = generics.get_object_or_404(User, id=user_id)
         user_ids = [user_id] + list(user.assistants.values_list('id', flat=True))
 
-        query = """
-                SELECT COUNT(*)
-                FROM docflow_reviewer
-                WHERE user_id = ANY (%(user_ids)s)
-                  AND is_read = FALSE \
-                """
+        query = f"""
+            SELECT COUNT(*)
+            FROM docflow_reviewer
+            WHERE user_id IN %s
+              AND is_read = FALSE
+        """
         cursor = connection.cursor()
-        params = {'user_ids': user_ids}
-        cursor.execute(query, params)
+        cursor.execute(query, (tuple(user_ids),))
         return cursor.fetchone()[0]
 
     def new_assignments_count(self, user_id):
