@@ -586,7 +586,7 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
     def create(self, validated_data):
         phone = validated_data.get('phone')
         pinfl = validated_data.get('pinfl')
-        phone_number = validated_data.pop('phone_number')
+        # phone_number = validated_data.pop('phone_number')
 
         if pinfl is None:
             pinfl = get_random_string(length=14, allowed_chars='0123456789')
