@@ -538,8 +538,8 @@ class UserListSerializer(ContentTypeMixin, serializers.ModelSerializer):
     def validate(self, attrs):
         request = self.context.get('request')
         # pinfl = attrs.get('pinfl')
-        phone = attrs.get('phone_number')
-        username = attrs.get('username')
+        phone = attrs.get('phone')
+        # username = attrs.get('username')
         instance = self.instance
 
         # If instance is present, it's an update operation
