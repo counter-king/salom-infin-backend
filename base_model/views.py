@@ -196,13 +196,11 @@ class NewCountsView(views.APIView):
         query = """
                 SELECT COUNT(*)
                 FROM docflow_reviewer
-                WHERE user_id IN %(user_ids)s
+                WHERE user_id = ANY (%(user_ids)s)
                   AND is_read = FALSE \
                 """
         cursor = connection.cursor()
-        params = {
-            'user_ids': user_ids
-        }
+        params = {'user_ids': user_ids}
         cursor.execute(query, params)
         return cursor.fetchone()[0]
 
